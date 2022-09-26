@@ -1,0 +1,25 @@
+/*
+Theme name: 5W5 - Équipe 4
+Author: Équipe 4
+Author URI: https://github.com/cdhyppolite/5W5
+Description: Thème fait dans le cours 5W5
+Version: 1.0
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+Text Domain: cidw-4w4
+*/
+
+.test {
+    text-align: center;
+}
+
+
+/* ---------- Initialisation ----------*/
+
+@import "init/normalize";
+
+/* ---------- VARIABLES ----------*/
+
+@import "variables/couleurs";
+@import "fonts/fonts";
+// @import "variables/structure";
