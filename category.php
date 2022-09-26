@@ -3,6 +3,17 @@
 <section class="formation">
         <h2 class="formation__titre">Liste de cours - Techniques d'intégration multimédia</h2>
         <div class="formation__liste">
+
+        <nav>
+            <a href="?session=0">Tout</a>
+            <a href="?session=1">Session 1</a>
+            <a href="?session=2">Session 2</a>
+            <a href="?session=3">Session 3</a>
+            <a href="?session=4">Session 4</a>
+            <a href="?session=5">Session 5</a>
+            <a href="?session=6">Session 6</a>
+        </nav>
+        
             <?php if (have_posts()):
                 while (have_posts()): the_post(); ?>
                 <?php
@@ -23,7 +34,12 @@
                     //-----------------------------
                 ?>
                 
-                <article style="background-image: url('<?= get_the_post_thumbnail_url(); ?>');" class="formation__cours <?= $etat; ?>">
+                
+                <?php
+                    if ( (isset($_GET["session"]) && $_GET["session"] == $codeCours[4]) || (!isset($_GET["session"]) || $_GET["session"] == 0 )) :?>
+
+                <article style="background-image: url('<?= get_the_post_thumbnail_url(); ?>');"
+                    class="formation__cours <?= $etat; ?>">
                     <?php /*the_post_thumbnail('thumbnail'); */?>
                     <h3 class="cours__titre"> <a href="<?= get_permalink(); ?>"> <?= $titreFiltreCours; ?> </a></h3>
                     <!-- <div class="cours__nbre-heure"><?= $nbHeures; ?></div> -->
@@ -31,7 +47,11 @@
                     <!-- <div class="cours_etat"></div> -->
                     <!-- <p class="cours__desc"> <?= $descCours; ?></p> -->
                 </article>
-                <?php endwhile ?>
+
+                <?php endif ?>
+
+                
+                    <?php endwhile ?>
                 <?php endif ?>
         </div>
     </section>
