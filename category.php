@@ -5,7 +5,7 @@
         <div class="formation__liste">
 
         <nav>
-            <a href="?session=0">Tout</a>
+            <a href="?">Tout</a>
             <a href="?session=1">Session 1</a>
             <a href="?session=2">Session 2</a>
             <a href="?session=3">Session 3</a>
@@ -36,7 +36,7 @@
                 
                 
                 <?php
-                    if ( (isset($_GET["session"]) && $_GET["session"] == $codeCours[4]) || (!isset($_GET["session"]) || $_GET["session"] == 0 )) :?>
+                    if ( (isset($_GET["session"]) && $_GET["session"] == $codeCours[4]) || (!isset($_GET["session"]))) :?>
 
                 <article style="background-image: url('<?= get_the_post_thumbnail_url(); ?>');"
                     class="formation__cours <?= $etat; ?>">
