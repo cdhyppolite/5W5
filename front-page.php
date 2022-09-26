@@ -8,6 +8,8 @@
                     ?>
             <?php endif ?>
             <p>Ceci est la page principal</p>
+            <a href="/category/cours">Liste Cours</a>
+            
         </div>
     </section>
 </main>
