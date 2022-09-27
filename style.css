@@ -332,6 +332,13 @@ h1 {
   font-family: 'Neonblitz', Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h2 {
+  font-family: 'Las Enter', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*.entete_principal {
+    // font-family: 'Neonderthaw', cursive;
+}*/
 @font-face {
   font-family: 'Neon Sans';
   src: url("fonts/NeonSans.woff2") format("woff2"), url("fonts/NeonSans.woff") format("woff");
