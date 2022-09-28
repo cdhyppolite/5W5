@@ -25,3 +25,6 @@
             <h1 class="entete_principal"><?= get_bloginfo('name'); ?></h1>
         </a>
     </header>
+
+<!-- Menu avec la liste des cours -->
+<?php include('inclusions/menuBarreCours.php');?>
