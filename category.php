@@ -18,14 +18,14 @@
                     while (have_posts()): the_post(); ?>
                     <?php
                         $titre = get_the_title();
-                        $titreFiltreCours = substr($titre, 7, -6);
+                        $titreFiltreCours = substr($titre, 3, -6);
                         $nbHeures = substr($titre, -6);
-                        $codeCours = substr($titre, 0,7);
+                        $codeCours = substr($titre, 0,3);
                         $descCours = get_the_excerpt();
                     ?>
                     
                     <?php
-                        if ( (isset($_GET["session"]) && $_GET["session"] == $codeCours[4]) || (!isset($_GET["session"]))) :?>
+                        if ( (isset($_GET["session"]) && $_GET["session"] == $codeCours[0]) || (!isset($_GET["session"]))) :?>
 
                         <article style="background-image: url('<?= get_the_post_thumbnail_url(); ?>');"
                             class="formation__cours <?= $etat; ?>">
