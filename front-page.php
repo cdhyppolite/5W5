@@ -1,5 +1,5 @@
 <?php get_header() ?>
-<main class="principal">
+<main class="site__main">
     <h2 class="formation__titre">------- Front page -------</h2>
             <?php if (have_posts()): ?>
                     <?php

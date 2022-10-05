@@ -13,18 +13,15 @@
     <!-- Police Neon Sans -->
     <link rel="preload" href="<?php echo (get_bloginfo('template_directory')."/fonts/NeonSans.woff2") ?>" as="font" type="font/woff2" crossorigin>
     <?php wp_head(); ?>
-
-
-
-
 </head>
 
-<body>
-    <header class="entete">
+<body <?php body_class("site"); ?>>
+<header class="site__header">
         <a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home">
-            <h1 class="entete_principal"><?= get_bloginfo('name'); ?></h1>
+            <h1 class="header__principal"><?= get_bloginfo('name'); ?></h1>
+            <!-- <h2 class="header__secondaire"> <?php echo (get_bloginfo('description', 'display')); ?> </h2> -->
         </a>
     </header>
-
-<!-- Menu avec la liste des cours -->
+    
+    <!-- Menu avec la liste des cours -->
 <?php include('inclusions/menuBarreCours.php');?>
