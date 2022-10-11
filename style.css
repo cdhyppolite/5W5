@@ -517,7 +517,34 @@ ELEMENTS
 }
 
 .triSession .active {
-  background-color: pink;
+  background-color: gold;
+}
+
+.listeCours {
+  margin: 0 auto;
+}
+
+.cours {
+  width: 100%;
+  border: 3px solid red;
+  position: relative;
+}
+
+.cours__btn {
+  border: 1px solid red;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-down-bold);
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: scale(2.5);
+  width: 12px;
+  height: 10px;
+}
+
+.cours__btn:hover {
+  cursor: pointer;
 }
 
 /* -------------------------------------

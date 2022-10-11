@@ -1,0 +1,30 @@
+    .listeCours {
+        // background-color: white;
+        // padding: 0 1vw 0 1vw;
+        margin: 0 auto;
+        &__titre {
+            // margin: 0 auto;
+        }
+    }
+    
+    .cours {
+        width: 100%;
+        border: 3px solid red;
+        position: relative;
+        &__btn {
+            border: 1px solid red;
+            // border-radius: 50%;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-down-bold);
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: scale(2.5);
+            width: 12px;
+            height: 10px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }

@@ -1,8 +1,8 @@
 <?php get_header() ?>
 <main class="site__main">
-<section class="formation">
-        <h2 class="formation__titre">Liste de cours - Techniques d'intégration multimédia</h2>
-        <div class="formation__liste">
+<section class="listeCours">
+        <h2 class="listeCours__titre">Liste de cours - Techniques d'intégration multimédia</h2>
+        <div class="listeCours__liste">
 
         <nav class="triSession">
             <a href="?" class="<?php if (!isset($_GET["session"])) echo "active" ?>">Tout</a>
@@ -25,14 +25,15 @@
                     <?php
                         if ( (isset($_GET["session"]) && $_GET["session"] == $codeCours[0]) || (!isset($_GET["session"]))) :?>
                         <?php /** style="background-image: url('<?= get_the_post_thumbnail_url(); ?>');" */ ?>
-                        <article class="formation__cours">
-                            <?php /*the_post_thumbnail('thumbnail'); */?>
+                        <article class="cours">
                             <h3 class="cours__titre"> <a href="<?= get_permalink(); ?>"> <?= $titreFiltreCours; ?> </a></h3>
+                            <div class="cours__btn"></div>
                                 <?php
                                 /**<div class="cours__nbre-heure"><?= $nbHeures; ?></div>
                                 <p class="cours__code"><?= $codeCours; ?> </p>
                                 <p class="cours__desc"> <?= $descCours; ?></p> */
                                 ?>
+                            <?php /*the_post_thumbnail('thumbnail'); */?>
                         </article>
 
                     <?php endif ?>
