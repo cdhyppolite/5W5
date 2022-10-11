@@ -9,23 +9,40 @@ License: GNU General Public License v2 or later
 Text Domain: cidw-4w4
 */
 
-.test {
-    text-align: center;
-}
 
-
-/* ---------- Initialisation ----------*/
+/* -------------------------------------
+INITIALISATION
+----------------------------------------*/
 
 @import "init/normalize";
+@import "init/largeurboite";
 
-/* ---------- VARIABLES ----------*/
+/* -------------------------------------
+VARIABLES
+----------------------------------------*/
 
 @import "variables/couleurs";
 @import "variables/fonts";
+@import "variables/structure";
 @import "variables/links";
-// @import "variables/structure";
 
-/* ---------- COMPOSANTES ----------*/
+/* -------------------------------------
+LAYOUT
+----------------------------------------*/
 
-@import "composantes/header";
-// @import "composantes/menu";
+@import "layout/layout";
+
+/* -------------------------------------
+ELEMENTS
+----------------------------------------*/
+
+
+/* -------------------------------------
+COMPOSANTS
+----------------------------------------*/
+
+@import "composantes/cours";
+@import "composantes/menu";
+@import "composantes/entete";
+@import "composantes/footer";
+@import "composantes/navigation";

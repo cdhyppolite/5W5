@@ -1,0 +1,54 @@
+.carte__main {
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid 1px;
+    width: 20%;
+    padding: 10px;
+    overflow: hidden;
+    // border-radius: 25px;
+}
+
+.main__titre {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    color: #444;
+    /*************/
+    width: 100%;
+    display: block;
+}
+
+.carte p {
+    font-size: .8rem;
+    text-align: justify;
+}
+
+.carte__titre {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.35rem;
+    color: #444;
+    // background-color: darkgreen;
+}
+
+.carte__contenu {
+    text-align: justify;
+}
+
+.carte__code {
+    font-size: 1rem;
+    color: #05204d;
+    // font-style: italic;
+    font-weight: bold;
+}
+
+.carte__duree {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: crimson;
+}
+
+.carte__duree,
+.carte__code,
+.carte__contenu {
+    margin-top: -7px;
+}

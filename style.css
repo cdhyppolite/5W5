@@ -10,44 +10,6 @@ License: GNU General Public License v2 or later
 Text Domain: cidw-4w4
 */
 /* -------------------------------------
-VARIABLES
-----------------------------------------*/
-h1 {
-  font-family: 'Neonblitz', Verdana, Geneva, Tahoma, sans-serif;
-}
-
-/*.entete_principal {
-    // font-family: 'Neonderthaw', cursive;
-}*/
-@font-face {
-  font-family: 'Neon Sans';
-  src: url("fonts/NeonSans.woff2") format("woff2"), url("fonts/NeonSans.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Las Enter';
-  src: url("fonts/LasEnterPersonalUseOnly.woff2") format("woff2"), url("fonts/LasEnterPersonalUseOnly.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Neonblitz';
-  src: url("fonts/Neonblitz.woff2") format("woff2"), url("fonts/Neonblitz.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* -------------------------------------
 INITIALISATION
 ----------------------------------------*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -372,6 +334,67 @@ html {
 }
 
 /* -------------------------------------
+VARIABLES
+----------------------------------------*/
+h1,
+.header__principal {
+  font-family: 'Neonblitz', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header__principal,
+.header__secondaire {
+  margin-left: 5%;
+}
+
+/*.entete_principal {
+    // font-family: 'Neonderthaw', cursive;
+}*/
+@font-face {
+  font-family: 'Neon Sans';
+  src: url("fonts/NeonSans.woff2") format("woff2"), url("fonts/NeonSans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Las Enter';
+  src: url("fonts/LasEnterPersonalUseOnly.woff2") format("woff2"), url("fonts/LasEnterPersonalUseOnly.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neonblitz';
+  src: url("fonts/Neonblitz.woff2") format("woff2"), url("fonts/Neonblitz.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+a {
+  text-decoration: none;
+  color: #4169e1;
+}
+
+a:visited {
+  color: #800080;
+}
+
+a:hover, a:focus, a:active {
+  color: #191970;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover, a:active {
+  outline: 0;
+}
+
+/* -------------------------------------
 LAYOUT
 ----------------------------------------*/
 .site {
@@ -436,11 +459,6 @@ LAYOUT
   width: 95%;
 }
 
-.header__principal,
-.header__secondaire {
-  margin-left: 5%;
-}
-
 .site__info {
   display: flex;
   flex-direction: row;
@@ -483,26 +501,6 @@ LAYOUT
 /* -------------------------------------
 ELEMENTS
 ----------------------------------------*/
-a {
-  color: #4169e1;
-}
-
-a:visited {
-  color: #800080;
-}
-
-a:hover, a:focus, a:active {
-  color: #191970;
-}
-
-a:focus {
-  outline: thin dotted;
-}
-
-a:hover, a:active {
-  outline: 0;
-}
-
 /* -------------------------------------
 COMPOSANTS
 ----------------------------------------*/
@@ -555,5 +553,10 @@ COMPOSANTS
 .carte__code,
 .carte__contenu {
   margin-top: -7px;
+}
+
+/**Menu.scss */
+.menu-principal-container ul {
+  list-style: none;
 }
 /*# sourceMappingURL=style.css.map */
