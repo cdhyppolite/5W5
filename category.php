@@ -4,11 +4,11 @@
         <h2 class="formation__titre">Liste de cours - Techniques d'intégration multimédia</h2>
         <div class="formation__liste">
 
-        <nav>
-            <a href="?">Tout</a>
+        <nav class="triSession">
+            <a href="?" class="<?php if (!isset($_GET["session"])) echo "active" ?>">Tout</a>
             <!-- Boucle -->
             <?php for ($nbSessions = 1; $nbSessions <= 6; $nbSessions++) : ?>
-                <a href="?session=<?= $nbSessions; ?>">Session <?= $nbSessions; ?></a>
+                <a href="?session=<?= $nbSessions; ?>" class="<?= (isset($_GET["session"]) && ($_GET["session"]==$nbSessions)) ? "active" :""; ?>">Session <?= $nbSessions; ?></a>
             <?php endfor; ?>
         </nav>
         

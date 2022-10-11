@@ -434,6 +434,7 @@ LAYOUT
   display: flex;
   flex-wrap: wrap;
   row-gap: 20px;
+  min-height: 73vh;
 }
 
 .site__footer {
@@ -501,6 +502,24 @@ LAYOUT
 /* -------------------------------------
 ELEMENTS
 ----------------------------------------*/
+.triSession {
+  display: flex;
+  justify-content: space-around;
+}
+
+.triSession a {
+  background-color: aqua;
+  padding: 10px;
+}
+
+.triSession a:hover {
+  background-color: gold;
+}
+
+.triSession .active {
+  background-color: pink;
+}
+
 /* -------------------------------------
 COMPOSANTS
 ----------------------------------------*/

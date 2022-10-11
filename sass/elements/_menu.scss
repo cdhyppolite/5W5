@@ -1,0 +1,32 @@
+.menu {
+    &-principal {
+        &-container {
+            a {
+                // color: hotpink;
+                &:hover {
+                    // color: aqua;
+                }
+                &:active {
+                    // color: gray;
+                }
+            }
+        }
+    }
+}
+
+.triSession {
+    display: flex;
+    justify-content: space-around;
+    // background-color: blue;
+    a {
+        background-color: aqua;
+        // margin: 0;
+        padding: 10px;
+        &:hover {
+            background-color: gold;
+        }
+    }
+    .active {
+        background-color: pink;
+    }
+}
