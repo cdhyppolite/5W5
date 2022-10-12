@@ -521,17 +521,22 @@ ELEMENTS
 }
 
 .listeCours {
+  width: clamp(300px, 100%, 750px);
   margin: 0 auto;
 }
 
 .cours {
-  width: 100%;
-  border: 3px solid red;
+  overflow: hidden;
+  margin: 0 auto;
+  border-bottom: 3px solid red;
   position: relative;
 }
 
+.cours:last-child {
+  border-bottom: none;
+}
+
 .cours__btn {
-  border: 1px solid red;
   position: absolute;
   right: 20px;
   top: 20px;
@@ -545,6 +550,30 @@ ELEMENTS
 
 .cours__btn:hover {
   cursor: pointer;
+}
+
+.cours__infos {
+  height: 0;
+}
+
+.cours__infos .cours__desc {
+  text-align: justify;
+}
+
+input {
+  display: none;
+}
+
+input:checked {
+  display: none;
+}
+
+input:checked ~ label > .cours__btn {
+  transform: rotate(180deg) scale(2.5);
+}
+
+input:checked ~ .cours__infos {
+  height: unset;
 }
 
 /* -------------------------------------

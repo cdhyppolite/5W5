@@ -1,6 +1,7 @@
     .listeCours {
         // background-color: white;
         // padding: 0 1vw 0 1vw;
+        width: clamp(300px, 100%, 750px);
         margin: 0 auto;
         &__titre {
             // margin: 0 auto;
@@ -8,11 +9,15 @@
     }
     
     .cours {
-        width: 100%;
-        border: 3px solid red;
+        overflow: hidden;
+        margin: 0 auto;
+        border-bottom: 3px solid red;
+        &:last-child {
+            border-bottom: none;
+        }
         position: relative;
         &__btn {
-            border: 1px solid red;
+            // border: 1px solid red;
             // border-radius: 50%;
             position: absolute;
             right: 20px;
@@ -25,6 +30,30 @@
             height: 10px;
             &:hover {
                 cursor: pointer;
+            }
+        }
+        &__infos {
+            height: 0;
+            .cours {
+                &__desc {
+                    text-align: justify;
+                }
+            }
+        }
+    }
+    
+    input {
+        display: none;
+        &:checked {
+            display: none;
+            ~label>.cours__btn {
+                // background-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-up-bold);
+                transform: rotate(180deg) scale(2.5);
+            }
+            ~.cours {
+                &__infos {
+                    height: unset;
+                }
             }
         }
     }

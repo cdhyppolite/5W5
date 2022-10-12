@@ -1,4 +1,5 @@
-<?php get_header() ?>
+<?php get_header();
+        $count =0; ?>
 <main class="site__main">
 <section class="listeCours">
         <h2 class="listeCours__titre">Liste de cours - Techniques d'intégration multimédia</h2>
@@ -13,7 +14,7 @@
         </nav>
         
         <?php if (have_posts()):
-                    while (have_posts()): the_post(); ?>
+                    while (have_posts()): the_post(); $count++?>
                     <?php
                         $titre = get_the_title();
                         $titreFiltreCours = substr($titre, 3, -6);
@@ -26,13 +27,19 @@
                         if ( (isset($_GET["session"]) && $_GET["session"] == $codeCours[0]) || (!isset($_GET["session"]))) :?>
                         <?php /** style="background-image: url('<?= get_the_post_thumbnail_url(); ?>');" */ ?>
                         <article class="cours">
-                            <h3 class="cours__titre"> <a href="<?= get_permalink(); ?>"> <?= $titreFiltreCours; ?> </a></h3>
-                            <div class="cours__btn"></div>
-                                <?php
-                                /**<div class="cours__nbre-heure"><?= $nbHeures; ?></div>
+                        <input type="checkbox" id="cours-btn_<?= $count; ?>">
+                            <h3 class="cours__titre"> <a href="<?= get_permalink(); ?>"> <?= $titreFiltreCours /*. " - ". $count*/; ?> </a></h3>
+
+                            <label for="cours-btn_<?= $count; ?>">
+                                <div class="cours__btn"></div>
+                            </label>
+
+                            <div class="cours__infos">
+                                <!-- <div class="cours__nbre-heure"><?= $nbHeures; ?></div> -->
                                 <p class="cours__code"><?= $codeCours; ?> </p>
-                                <p class="cours__desc"> <?= $descCours; ?></p> */
-                                ?>
+                                <p class="cours__desc"> <?= $descCours; ?></p>
+                            </div>
+                                
                             <?php /*the_post_thumbnail('thumbnail'); */?>
                         </article>
 
