@@ -28,17 +28,33 @@
             transform: scale(2.5);
             width: 12px;
             height: 10px;
+            transition: .4s cubic-bezier(.5, 0, .5, 1.7);
             &:hover {
                 cursor: pointer;
             }
         }
         &__infos {
             height: 0;
+            transition: .4s cubic-bezier(.5, 0, .5, 1.7);
+            display: flex;
+            justify-content: space-around;
             .cours {
                 &__desc {
                     text-align: justify;
                 }
             }
+        }
+        &__img {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__desc {
+            width: 50%;
         }
     }
     
@@ -48,11 +64,11 @@
             display: none;
             ~label>.cours__btn {
                 // background-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-up-bold);
-                transform: rotate(180deg) scale(2.5);
+                transform: rotate(-180deg) scale(2.5);
             }
             ~.cours {
                 &__infos {
-                    height: unset;
+                    height: 127px;
                 }
             }
         }

@@ -1,5 +1,6 @@
 <?php get_header();
-        $count =0; ?>
+        $count =0; 
+        $imageBlank = get_bloginfo('template_directory')."/images/blank.jpg"; ?>
 <main class="site__main">
 <section class="listeCours">
         <h2 class="listeCours__titre">Liste de cours - Techniques d'intégration multimédia</h2>
@@ -31,12 +32,15 @@
                             <h3 class="cours__titre"> <a href="<?= get_permalink(); ?>"> <?= $titreFiltreCours /*. " - ". $count*/; ?> </a></h3>
 
                             <label for="cours-btn_<?= $count; ?>">
-                                <div class="cours__btn"></div>
+                                <div class="cours__btn" title="En savoir plus"></div>
                             </label>
 
                             <div class="cours__infos">
                                 <!-- <div class="cours__nbre-heure"><?= $nbHeures; ?></div> -->
-                                <p class="cours__code"><?= $codeCours; ?> </p>
+                                <div class="cours__img">
+                                    <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt="">
+                                </div>
+                                <!-- <p class="cours__code"><?= $codeCours; ?> </p> -->
                                 <p class="cours__desc"> <?= $descCours; ?></p>
                             </div>
                                 
