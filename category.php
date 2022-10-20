@@ -42,6 +42,7 @@
                                 </div>
                                 <!-- <p class="cours__code"><?= $codeCours; ?> </p> -->
                                 <p class="cours__desc"> <?= $descCours; ?></p>
+                                <p class="cours__logiciel">Logiciel(s) utilisé(s): </p>
                             </div>
                                 
                             <?php /*the_post_thumbnail('thumbnail'); */?>

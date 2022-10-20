@@ -17,6 +17,8 @@
 .triSession {
     display: flex;
     justify-content: space-around;
+    width: max-content;
+    margin: 0 auto;
     // background-color: blue;
     a {
         background-color: aqua;
@@ -27,6 +29,7 @@
         }
     }
     .active {
-        background-color: gold;
+        // background-color: gold;
+        border-bottom: 3px solid red;
     }
 }

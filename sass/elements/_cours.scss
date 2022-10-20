@@ -12,6 +12,9 @@
         overflow: hidden;
         margin: 0 auto;
         border-bottom: 3px solid red;
+        &:nth-child(1) {
+            border-bottom: 3px solid hotpink !important;
+        }
         &:last-child {
             border-bottom: none;
         }
@@ -38,6 +41,7 @@
             transition: .4s cubic-bezier(.5, 0, .5, 1.7);
             display: flex;
             justify-content: space-around;
+            flex-direction: row;
             .cours {
                 &__desc {
                     text-align: justify;
@@ -69,6 +73,7 @@
             ~.cours {
                 &__infos {
                     height: 127px;
+                    // align-items: center;
                 }
             }
         }

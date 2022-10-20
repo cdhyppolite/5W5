@@ -4,9 +4,9 @@
  */
 function _5w5_enqueue()
 {
-    wp_enqueue_style('lab1-cdh-style-css', get_stylesheet_uri());
+    wp_enqueue_style('5w5-style-css', get_stylesheet_uri());
     // wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true );
-    wp_enqueue_style('lab1-cdh-google-fonts', 'https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap', false);
+    wp_enqueue_style('5w5-google-fonts', 'https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap', false);
 }
 add_action('wp_enqueue_scripts', '_5w5_enqueue');
 
@@ -20,6 +20,15 @@ function cidw_5w5_register_nav_menu()
     ));
 }
 add_action('after_setup_theme', 'cidw_5w5_register_nav_menu', 0);
+/****************** - Add Thème support -***************** */
+ function cidw_4w4_add_theme_support() {
+    add_theme_support('post-thumbnails');
+    add_theme_support('custom-logo', array(
+        'height' => 100,
+        'width' => 100,
+    ));
+ }
+add_action( 'after_setup_theme', 'cidw_4w4_add_theme_support' );
 
 // Afficher les cours en ordre de session.
 function cidw_5w5_pre_get_posts(WP_Query $query)

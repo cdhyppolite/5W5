@@ -505,6 +505,8 @@ ELEMENTS
 .triSession {
   display: flex;
   justify-content: space-around;
+  width: max-content;
+  margin: 0 auto;
 }
 
 .triSession a {
@@ -517,7 +519,7 @@ ELEMENTS
 }
 
 .triSession .active {
-  background-color: gold;
+  border-bottom: 3px solid red;
 }
 
 .listeCours {
@@ -530,6 +532,10 @@ ELEMENTS
   margin: 0 auto;
   border-bottom: 3px solid red;
   position: relative;
+}
+
+.cours:nth-child(1) {
+  border-bottom: 3px solid hotpink !important;
 }
 
 .cours:last-child {
@@ -558,6 +564,7 @@ ELEMENTS
   transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.7);
   display: flex;
   justify-content: space-around;
+  flex-direction: row;
 }
 
 .cours__infos .cours__desc {
