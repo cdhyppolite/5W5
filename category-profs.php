@@ -11,11 +11,13 @@
             <?php $nomProf = get_the_title(); ?>
 
             <article class="prof">
-                <div class="prof__img">
-                    <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt="">
-                </div>
+                <a href="<?= get_permalink(); ?>">
+                    <div class="prof__img">
+                        <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt="">
+                    </div>
+                </a>
                 <div class="prof__texte">
-                    <h3 class="prof__titre"> <a href="<?= get_permalink(); ?>"> <?= $nomProf; ?> </a> </h3>
+                    <h3 class="prof__titre"><?= $nomProf; ?></h3>
                 </div>
             </article>
 

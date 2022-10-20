@@ -27,6 +27,7 @@ add_action('after_setup_theme', 'cidw_5w5_register_nav_menu', 0);
         'height' => 100,
         'width' => 100,
     ));
+    // add_theme_support('block-templates');
  }
 add_action( 'after_setup_theme', 'cidw_4w4_add_theme_support' );
 
@@ -35,7 +36,7 @@ function cidw_5w5_pre_get_posts(WP_Query $query)
 {
     if (is_admin()
     || !$query ->is_main_query()
-    || !$query ->is_category(array('cours','web','jeu','design','utilitaire','creation-3d','video'))   )
+    || !$query ->is_category(array('cours','web','jeu','design','utilitaire','creation-3d','video','profs'))   )
     {
         return $query;
     }        

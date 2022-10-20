@@ -13,6 +13,7 @@
 .prof {
     border: 3px solid red;
     width: clamp(250px, 30%, 350px);
+    margin: 10px;
     &__titre {
         border-bottom: 2px solid red;
     }
@@ -26,6 +27,18 @@
         img {
             width: 100%;
             height: 100%;
+        }
+    }
+}
+
+.unProf {
+    &__img {
+        overflow: hidden;
+        height: 300px;
+        // width: auto;
+        img {
+            // width: 100%;
+            // height: 100%;
         }
     }
 }

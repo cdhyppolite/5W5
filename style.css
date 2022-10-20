@@ -617,6 +617,7 @@ input:checked ~ .cours__infos {
 .prof {
   border: 3px solid red;
   width: clamp(250px, 30%, 350px);
+  margin: 10px;
 }
 
 .prof__titre {
@@ -634,6 +635,11 @@ input:checked ~ .cours__infos {
 .prof__img img {
   width: 100%;
   height: 100%;
+}
+
+.unProf__img {
+  overflow: hidden;
+  height: 300px;
 }
 
 /* -------------------------------------
