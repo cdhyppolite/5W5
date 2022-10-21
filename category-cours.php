@@ -6,6 +6,7 @@
         <h2 class="listeCours__titre">Liste de cours - Techniques d'intégration multimédia</h2>
         <div class="listeCours__liste">
 
+        <!-- Menu des cours pour les sessions -->
         <nav class="triSession">
             <a href="?" class="<?php if (!isset($_GET["session"])) echo "active" ?>">Tout</a>
             <!-- Boucle -->
@@ -44,8 +45,7 @@
                                 <p class="cours__desc"> <?= $descCours; ?></p>
                                 <p class="cours__logiciel">Logiciel(s) utilisé(s): </p>
                             </div>
-                                
-                            <?php /*the_post_thumbnail('thumbnail'); */?>
+                            
                         </article>
 
                     <?php endif ?>

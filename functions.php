@@ -21,7 +21,7 @@ function cidw_5w5_register_nav_menu()
 }
 add_action('after_setup_theme', 'cidw_5w5_register_nav_menu', 0);
 /****************** - Add Thème support -***************** */
- function cidw_4w4_add_theme_support() {
+ function cidw_5w5_add_theme_support() {
     add_theme_support('post-thumbnails');
     add_theme_support('custom-logo', array(
         'height' => 100,
@@ -29,7 +29,7 @@ add_action('after_setup_theme', 'cidw_5w5_register_nav_menu', 0);
     ));
     // add_theme_support('block-templates');
  }
-add_action( 'after_setup_theme', 'cidw_4w4_add_theme_support' );
+add_action( 'after_setup_theme', 'cidw_5w5_add_theme_support' );
 
 // Afficher les cours en ordre de session.
 function cidw_5w5_pre_get_posts(WP_Query $query)
