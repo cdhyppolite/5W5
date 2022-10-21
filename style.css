@@ -404,6 +404,15 @@ LAYOUT
   grid-template-areas: "header header" "barre main" "footer footer";
 }
 
+.site__main {
+  grid-area: main;
+  background-color: #bdbdbd;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  min-height: 73vh;
+}
+
 .site__header {
   grid-area: header;
   background-color: crimson;
@@ -421,20 +430,10 @@ LAYOUT
   margin-left: 10%;
 }
 
-.site__barre nav a,
-.site__copyright nav a {
+.site__barre nav a {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.15em;
-}
-
-.site__main {
-  grid-area: main;
-  background-color: #bdbdbd;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 20px;
-  min-height: 73vh;
 }
 
 .site__footer {
@@ -442,8 +441,42 @@ LAYOUT
   background-color: #161616;
 }
 
-.home {
-  background-color: white;
+.site__copyright {
+  border-top: 3px double #3b3b3b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.site__copyright nav,
+.site__copyright h2 {
+  margin: 0 auto;
+}
+
+.site__copyright nav a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.15em;
+}
+
+.site__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.site__info section:first-child {
+  margin-left: 2%;
+}
+
+.site__info section:last-child {
+  margin-right: 2%;
+}
+
+.site__info__liens {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .header__titre {
@@ -460,43 +493,8 @@ LAYOUT
   width: 95%;
 }
 
-.site__info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.site__info__adresse,
-.site__info__liens,
-.site__info__nouvelles,
-.site__copyright {
-  color: whitesmoke;
-}
-
-.site__info__liens {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.site__info section:first-child {
-  margin-left: 2%;
-}
-
-.site__info section:last-child {
-  margin-right: 2%;
-}
-
-.site__copyright {
-  border-top: 3px double #3b3b3b;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.site__copyright nav,
-.site__copyright h2 {
-  margin: 0 auto;
+.home {
+  background-color: white;
 }
 
 /* -------------------------------------
