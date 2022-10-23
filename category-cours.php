@@ -8,7 +8,7 @@
 
         <!-- Menu des cours pour les sessions -->
         <nav class="triSession">
-            <a href="?" class="<?php if (!isset($_GET["session"])) echo "active" ?>">Tout</a>
+            <a href="?" class="<?php if (!isset($_GET["session"])) echo "active" ?>">Tous</a>
             <!-- Boucle -->
             <?php for ($nbSessions = 1; $nbSessions <= 6; $nbSessions++) : ?>
                 <a href="?session=<?= $nbSessions; ?>" class="<?= (isset($_GET["session"]) && ($_GET["session"]==$nbSessions)) ? "active" :""; ?>">Session <?= $nbSessions; ?></a>

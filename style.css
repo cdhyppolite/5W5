@@ -508,12 +508,14 @@ ELEMENTS
 }
 
 .triSession a {
-  background-color: aqua;
+  background-color: darkblue;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  color: #fff;
   padding: 10px;
 }
 
 .triSession a:hover {
-  background-color: gold;
+  background: linear-gradient(to top, #f969a2 0, #ff0a64 20%, #ff0a64 49%, #f969a2 50%, #ff0a64);
 }
 
 .triSession .active {
@@ -643,57 +645,6 @@ input:checked ~ .cours__infos {
 /* -------------------------------------
 COMPOSANTS
 ----------------------------------------*/
-.carte__main {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  padding: 10px;
-  overflow: hidden;
-}
-
-.main__titre {
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.5rem;
-  color: #444;
-  /*************/
-  width: 100%;
-  display: block;
-}
-
-.carte p {
-  font-size: .8rem;
-  text-align: justify;
-}
-
-.carte__titre {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.35rem;
-  color: #444;
-}
-
-.carte__contenu {
-  text-align: justify;
-}
-
-.carte__code {
-  font-size: 1rem;
-  color: #05204d;
-  font-weight: bold;
-}
-
-.carte__duree {
-  font-weight: bold;
-  font-size: 1.2em;
-  color: crimson;
-}
-
-.carte__duree,
-.carte__code,
-.carte__contenu {
-  margin-top: -7px;
-}
-
 /**Menu.scss */
 .menu-principal-container ul {
   list-style: none;

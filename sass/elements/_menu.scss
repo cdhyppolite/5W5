@@ -21,11 +21,13 @@
     margin: 0 auto;
     // background-color: blue;
     a {
-        background-color: aqua;
+        background-color: darkblue;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+        color: #fff;
         // margin: 0;
         padding: 10px;
         &:hover {
-            background-color: gold;
+            background: linear-gradient(to top, #f969a2 0, #ff0a64 20%, #ff0a64 49%, #f969a2 50%, #ff0a64);
         }
     }
     .active {

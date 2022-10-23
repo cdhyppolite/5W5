@@ -6,6 +6,6 @@
 - [Zachary Arsenault](https://github.com/TheFrenchBuck)
 ### [Lien du site Siteground](https://timm178.sg-host.com/)
 ### [Lien du Google Sheets](https://docs.google.com/spreadsheets/d/1tfcWJ_KfRK7A1qLzvmbN3c6tjl_g7qarUelLplwTTVQ/edit#gid=0)
-# Changements: Footer.php
+# Changements: petits changements à plusieurs endroits
 
 ![Image](./screenshot.png "Image du Thème (À modifier)") 
