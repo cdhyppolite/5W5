@@ -1,13 +1,32 @@
 .menu {
+    a {
+        width: 100%;
+    }
+    margin: 0;
+    margin: 0;
     &-principal {
         &-container {
             a {
-                // color: hotpink;
-                &:hover {
-                    // color: aqua;
-                }
+                color: $couleur_texte1;
+                padding: 4px;
                 &:active {
                     // color: gray;
+                }
+                &:visited {
+                    color: $couleur_texte1;
+                }
+            }
+            li {
+                width: 100%;
+                background-color: $couleur_fond2;
+                // clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+                &:after {
+                    // clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+                }
+                &:hover {
+                    a {
+                        color: $couleur_texte2;
+                    }
                 }
             }
         }

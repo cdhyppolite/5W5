@@ -5,7 +5,7 @@
     grid-template-areas: "header header" "barre main" "footer footer";
     &__main {
         grid-area: main;
-        background-color: $color__background-main;
+        background-color: $couleur_fond;
         display: flex;
         // background-color: #eee;
         // border: 3px solid #bdbdbd;
@@ -16,12 +16,12 @@
     }
     &__header {
         grid-area: header;
-        background-color: $color__background-header;
+        background-color: $couleur_fond;
         margin-top: -30px;
     }
     &__barre {
         grid-area: barre;
-        background-color: $color__background-barre;
+        background-color: $couleur_fond;
         // border: 3px solid #bdbdbd;
         // border-radius: 25px;
         nav {

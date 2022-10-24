@@ -30,7 +30,7 @@
                         <?php /** style="background-image: url('<?= get_the_post_thumbnail_url(); ?>');" */ ?>
                         <article class="cours">
                         <input type="checkbox" id="cours-btn_<?= $count; ?>">
-                            <h3 class="cours__titre"> <a href="<?= get_permalink(); ?>"> <?= $titreFiltreCours /*. " - ". $count*/; ?> </a></h3>
+                            <h3 class="cours__titre" title="Voir la description complète"> <a href="<?= get_permalink(); ?>"> <?= $titreFiltreCours /*. " - ". $count*/; ?> </a></h3>
 
                             <label for="cours-btn_<?= $count; ?>">
                                 <div class="cours__btn" title="En savoir plus"></div>

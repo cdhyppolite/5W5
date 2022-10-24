@@ -11,7 +11,7 @@
     .cours {
         overflow: hidden;
         margin: 0 auto;
-        border-bottom: 3px solid red;
+        border-bottom: 1px dotted white;
         &:nth-child(1) {
             border-bottom: 3px solid hotpink !important;
         }
@@ -20,17 +20,17 @@
         }
         position: relative;
         &__btn {
-            // border: 1px solid red;
             // border-radius: 50%;
             position: absolute;
             right: 20px;
             top: 20px;
-            background-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-down-bold);
+            -webkit-mask-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-down-bold);
             background-repeat: no-repeat;
             background-position: center;
-            transform: scale(2.5);
-            width: 12px;
-            height: 10px;
+            background-color: white;
+            transform: scale(1.5);
+            width: 13px;
+            height: 12px;
             transition: .4s cubic-bezier(.5, 0, .5, 1.7);
             &:hover {
                 cursor: pointer;
@@ -68,7 +68,7 @@
             display: none;
             ~label>.cours__btn {
                 // background-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-up-bold);
-                transform: rotate(-180deg) scale(2.5);
+                transform: rotate(-180deg) scale(1.5);
             }
             ~.cours {
                 &__infos {
