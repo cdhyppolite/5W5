@@ -338,7 +338,8 @@ VARIABLES
 ----------------------------------------*/
 p,
 h1,
-h2 {
+h2,
+h3 {
   color: white;
 }
 
@@ -507,6 +508,7 @@ LAYOUT
 ELEMENTS
 ----------------------------------------*/
 .menu {
+  list-style: none;
   margin: 0;
   margin: 0;
 }
@@ -533,6 +535,10 @@ ELEMENTS
   color: #56CBFE;
 }
 
+.menu-principal-container .current-menu-item a {
+  color: #56CBFE !important;
+}
+
 .triSession {
   display: flex;
   justify-content: space-around;
@@ -541,9 +547,10 @@ ELEMENTS
 }
 
 .triSession a {
-  background-color: darkblue;
+  background-color: #B44DBB;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-  color: #fff;
+  color: white;
+  font-weight: 900;
   padding: 10px;
 }
 
@@ -552,7 +559,7 @@ ELEMENTS
 }
 
 .triSession .active {
-  border-bottom: 3px solid red;
+  color: #56CBFE;
 }
 
 .listeCours {
@@ -567,8 +574,8 @@ ELEMENTS
   position: relative;
 }
 
-.cours:nth-child(1) {
-  border-bottom: 3px solid hotpink !important;
+.cours a:visited {
+  color: white;
 }
 
 .cours:last-child {
@@ -591,6 +598,7 @@ ELEMENTS
 
 .cours__btn:hover {
   cursor: pointer;
+  background-color: #56CBFE;
 }
 
 .cours__infos {
@@ -618,6 +626,14 @@ ELEMENTS
 
 .cours__desc {
   width: 50%;
+}
+
+.cours__titre a {
+  color: white;
+}
+
+.cours__titre a:hover {
+  color: #56CBFE !important;
 }
 
 input {
@@ -679,8 +695,4 @@ input:checked ~ .cours__infos {
 /* -------------------------------------
 COMPOSANTS
 ----------------------------------------*/
-/**Menu.scss */
-.menu-principal-container ul {
-  list-style: none;
-}
 /*# sourceMappingURL=style.css.map */

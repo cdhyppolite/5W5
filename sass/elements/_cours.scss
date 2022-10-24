@@ -9,12 +9,12 @@
     }
     
     .cours {
+        a:visited {
+            color: $couleur_texte1;
+        }
         overflow: hidden;
         margin: 0 auto;
         border-bottom: 1px dotted white;
-        &:nth-child(1) {
-            border-bottom: 3px solid hotpink !important;
-        }
         &:last-child {
             border-bottom: none;
         }
@@ -27,13 +27,14 @@
             -webkit-mask-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-down-bold);
             background-repeat: no-repeat;
             background-position: center;
-            background-color: white;
+            background-color: $couleur_texte1;
             transform: scale(1.5);
             width: 13px;
             height: 12px;
             transition: .4s cubic-bezier(.5, 0, .5, 1.7);
             &:hover {
                 cursor: pointer;
+                background-color: $couleur_texte2;
             }
         }
         &__infos {
@@ -59,6 +60,14 @@
         }
         &__desc {
             width: 50%;
+        }
+        &__titre {
+            a {
+                color: $couleur_texte1;
+                &:hover {
+                    color: $couleur_texte2 !important;
+                }
+            }
         }
     }
     
