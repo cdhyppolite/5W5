@@ -12,7 +12,7 @@
         flex-wrap: wrap;
         row-gap: 20px;
         // border-radius: 25px;
-        min-height: 73vh;
+        min-height: 80vh;
     }
     &__header {
         grid-area: header;
@@ -27,7 +27,7 @@
         nav {
             display: flex;
             flex-direction: column;
-            margin-left: 10%;
+            margin: 0 auto;
             a {
                 text-decoration: none;
                 font-weight: bold;
