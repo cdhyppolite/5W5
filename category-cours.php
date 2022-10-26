@@ -8,6 +8,14 @@
 
         <!-- Menu des cours pour les sessions -->
         <nav class="triSession">
+            <?php
+            //Empecher l'utilisateur d'écrire n'importe quoi la la variable session
+                if (isset($_GET["session"])) {
+                    if (($_GET["session"]<1) || ($_GET["session"]> 6)) {
+                        unset($_GET["session"]); // Détruire la vartiable
+                    }
+                }
+            ?>
             <a href="?" class="<?php if (!isset($_GET["session"])) echo "active" ?>">Tous</a>
             <!-- Boucle -->
             <?php for ($nbSessions = 1; $nbSessions <= 6; $nbSessions++) : ?>
