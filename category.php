@@ -8,7 +8,7 @@
         <div class="listeProfs__liste">
 
             <?php if (have_posts()):
-                    while (have_posts()): the_post(); $count++?>
+                    while (have_posts()): the_post();?>
             <?php $nomProf = get_the_title(); ?>
 
             <article class="prof">

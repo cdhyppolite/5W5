@@ -11,6 +11,7 @@
             a {
                 color: $couleur_texte1;
                 padding: 4px;
+                transition-duration: .4s;
                 &:active {
                     // color: gray;
                 }
