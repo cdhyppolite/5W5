@@ -7,7 +7,7 @@ Description: Thème fait dans le cours 5W5
 Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
-Text Domain: cidw-4w4
+Text Domain: cidw-5w5
 */
 /* -------------------------------------
 INITIALISATION
@@ -338,9 +338,12 @@ VARIABLES
 ----------------------------------------*/
 p,
 h1,
-h2,
 h3 {
   color: white;
+}
+
+h2 {
+  color: #FFA4DC;
 }
 
 h1,
@@ -353,9 +356,6 @@ h1,
   margin-left: 5%;
 }
 
-/*.entete_principal {
-    // font-family: 'Neonderthaw', cursive;
-}*/
 @font-face {
   font-family: 'Neon Sans';
   src: url("fonts/NeonSans.woff2") format("woff2"), url("fonts/NeonSans.woff") format("woff");
@@ -509,6 +509,7 @@ ELEMENTS
 ----------------------------------------*/
 .menu {
   list-style: none;
+  font-family: lobster;
   margin: 0;
   margin: 0;
 }
@@ -533,6 +534,7 @@ ELEMENTS
 
 .menu-principal-container li:hover a {
   color: #56CBFE;
+  text-shadow: 0 0 0.3em #f9f5f5, 0 0 0.3em white;
 }
 
 .menu-principal-container .current-menu-item a {
@@ -662,6 +664,13 @@ input:checked ~ .cours__infos {
   flex-wrap: wrap;
   justify-content: center;
   justify-content: space-around;
+}
+
+.listeProfs__titre {
+  border: 3px solid #FFA4DC;
+  text-align: center;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+  max-width: 50%;
 }
 
 .prof {

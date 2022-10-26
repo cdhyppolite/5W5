@@ -1,9 +1,10 @@
 <?php get_header();
-        $count =0; 
-        $imageBlank = get_bloginfo('template_directory')."/images/blank.jpg"; ?>
+    $imageBlank = get_bloginfo('template_directory')."/images/blank.jpg";
+    $nomCategorie = get_queried_object() -> name;
+?>
 <main class="site__main">
     <section class="listeProfs">
-        <h2 class="listeProfs__titre">Liste des enseignants</h2>
+        <h2 class="listeProfs__titre">Liste <?= $nomCategorie; ?></h2>
         <div class="listeProfs__liste">
 
             <?php if (have_posts()):
