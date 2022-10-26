@@ -533,7 +533,6 @@ ELEMENTS
 }
 
 .menu-principal-container li:hover a {
-  color: #56CBFE;
   text-shadow: 0 0 0.3em #f9f5f5, 0 0 0.3em white;
 }
 
@@ -636,6 +635,7 @@ ELEMENTS
 
 .cours__titre a:hover {
   color: #56CBFE !important;
+  cursor: pointer;
 }
 
 input {

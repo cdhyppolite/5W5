@@ -66,6 +66,7 @@
                 color: $couleur_texte1;
                 &:hover {
                     color: $couleur_texte2 !important;
+                    cursor: pointer;
                 }
             }
         }
