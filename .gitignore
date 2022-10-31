@@ -1,0 +1,6 @@
+# misc
+.DS_Store
+
+# Fichers à ignorer
+style.css.map
+z-gitignore/*

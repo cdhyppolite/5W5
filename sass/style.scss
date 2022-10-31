@@ -1,0 +1,50 @@
+/*
+Theme name: 5W5 - Équipe 4
+Author: Équipe 4
+Author URI: https://github.com/cdhyppolite/5W5
+Description: Thème fait dans le cours 5W5
+Version: 1.0
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+Text Domain: cidw-5w5
+*/
+
+
+/* -------------------------------------
+INITIALISATION
+----------------------------------------*/
+
+@import "init/normalize";
+@import "init/largeurboite";
+
+/* -------------------------------------
+VARIABLES
+----------------------------------------*/
+
+@import "variables/couleurs";
+@import "variables/fonts";
+@import "variables/structure";
+@import "variables/links";
+
+/* -------------------------------------
+LAYOUT
+----------------------------------------*/
+
+@import "layout/layout";
+
+/* -------------------------------------
+ELEMENTS
+----------------------------------------*/
+
+@import "elements/menu";
+@import "elements/cours";
+@import "elements/profs";
+@import "elements/accueil";
+
+/* -------------------------------------
+COMPOSANTS
+----------------------------------------*/
+
+@import "composantes/entete";
+@import "composantes/footer";
+@import "composantes/navigation";
