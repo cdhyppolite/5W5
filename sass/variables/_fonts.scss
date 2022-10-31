@@ -1,17 +1,36 @@
-h1 {
-    font-family: 'Neonblitz', Verdana, Geneva, Tahoma, sans-serif;
+$font1:'Neonblitz',
+Verdana,
+Geneva,
+Tahoma,
+sans-serif;
+$font2: 'Brevia',
+sans-serif;
+$fontsMenu: lobster;
+// 
+p,
+h1,
+h3 {
+    color: $couleur_texte1
 }
 
 h2 {
-    font-family: 'Las Enter', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: $font2;
+    color: $couleur_texte3;
 }
 
-
-/*.entete_principal {
-    // font-family: 'Neonderthaw', cursive;
-}*/
+h1 {
+    font-family: $font1;
+}
 
 // Polices customs (https://transfonter.org/)
+@font-face {
+    font-family: 'Brevia';
+    src: url('fonts/Brevia-Black2') format('woff2'), url('fonts/Brevia-Black') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 @font-face {
     font-family: 'Neon Sans';
     src: url('fonts/NeonSans.woff2') format('woff2'), url('fonts/NeonSans.woff') format('woff');

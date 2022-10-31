@@ -6,24 +6,45 @@ Description: Thème fait dans le cours 5W5
 Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
-Text Domain: cidw-4w4
+Text Domain: cidw-5w5
 */
 
-.test {
-    text-align: center;
-}
 
-
-/* ---------- Initialisation ----------*/
+/* -------------------------------------
+INITIALISATION
+----------------------------------------*/
 
 @import "init/normalize";
+@import "init/largeurboite";
 
-/* ---------- VARIABLES ----------*/
+/* -------------------------------------
+VARIABLES
+----------------------------------------*/
 
 @import "variables/couleurs";
 @import "variables/fonts";
-// @import "variables/structure";
+@import "variables/structure";
+@import "variables/links";
 
-/* ---------- COMPOSANTES ----------*/
+/* -------------------------------------
+LAYOUT
+----------------------------------------*/
 
-@import "composantes/header";
+@import "layout/layout";
+
+/* -------------------------------------
+ELEMENTS
+----------------------------------------*/
+
+@import "elements/menu";
+@import "elements/cours";
+@import "elements/profs";
+@import "elements/accueil";
+
+/* -------------------------------------
+COMPOSANTS
+----------------------------------------*/
+
+@import "composantes/entete";
+@import "composantes/footer";
+@import "composantes/navigation";

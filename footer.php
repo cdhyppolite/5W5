@@ -1,10 +1,13 @@
-<footer class="footer">
-    <div class="centre">
-        <section class="footer_lien">Lien</section>
-        <section class="footer_adresse">Adresse</section>
-        <section class="footer_article">Article</section>
-        <section>Test</section>
-        <section class="footer__copyright"><i>&copy; <?php echo date("Y"); ?> - TIM Maisonneuve - Tous droits réservés</i></section>
+<footer class="site__footer">
+    <div class="site__info">
+        <section class="site__info__adresse">
+            <p>3800 Rue Sherbrooke E, Montréal, QC</p>
+            <p>H1X 2A2</p>
+            <p>(514) 254-7131</p>
+        </section>
+    </div>
+    <div class="site__copyright">
+        <h2>&copy; <?php echo date("Y"); ?> - TIM Maisonneuve - Tous droits réservés</h2>
     </div>
 </footer>
-<?php wp_footer(); ?>
+<script src="<?php echo (get_bloginfo('template_directory')."/js/menu.js"); ?>"></script>

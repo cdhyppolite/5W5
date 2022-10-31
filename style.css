@@ -7,13 +7,11 @@ Description: Thème fait dans le cours 5W5
 Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
-Text Domain: cidw-4w4
+Text Domain: cidw-5w5
 */
-.test {
-  text-align: center;
-}
-
-/* ---------- Initialisation ----------*/
+/* -------------------------------------
+INITIALISATION
+----------------------------------------*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
 	 ========================================================================== */
@@ -323,22 +321,44 @@ template {
   display: none;
 }
 
-/* ---------- VARIABLES ----------*/
-body {
-  background-color: #b4b4b4;
+/* Inherit box-sizing to more easily change it's value on a component level.
+@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-h1 {
-  font-family: 'Neonblitz', Verdana, Geneva, Tahoma, sans-serif;
+html {
+  box-sizing: border-box;
+}
+
+/* -------------------------------------
+VARIABLES
+----------------------------------------*/
+p,
+h1,
+h3 {
+  color: white;
 }
 
 h2 {
-  font-family: 'Las Enter', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Brevia", sans-serif;
+  color: #FFA4DC;
 }
 
-/*.entete_principal {
-    // font-family: 'Neonderthaw', cursive;
-}*/
+h1 {
+  font-family: "Neonblitz", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@font-face {
+  font-family: 'Brevia';
+  src: url("fonts/Brevia-Black2") format("woff2"), url("fonts/Brevia-Black") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Neon Sans';
   src: url("fonts/NeonSans.woff2") format("woff2"), url("fonts/NeonSans.woff") format("woff");
@@ -363,8 +383,393 @@ h2 {
   font-display: swap;
 }
 
-/* ---------- COMPOSANTES ----------*/
-.entete a {
+a {
   text-decoration: none;
+  color: #4169e1;
+}
+
+a:visited {
+  color: #800080;
+}
+
+a:hover, a:focus, a:active {
+  color: #191970;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover, a:active {
+  outline: 0;
+}
+
+/* -------------------------------------
+LAYOUT
+----------------------------------------*/
+.site {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: 250px auto;
+  grid-template-areas: "header header" "barre main" "footer footer";
+}
+
+.site__main {
+  grid-area: main;
+  background-color: #000834;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  min-height: 80vh;
+}
+
+.site__barre {
+  grid-area: barre;
+  background-color: #000834;
+}
+
+.site__footer {
+  grid-area: footer;
+  background-color: #161616;
+}
+
+.site__copyright {
+  border-top: 3px double #3b3b3b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.site__copyright nav,
+.site__copyright h2 {
+  margin: 0 auto;
+}
+
+.site__copyright nav a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.15em;
+}
+
+.site__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.site__info section:first-child {
+  margin-left: 2%;
+}
+
+.site__info section:last-child {
+  margin-right: 2%;
+}
+
+.site__info__liens {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.header__titre {
+  color: #1976D2;
+  margin-bottom: -10px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  margin-left: 5%;
+  font-size: 2rem;
+  font-style: oblique;
+}
+
+.header__description {
+  display: inline-block;
+  width: 95%;
+}
+
+.home {
+  background-color: white;
+}
+
+/* -------------------------------------
+ELEMENTS
+----------------------------------------*/
+.menu {
+  list-style: none;
+  font-family: lobster;
+}
+
+.menu-principal-container a {
+  margin-left: 20px;
+  color: white;
+  padding: 4px;
+  text-shadow: 0px 2px 0px grey;
+  transition-duration: .4s;
+}
+
+.menu-principal-container a:visited {
+  color: white;
+}
+
+.menu-principal-container li {
+  margin-bottom: 10px;
+}
+
+.menu-principal-container li:hover a {
+  text-shadow: 0 0 0.3em #f9f5f5, 0 0 0.3em white;
+}
+
+.menu-principal-container .current-menu-item a {
+  color: #56CBFE !important;
+}
+
+.triSession {
+  display: flex;
+  justify-content: space-around;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.triSession a {
+  background-color: #8a2be2;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: lobster;
+  font-weight: 900;
+  padding: 10px;
+}
+
+.triSession a:hover {
+  background: linear-gradient(to top, #f969a2 0, #ff0a64 20%, #ff0a64 49%, #f969a2 50%, #ff0a64);
+}
+
+.triSession .active {
+  color: #56CBFE;
+}
+
+.colone {
+  clip-path: polygon(13% 0, 87% 0, 100% 100%, 0 100%);
+  background-color: #8a2be2;
+  height: 10px;
+  z-index: 1;
+  box-shadow: 10px 10px 10px #8a2be2;
+}
+
+.listeCours {
+  width: clamp(300px, 100%, 750px);
+  margin: 0 auto;
+}
+
+.listeCours__titre {
+  text-align: center;
+}
+
+.cours {
+  overflow: hidden;
+  margin: 0 auto;
+  border-bottom: 1px dotted white;
+  position: relative;
+}
+
+.cours a:visited {
+  color: white;
+}
+
+.cours:last-child {
+  border-bottom: none;
+}
+
+.cours__btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  -webkit-mask-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-down-bold);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  transform: scale(1.5);
+  width: 13px;
+  height: 12px;
+  transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.7);
+}
+
+.cours__btn:hover {
+  cursor: pointer;
+  background-color: #56CBFE;
+}
+
+.cours__infos {
+  height: 0;
+  transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.7);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.cours__infos .cours__desc {
+  text-align: justify;
+}
+
+.cours__img {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.cours__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.cours__desc {
+  width: 50%;
+}
+
+.cours__titre a {
+  font-family: "Brevia", sans-serif;
+  color: white;
+}
+
+.cours__titre a:hover {
+  color: #56CBFE !important;
+  cursor: pointer;
+}
+
+input {
+  display: none;
+}
+
+input:checked {
+  display: none;
+}
+
+input:checked ~ label > .cours__btn {
+  transform: rotate(-180deg) scale(1.5);
+}
+
+input:checked ~ .cours__infos {
+  height: 127px;
+}
+
+.listeProfs {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.listeProfs__liste {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.listeProfs__titre {
+  border: 3px solid #FFA4DC;
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto;
+  max-height: 3.5vh;
+}
+
+.prof {
+  transition-duration: .4s;
+  border: 3px solid #8a2be2;
+  width: clamp(250px, 30%, 350px);
+  margin: 10px;
+}
+
+.prof__titre {
+  border-bottom: 2px solid #8a2be2;
+  font-family: "Brevia", sans-serif;
+}
+
+.prof__texte {
+  padding: 10px;
+}
+
+.prof__img {
+  overflow: hidden;
+}
+
+.prof__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.prof:hover {
+  box-shadow: 5px 10px #56CBFE;
+  transform: scale(1.05);
+}
+
+.unProf {
+  display: grid;
+  grid-template-areas: "pTitre pTitre" "pImg pInfos" "pAutres pAutres";
+}
+
+.unProf__titre {
+  grid-area: pTitre;
+  height: 30px;
+}
+
+.unProf__img {
+  grid-area: pImg;
+  overflow: hidden;
+  height: 400px;
+  width: 267px;
+  border: 1px solid red;
+}
+
+.unProf__img img {
+  height: 100%;
+}
+
+.unProf__desc {
+  grid-area: pInfos;
+}
+
+.unProf__anecdote {
+  grid-area: pAutres;
+}
+
+iframe {
+  border: 5px solid #FFA4DC;
+  margin: 0 auto;
+}
+
+.home .site__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------------------------
+COMPOSANTS
+----------------------------------------*/
+.site__header {
+  grid-area: header;
+  background-color: #000834;
+}
+
+.site__header__titre {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  align-items: center;
+}
+
+.site__header__titre h1,
+.site__header__titre h2 {
+  color: #56CBFE;
+  text-shadow: 0 0 0.3em #f9f5f5, 0 0 0.3em white;
+}
+
+.site__header__titre:visited {
+  color: #56CBFE;
+}
+
+.header__secondaire {
+  margin-top: -25px;
+  font-family: 'Neonblitz', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 9px;
 }
 /*# sourceMappingURL=style.css.map */
