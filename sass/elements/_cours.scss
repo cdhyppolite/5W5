@@ -90,3 +90,11 @@
             }
         }
     }
+    
+    .site__main__cours {
+        background-color: $couleur_fond;
+        height: 100vh;
+        p {
+            font-family: $font2;
+        }
+    }
