@@ -1,6 +1,6 @@
 .site {
     display: grid;
-    // gap: 1px;
+    gap: 1px;
     grid-template-columns: ($size__site-sidebar) auto;
     grid-template-areas: "header header" "barre main" "footer footer";
     &__main {
