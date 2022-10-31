@@ -19,9 +19,9 @@
 
 <body <?php body_class("site"); ?>>
 <header class="site__header">
-        <a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home">
+        <a class="site__header__titre" href="<?= esc_url( home_url( '/' ) ); ?>" rel="home">
             <h1 class="header__principal"><?= get_bloginfo('name'); ?></h1>
-            <!-- <h2 class="header__secondaire"> <?php echo (get_bloginfo('description', 'display')); ?> </h2> -->
+            <h6 class="header__secondaire"> <?php echo (get_bloginfo('description', 'display')); ?> </h6>
         </a>
     </header>
     

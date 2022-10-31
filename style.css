@@ -346,14 +346,8 @@ h2 {
   color: #FFA4DC;
 }
 
-h1,
-.header__principal {
+h1 {
   font-family: 'Neonblitz', Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.header__principal,
-.header__secondaire {
-  margin-left: 5%;
 }
 
 @font-face {
@@ -406,6 +400,7 @@ LAYOUT
 ----------------------------------------*/
 .site {
   display: grid;
+  gap: 1px;
   grid-template-columns: 250px auto;
   grid-template-areas: "header header" "barre main" "footer footer";
 }
@@ -417,12 +412,6 @@ LAYOUT
   flex-wrap: wrap;
   row-gap: 20px;
   min-height: 80vh;
-}
-
-.site__header {
-  grid-area: header;
-  background-color: #000834;
-  margin-top: -30px;
 }
 
 .site__barre {
@@ -503,6 +492,7 @@ ELEMENTS
   margin-left: 20px;
   color: white;
   padding: 4px;
+  text-shadow: 0px 2px 0px grey;
   transition-duration: .4s;
 }
 
@@ -669,13 +659,14 @@ input:checked ~ .cours__infos {
 }
 
 .prof {
-  border: 3px solid red;
+  transition-duration: .4s;
+  border: 3px solid #8a2be2;
   width: clamp(250px, 30%, 350px);
   margin: 10px;
 }
 
 .prof__titre {
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #8a2be2;
 }
 
 .prof__texte {
@@ -691,6 +682,11 @@ input:checked ~ .cours__infos {
   height: 100%;
 }
 
+.prof:hover {
+  box-shadow: 5px 10px #56CBFE;
+  transform: scale(1.05);
+}
+
 .unProf__img {
   overflow: hidden;
   height: 300px;
@@ -698,9 +694,45 @@ input:checked ~ .cours__infos {
 
 iframe {
   border: 5px solid #FFA4DC;
+  margin: 0 auto;
+}
+
+.home .site__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* -------------------------------------
 COMPOSANTS
 ----------------------------------------*/
+.site__header {
+  grid-area: header;
+  background-color: #000834;
+}
+
+.site__header__titre {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  align-items: center;
+}
+
+.site__header__titre h1,
+.site__header__titre h2 {
+  color: #56CBFE;
+  text-shadow: 0 0 0.3em #f9f5f5, 0 0 0.3em white;
+}
+
+.site__header__titre:visited {
+  color: #56CBFE;
+}
+
+.header__secondaire {
+  margin-top: -25px;
+  font-family: 'Neonblitz', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 9px;
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,6 @@
 .site {
     display: grid;
-    // gap: 1px;
+    gap: 1px;
     grid-template-columns: ($size__site-sidebar) auto;
     grid-template-areas: "header header" "barre main" "footer footer";
     &__main {
@@ -13,11 +13,6 @@
         row-gap: 20px;
         // border-radius: 25px;
         min-height: 80vh;
-    }
-    &__header {
-        grid-area: header;
-        background-color: $couleur_fond;
-        margin-top: -30px;
     }
     &__barre {
         grid-area: barre;
