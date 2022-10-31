@@ -1,6 +1,7 @@
 .site__header {
     grid-area: header;
     background-color: $couleur_fond;
+    margin-top: -40px;
     &__titre {
         // margin-left: 5%;
         margin-left: 50px;

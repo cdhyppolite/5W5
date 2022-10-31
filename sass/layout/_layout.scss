@@ -1,6 +1,6 @@
 .site {
     display: grid;
-    gap: 1px;
+    // gap: 1px;
     grid-template-columns: ($size__site-sidebar) auto;
     grid-template-areas: "header header" "barre main" "footer footer";
     &__main {
@@ -32,7 +32,8 @@
     }
     &__footer {
         grid-area: footer;
-        background-color: $color__background-footer;
+        // background-color: $color__background-footer;
+        background-image: linear-gradient($couleur_fond, $color__background-footer);
         // border: 3px solid #bdbdbd;
         // border-radius: 25px;
     }
@@ -89,4 +90,5 @@
 .home {
     // background-color: whitesmoke;
     background-color: $color__background-body;
+    // background-color: $couleur_fond;
 }
