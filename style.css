@@ -183,9 +183,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -193,9 +193,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -204,9 +204,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -250,8 +250,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -259,8 +259,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -268,7 +268,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
@@ -276,7 +276,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -347,50 +347,43 @@ h2 {
 }
 
 h1 {
-  font-family: 'Neonblitz', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Neonblitz", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @font-face {
-  font-family: 'Neon Sans';
+  font-family: "Neon Sans";
   src: url("fonts/NeonSans.woff2") format("woff2"), url("fonts/NeonSans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Las Enter';
+  font-family: "Las Enter";
   src: url("fonts/LasEnterPersonalUseOnly.woff2") format("woff2"), url("fonts/LasEnterPersonalUseOnly.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Neonblitz';
+  font-family: "Neonblitz";
   src: url("fonts/Neonblitz.woff2") format("woff2"), url("fonts/Neonblitz.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 a {
   text-decoration: none;
   color: #4169e1;
 }
-
 a:visited {
   color: #800080;
 }
-
 a:hover, a:focus, a:active {
   color: #191970;
 }
-
 a:focus {
   outline: thin dotted;
 }
-
 a:hover, a:active {
   outline: 0;
 }
@@ -401,10 +394,15 @@ LAYOUT
 .site {
   display: grid;
   gap: 1px;
-  grid-template-columns: 250px auto;
-  grid-template-areas: "header header" "barre main" "footer footer";
+  grid-template-columns: auto;
+  grid-template-areas: "header" "barre" "main" "footer";
 }
-
+@media screen and (min-width: 700px) {
+  .site {
+    grid-template-columns: 250px auto;
+    grid-template-areas: "header header" "barre main" "footer footer";
+  }
+}
 .site__main {
   grid-area: main;
   background-color: #000834;
@@ -413,49 +411,47 @@ LAYOUT
   row-gap: 20px;
   min-height: 80vh;
 }
-
 .site__barre {
   grid-area: barre;
   background-color: #000834;
+  position: absolute;
+  width: 100vw;
 }
-
+@media screen and (min-width: 700px) {
+  .site__barre {
+    position: static;
+  }
+}
 .site__footer {
   grid-area: footer;
   background-color: #161616;
 }
-
 .site__copyright {
-  border-top: 3px double #3b3b3b;
+  border-top: 3px double rgb(59, 59, 59);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .site__copyright nav,
 .site__copyright h2 {
   margin: 0 auto;
 }
-
 .site__copyright nav a {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.15em;
 }
-
 .site__info {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-
 .site__info section:first-child {
   margin-left: 2%;
 }
-
 .site__info section:last-child {
   margin-right: 2%;
 }
-
 .site__info__liens {
   display: flex;
   flex-direction: column;
@@ -470,7 +466,6 @@ LAYOUT
   font-size: 2rem;
   font-style: oblique;
 }
-
 .header__description {
   display: inline-block;
   width: 95%;
@@ -487,27 +482,22 @@ ELEMENTS
   list-style: none;
   font-family: lobster;
 }
-
 .menu-principal-container a {
   margin-left: 20px;
   color: white;
   padding: 4px;
   text-shadow: 0px 2px 0px grey;
-  transition-duration: .4s;
+  transition-duration: 0.4s;
 }
-
 .menu-principal-container a:visited {
   color: white;
 }
-
 .menu-principal-container li {
   margin-bottom: 10px;
 }
-
 .menu-principal-container li:hover a {
-  text-shadow: 0 0 0.3em #f9f5f5, 0 0 0.3em white;
+  text-shadow: 0 0 0.3em rgb(249, 245, 245), 0 0 0.3em rgb(255, 255, 255);
 }
-
 .menu-principal-container .current-menu-item a {
   color: #56CBFE !important;
 }
@@ -518,7 +508,6 @@ ELEMENTS
   width: max-content;
   margin: 0 auto;
 }
-
 .triSession a {
   background-color: #B44DBB;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
@@ -526,11 +515,9 @@ ELEMENTS
   font-weight: 900;
   padding: 10px;
 }
-
 .triSession a:hover {
   background: linear-gradient(to top, #f969a2 0, #ff0a64 20%, #ff0a64 49%, #f969a2 50%, #ff0a64);
 }
-
 .triSession .active {
   color: #56CBFE;
 }
@@ -547,7 +534,6 @@ ELEMENTS
   width: clamp(300px, 100%, 750px);
   margin: 0 auto;
 }
-
 .listeCours__titre {
   text-align: center;
 }
@@ -558,15 +544,12 @@ ELEMENTS
   border-bottom: 1px dotted white;
   position: relative;
 }
-
 .cours a:visited {
   color: white;
 }
-
 .cours:last-child {
   border-bottom: none;
 }
-
 .cours__btn {
   position: absolute;
   right: 20px;
@@ -580,12 +563,10 @@ ELEMENTS
   height: 12px;
   transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.7);
 }
-
 .cours__btn:hover {
   cursor: pointer;
   background-color: #56CBFE;
 }
-
 .cours__infos {
   height: 0;
   transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.7);
@@ -593,30 +574,24 @@ ELEMENTS
   justify-content: space-around;
   flex-direction: row;
 }
-
 .cours__infos .cours__desc {
   text-align: justify;
 }
-
 .cours__img {
   width: 100px;
   height: 100px;
   overflow: hidden;
 }
-
 .cours__img img {
   width: 100%;
   height: 100%;
 }
-
 .cours__desc {
   width: 50%;
 }
-
 .cours__titre a {
   color: white;
 }
-
 .cours__titre a:hover {
   color: #56CBFE !important;
   cursor: pointer;
@@ -625,15 +600,12 @@ ELEMENTS
 input {
   display: none;
 }
-
 input:checked {
   display: none;
 }
-
 input:checked ~ label > .cours__btn {
   transform: rotate(-180deg) scale(1.5);
 }
-
 input:checked ~ .cours__infos {
   height: 127px;
 }
@@ -642,14 +614,12 @@ input:checked ~ .cours__infos {
   display: grid;
   grid-template-columns: 1fr;
 }
-
 .listeProfs__liste {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   justify-content: space-around;
 }
-
 .listeProfs__titre {
   border: 3px solid #FFA4DC;
   text-align: center;
@@ -659,29 +629,24 @@ input:checked ~ .cours__infos {
 }
 
 .prof {
-  transition-duration: .4s;
+  transition-duration: 0.4s;
   border: 3px solid #8a2be2;
   width: clamp(250px, 30%, 350px);
   margin: 10px;
 }
-
 .prof__titre {
   border-bottom: 2px solid #8a2be2;
 }
-
 .prof__texte {
   padding: 10px;
 }
-
 .prof__img {
   overflow: hidden;
 }
-
 .prof__img img {
   width: 100%;
   height: 100%;
 }
-
 .prof:hover {
   box-shadow: 5px 10px #56CBFE;
   transform: scale(1.05);
@@ -691,7 +656,6 @@ input:checked ~ .cours__infos {
   overflow: hidden;
   height: 300px;
 }
-
 iframe {
   border: 5px solid #FFA4DC;
   margin: 0 auto;
@@ -711,7 +675,6 @@ COMPOSANTS
   grid-area: header;
   background-color: #000834;
 }
-
 .site__header__titre {
   margin-left: 50px;
   display: flex;
@@ -719,20 +682,77 @@ COMPOSANTS
   width: 200px;
   align-items: center;
 }
-
 .site__header__titre h1,
 .site__header__titre h2 {
   color: #56CBFE;
-  text-shadow: 0 0 0.3em #f9f5f5, 0 0 0.3em white;
+  text-shadow: 0 0 0.3em rgb(249, 245, 245), 0 0 0.3em rgb(255, 255, 255);
 }
-
 .site__header__titre:visited {
   color: #56CBFE;
 }
 
 .header__secondaire {
   margin-top: -25px;
-  font-family: 'Neonblitz', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Neonblitz", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 9px;
 }
-/*# sourceMappingURL=style.css.map */
+
+/*
+
+<section class="site__barre">
+    <!-- <input type="checkbox" id="chk-burger">
+    <div class="burgerMenuParent">
+        <label for="chk-burger" id="burger">
+            <div class="ligne"></div>
+            <div class="ligne"></div>
+            <div class="ligne"></div>
+        </label>
+    </div> -->
+
+    <?php
+    // $icone= '<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" color="#000"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>';
+    ?>
+</section>
+*/
+#chk-burger {
+  display: block;
+}
+
+#chk-burger:checked ~ .burgerMenuParent {
+  transform: rotate(90deg);
+}
+
+.burgerMenuParent {
+  border: 1px solid #aaa;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+
+.ligne {
+  width: 100%;
+  height: 20%;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.ligne:nth-of-type(1) {
+  top: 0;
+  background-color: blue;
+}
+
+.ligne:nth-of-type(2) {
+  top: 35px;
+  background-color: red;
+}
+
+.ligne:nth-of-type(3) {
+  top: 85px;
+  background-color: green;
+}/*# sourceMappingURL=style.css.map */

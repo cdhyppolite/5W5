@@ -1,8 +1,22 @@
 .site {
     display: grid;
-    gap: 1px;
+   gap: 1px;
+   grid-template-columns:  auto;
+   grid-template-areas: 
+   "header"
+   "barre"
+   "main"
+   "footer"; 
+   
+    @media screen   and (min-width : 700px){
+      
     grid-template-columns: ($size__site-sidebar) auto;
-    grid-template-areas: "header header" "barre main" "footer footer";
+    grid-template-areas: 
+    "header header"
+    "barre main"
+    "footer footer"; 
+    }
+  
     &__main {
         grid-area: main;
         background-color: $couleur_fond;
@@ -17,6 +31,13 @@
     &__barre {
         grid-area: barre;
         background-color: $couleur_fond;
+        position: absolute;
+         width : 100vw;
+       // transform: translateX(-100vw);
+        @media screen   and (min-width : 700px){
+            position: static;
+            //transform: translateX(0vw);
+        }
         // border: 3px solid #bdbdbd;
         // border-radius: 25px;
         // nav {
