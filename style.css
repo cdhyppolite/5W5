@@ -343,11 +343,20 @@ h3 {
 }
 
 h2 {
+  font-family: "Brevia", sans-serif;
   color: #FFA4DC;
 }
 
 h1 {
-  font-family: 'Neonblitz', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Neonblitz", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@font-face {
+  font-family: 'Brevia';
+  src: url("fonts/Brevia-Black2") format("woff2"), url("fonts/Brevia-Black") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -400,7 +409,6 @@ LAYOUT
 ----------------------------------------*/
 .site {
   display: grid;
-  gap: 1px;
   grid-template-columns: 250px auto;
   grid-template-areas: "header header" "barre main" "footer footer";
 }
@@ -523,6 +531,7 @@ ELEMENTS
   background-color: #B44DBB;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
   color: white;
+  font-family: lobster;
   font-weight: 900;
   padding: 10px;
 }
@@ -614,6 +623,7 @@ ELEMENTS
 }
 
 .cours__titre a {
+  font-family: "Brevia", sans-serif;
   color: white;
 }
 
@@ -667,6 +677,7 @@ input:checked ~ .cours__infos {
 
 .prof__titre {
   border-bottom: 2px solid #8a2be2;
+  font-family: "Brevia", sans-serif;
 }
 
 .prof__texte {

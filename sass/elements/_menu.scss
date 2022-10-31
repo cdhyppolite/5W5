@@ -1,6 +1,6 @@
 .menu {
     list-style: none;
-    font-family: lobster;
+    font-family: $fontsMenu;
     &-principal {
         &-container {
             a {
@@ -52,6 +52,7 @@
         background-color: $couleur_fond2;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
         color: $couleur_texte1;
+        font-family: $fontsMenu;
         font-weight: 900;
         // margin: 0;
         padding: 10px;

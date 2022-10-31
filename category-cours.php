@@ -31,6 +31,7 @@
                         $nbHeures = substr($titre, -6);
                         $codeCours = substr($titre, 0,3);
                         $descCours = get_the_excerpt();
+                        // $descCours = get_the_content();
                     ?>
                     
                     <?php

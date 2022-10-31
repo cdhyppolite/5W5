@@ -63,6 +63,7 @@
         }
         &__titre {
             a {
+                font-family: $font2;
                 color: $couleur_texte1;
                 &:hover {
                     color: $couleur_texte2 !important;
@@ -83,6 +84,7 @@
             ~.cours {
                 &__infos {
                     height: 127px;
+                    // height: 360px;
                     // align-items: center;
                 }
             }
