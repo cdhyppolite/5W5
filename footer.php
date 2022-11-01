@@ -1,3 +1,4 @@
+<!-- Informations du footer (Srea modifié plustard) -->
 <footer class="site__footer">
     <div class="site__info">
         <section class="site__info__adresse">
@@ -10,4 +11,6 @@
         <h2>&copy; <?php echo date("Y"); ?> - TIM Maisonneuve - Tous droits réservés</h2>
     </div>
 </footer>
+</body>
+<!-- Script temporairement ajouté ici car il y a un bug avec functions.php -->
 <script src="<?php echo (get_bloginfo('template_directory')."/js/menu.js"); ?>"></script>

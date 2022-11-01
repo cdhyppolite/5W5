@@ -654,7 +654,7 @@ input:checked ~ .cours__infos {
   overflow: hidden;
 }
 
-.site__main__cours p {
+.site__main__cours div {
   font-family: "Brevia", sans-serif;
   text-align: justify;
   margin-left: 5px;
