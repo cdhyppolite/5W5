@@ -12,7 +12,7 @@
         flex-wrap: wrap;
         row-gap: 20px;
         // border-radius: 25px;
-        min-height: 80vh;
+        min-height: 85vh;
     }
     &__barre {
         grid-area: barre;
@@ -89,6 +89,10 @@
 
 .home {
     // background-color: whitesmoke;
-    background-color: $color__background-body;
+    // background-color: $color__background-body;
     // background-color: $couleur_fond;
+}
+
+body {
+    background-color: $couleur_fond;
 }

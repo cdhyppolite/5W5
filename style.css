@@ -419,7 +419,7 @@ LAYOUT
   display: flex;
   flex-wrap: wrap;
   row-gap: 20px;
-  min-height: 80vh;
+  min-height: 85vh;
 }
 
 .site__barre {
@@ -484,8 +484,8 @@ LAYOUT
   width: 95%;
 }
 
-.home {
-  background-color: white;
+body {
+  background-color: #000834;
 }
 
 /* -------------------------------------
@@ -755,7 +755,6 @@ COMPOSANTS
 .site__header {
   grid-area: header;
   background-color: #000834;
-  margin-top: -40px;
 }
 
 .site__header__titre {
@@ -767,7 +766,7 @@ COMPOSANTS
 }
 
 .site__header__titre h1,
-.site__header__titre h2 {
+.site__header__titre h6 {
   color: #56CBFE;
   text-shadow: 0 0 0.3em #f9f5f5, 0 0 0.3em white;
 }

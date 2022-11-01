@@ -23,7 +23,7 @@
          <p class="unProf__desc"><?= $description; ?></p>
       </div>
 
-      <p class="unProf__anecdote">Anecdote: <?php the_field('anecdote'); ?></p>
+      <!-- <p class="unProf__anecdote">Anecdote: <?php the_field('anecdote'); ?></p> -->
    </section>
    <?php /*endif; */?>
 </main>
