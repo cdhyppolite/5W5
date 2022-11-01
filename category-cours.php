@@ -9,7 +9,7 @@
         <!-- Menu des cours pour les sessions -->
         <nav class="triSession">
             <?php
-            //Empecher l'utilisateur d'écrire n'importe quoi la la variable session
+            //Empêcher l'utilisateur d'écrire n'importe quoi dans la variable session
                 if (isset($_GET["session"])) {
                     if (($_GET["session"]<1) || ($_GET["session"]> 6)) {
                         unset($_GET["session"]); // Détruire la vartiable
@@ -52,7 +52,7 @@
                                 </div>
                                 <!-- <p class="cours__code"><?= $codeCours; ?> </p> -->
                                 <p class="cours__desc"> <?= $descCours; ?></p>
-                                <p class="cours__logiciel">Logiciel(s) utilisé(s): </p>
+                                <!-- <p class="cours__logiciel">Logiciel(s) utilisé(s): </p> -->
                             </div>
                             
                         </article>
