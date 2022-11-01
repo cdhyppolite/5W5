@@ -7,7 +7,7 @@ Description: Thème fait dans le cours 5W5
 Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
-Text Domain: cidw-5w5
+Text Domain: e4_5w5
 */
 /* -------------------------------------
 INITIALISATION
@@ -353,7 +353,7 @@ h1 {
 
 @font-face {
   font-family: 'Brevia';
-  src: url("fonts/Brevia-Black2") format("woff2"), url("fonts/Brevia-Black") format("woff");
+  src: url("fonts/Brevia-Black2.woff2") format("woff2"), url("fonts/Brevia-Black.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
