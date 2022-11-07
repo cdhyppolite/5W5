@@ -29,14 +29,13 @@
         min-height: 80vh;
     }
     &__barre {
+        position: relative;
         grid-area: barre;
         background-color: $couleur_fond;
-        position: absolute;
-         width : 100vw;
+     
        // transform: translateX(-100vw);
-        @media screen   and (min-width : 700px){
-            position: static;
-            //transform: translateX(0vw);
+        @media screen and (min-width : 700px){
+
         }
         // border: 3px solid #bdbdbd;
         // border-radius: 25px;

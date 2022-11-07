@@ -399,7 +399,7 @@ LAYOUT
 }
 @media screen and (min-width: 700px) {
   .site {
-    grid-template-columns: 250px auto;
+    grid-template-columns: 30% auto;
     grid-template-areas: "header header" "barre main" "footer footer";
   }
 }
@@ -412,15 +412,9 @@ LAYOUT
   min-height: 80vh;
 }
 .site__barre {
+  position: relative;
   grid-area: barre;
   background-color: #000834;
-  position: absolute;
-  width: 100vw;
-}
-@media screen and (min-width: 700px) {
-  .site__barre {
-    position: static;
-  }
 }
 .site__footer {
   grid-area: footer;
@@ -697,6 +691,30 @@ COMPOSANTS
   font-size: 9px;
 }
 
+.menu-menu_cours-container {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.menu-menu_cours-container .menu {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.menu-menu_cours-container .menu-item {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.menu-menu_cours-container .menu-item a {
+  display: block;
+  margin-left: 0;
+  padding-left: 0;
+  color: white;
+  font-size: 1.2rem;
+  padding: 9px 0;
+}
+
 /*
 
 <section class="site__barre">
@@ -722,11 +740,31 @@ COMPOSANTS
   transform: rotate(90deg);
 }
 
+#chk-burger:checked ~ .menu-principal-container {
+  transform: translateX(0);
+}
+
+.menu-principal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  transform: translateX(-100vw);
+  transition: transform 0.5s;
+}
+@media screen and (min-width: 700px) {
+  .menu-principal-container {
+    position: static;
+    transform: translateX(0);
+    width: 100%;
+  }
+}
+
 .burgerMenuParent {
   border: 1px solid #aaa;
   background-color: white;
-  width: 100px;
-  height: 100px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: 0;
   left: 0;
@@ -737,7 +775,7 @@ COMPOSANTS
 
 .ligne {
   width: 100%;
-  height: 20%;
+  height: 33%;
   border: 1px solid black;
   background-color: white;
 }
@@ -755,4 +793,58 @@ COMPOSANTS
 .ligne:nth-of-type(3) {
   top: 85px;
   background-color: green;
+}
+
+.menu {
+  list-style: none;
+  font-family: lobster;
+}
+.menu-principal-container a {
+  margin-left: 20px;
+  color: white;
+  padding: 4px;
+  text-shadow: 0px 2px 0px grey;
+  transition-duration: 0.4s;
+}
+.menu-principal-container a:visited {
+  color: white;
+}
+.menu-principal-container li {
+  margin-bottom: 10px;
+}
+.menu-principal-container li:hover a {
+  text-shadow: 0 0 0.3em rgb(249, 245, 245), 0 0 0.3em rgb(255, 255, 255);
+}
+.menu-principal-container .current-menu-item a {
+  color: #56CBFE !important;
+}
+
+.triSession {
+  display: flex;
+  justify-content: space-around;
+  width: max-content;
+  margin: 0 auto;
+}
+.triSession a {
+  background-color: #B44DBB;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: lobster;
+  font-weight: 900;
+  padding: 10px;
+}
+.triSession a:hover {
+  background: linear-gradient(to top, #f969a2 0, #ff0a64 20%, #ff0a64 49%, #f969a2 50%, #ff0a64);
+}
+.triSession .active {
+  color: #56CBFE;
+}
+
+.colone {
+  clip-path: polygon(13% 0, 87% 0, 100% 100%, 0 100%);
+  background-color: #B44DBB;
+  height: 10px;
+  z-index: 1;
+  box-shadow: 10px 10px 10px #B44DBB;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
