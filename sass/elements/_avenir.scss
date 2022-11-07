@@ -1,0 +1,13 @@
+.avenir {
+    figcaption {
+        color: $couleur_texte1;
+    }
+}
+._page {
+    display: flex;
+    flex-direction: column;
+    h1 {
+        // margin: 0 auto;
+        text-align: center;
+    }
+}
