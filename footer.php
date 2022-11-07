@@ -12,6 +12,4 @@
     </div>
 </footer>
 </body>
-</html>
-<!-- Script temporairement ajouté ici car il y a un bug avec functions.php -->
-<script src="<?php echo (get_bloginfo('template_directory')."/js/menu.js"); ?>"></script>
+<?php wp_footer(); ?>
