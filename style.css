@@ -565,9 +565,16 @@ ELEMENTS
 .cours__infos {
   height: 0;
   transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.7);
-  display: flex;
   justify-content: space-around;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+.cours__infos__haut {
+  margin-top: 30px;
+  display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 .cours__infos .cours__desc {
   text-align: justify;
@@ -603,7 +610,7 @@ input:checked ~ label > .cours__btn {
   transform: rotate(-180deg) scale(1.5);
 }
 input:checked ~ .cours__infos {
-  height: 127px;
+  height: 250px;
 }
 
 .site__main__cours {

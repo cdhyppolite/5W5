@@ -38,11 +38,19 @@
             }
         }
         &__infos {
+            &__haut {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
             height: 0;
             transition: .4s cubic-bezier(.5, 0, .5, 1.7);
-            display: flex;
             justify-content: space-around;
-            flex-direction: row;
+            display: flex;
+            overflow: hidden;
+            // flex-wrap: wrap;
+            flex-direction: column;
             .cours {
                 &__desc {
                     text-align: justify;
@@ -83,7 +91,7 @@
             }
             ~.cours {
                 &__infos {
-                    height: 127px;
+                    height: 250px;
                     // height: 360px;
                     // align-items: center;
                 }

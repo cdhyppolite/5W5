@@ -46,13 +46,17 @@
                             </label>
 
                             <div class="cours__infos">
-                                <!-- <div class="cours__nbre-heure"><?= $nbHeures; ?></div> -->
-                                <div class="cours__img">
-                                    <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt="">
+                                <div class="cours__infos__haut">
+                                        <!-- <div class="cours__nbre-heure"><?= $nbHeures; ?></div> -->
+                                    <div class="cours__img">
+                                        <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt="">
+                                    </div>
+                                    <!-- <p class="cours__code"><?= $codeCours; ?> </p> -->
+                                    <p class="cours__desc"> <?= $descCours; ?></p>
                                 </div>
-                                <!-- <p class="cours__code"><?= $codeCours; ?> </p> -->
-                                <p class="cours__desc"> <?= $descCours; ?></p>
-                                <!-- <p class="cours__logiciel">Logiciel(s) utilisé(s): </p> -->
+                                <p class="cours__logiciel">Logiciel(s) utilisé(s):
+                                <?php the_field('Logiciel'); ?>
+                                </p>
                             </div>
                             
                         </article>
