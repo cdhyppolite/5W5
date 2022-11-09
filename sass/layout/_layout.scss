@@ -1,0 +1,98 @@
+.site {
+    display: grid;
+    // gap: 1px;
+    grid-template-columns: ($size__site-sidebar) auto;
+    grid-template-areas: "header header" "barre main" "footer footer";
+    &__main {
+        grid-area: main;
+        background-color: $couleur_fond;
+        display: flex;
+        // background-color: #eee;
+        // border: 3px solid #bdbdbd;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        // border-radius: 25px;
+        min-height: 85vh;
+    }
+    &__barre {
+        grid-area: barre;
+        background-color: $couleur_fond;
+        // border: 3px solid #bdbdbd;
+        // border-radius: 25px;
+        // nav {
+        //     display: flex;
+        //     flex-direction: column;
+        //     margin: 0 auto;
+        //     a {
+        //         text-decoration: none;
+        //         font-weight: bold;
+        //         font-size: 1.15em;
+        //     }
+        // }
+    }
+    &__footer {
+        grid-area: footer;
+        // background-color: $color__background-footer;
+        background-image: linear-gradient($couleur_fond, $color__background-footer);
+        // border: 3px solid #bdbdbd;
+        // border-radius: 25px;
+    }
+    &__copyright {
+        border-top: 3px double rgb(59, 59, 59);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        nav,
+        h2 {
+            margin: 0 auto;
+        }
+        nav a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.15em;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        section {
+            &:first-child {
+                margin-left: 2%;
+            }
+            &:last-child {
+                margin-right: 2%;
+            }
+        }
+        &__liens {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+.header {
+    &__titre {
+        color: #1976D2;
+        margin-bottom: -10px;
+        font-family: Roboto, Arial, Helvetica, sans-serif;
+        margin-left: 5%;
+        font-size: 2rem;
+        font-style: oblique;
+    }
+    &__description {
+        display: inline-block;
+        width: 95%;
+    }
+}
+
+.home {
+    // background-color: whitesmoke;
+    // background-color: $color__background-body;
+    // background-color: $couleur_fond;
+}
+
+body {
+    background-color: $couleur_fond;
+}
