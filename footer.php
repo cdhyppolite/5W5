@@ -1,4 +1,4 @@
-<!-- Informations du footer (Srea modifié plustard) -->
+<!-- Informations du footer (Sera modifié plustard) -->
 <footer class="site__footer">
     <div class="site__info">
         <section class="site__info__adresse">
@@ -12,5 +12,4 @@
     </div>
 </footer>
 </body>
-<!-- Script temporairement ajouté ici car il y a un bug avec functions.php -->
-<script src="<?php echo (get_bloginfo('template_directory')."/js/menu.js"); ?>"></script>
+<?php wp_footer(); ?>

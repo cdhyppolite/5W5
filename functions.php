@@ -5,7 +5,8 @@ function e4_5w5_enqueue(){
     wp_enqueue_style('5w5-le-style', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), false);
     wp_register_script('5w5-menuJS', get_template_directory_uri() . '/js/menu.js', array(), filemtime(get_template_directory() . '/js/menu.js'), true);
     
-    wp_enqueue_script('5w5-menuJS'); // Ne fonction pas pour l'instant
+    // Ajout des scripts JS
+    wp_enqueue_script('5w5-menuJS');
 }
 
 add_action("wp_enqueue_scripts", "e4_5w5_enqueue");
@@ -14,8 +15,8 @@ add_action("wp_enqueue_scripts", "e4_5w5_enqueue");
 function e4_5w5_register_nav_menu(){
     register_nav_menus(array(
         'menu_principal' => __('Menu principal', 'e4_5w5') ,
-        'menu_footer' => __('Menu footer', 'e4_5w5') ,
-        'menu_categorie_cours' => __('Menu Cours', 'e4_5w5')
+        // 'menu_footer' => __('Menu footer', 'e4_5w5') ,
+        // 'menu_categorie_cours' => __('Menu Cours', 'e4_5w5')
     ));
 }
 add_action( 'after_setup_theme', 'e4_5w5_register_nav_menu', 0 );
