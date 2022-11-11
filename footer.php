@@ -1,3 +1,4 @@
+<!-- Informations du footer (Sera modifié plustard) -->
 <footer class="site__footer">
     <div class="site__info">
         <section class="site__info__adresse">
@@ -10,4 +11,5 @@
         <h2>&copy; <?php echo date("Y"); ?> - TIM Maisonneuve - Tous droits réservés</h2>
     </div>
 </footer>
-<script src="<?php echo (get_bloginfo('template_directory')."/js/menu.js"); ?>"></script>
+</body>
+<?php wp_footer(); ?>

@@ -6,6 +6,16 @@
 - [Zachary Arsenault](https://github.com/TheFrenchBuck)
 ### [Lien du site Siteground](https://timm178.sg-host.com/)
 ### [Lien du Google Sheets](https://docs.google.com/spreadsheets/d/1tfcWJ_KfRK7A1qLzvmbN3c6tjl_g7qarUelLplwTTVQ/edit#gid=0)
-# Changements: `Modifications logo TIM`
+## Éléments réalisés au Sprint 2:
+```
+Début de la page d'accueil
+Début de la page des cours
+Début de la liste des enseignants
+Début de la page des enseigants
+Début de la liste des projets étudiants
+Menu pour sélectionner les pages (pas le menu burger)
+Ajout des polices d'écriture
+Début de l'intégration des couleurs
+```
 
 ![Image](./screenshot.png "Image du Thème")

@@ -7,7 +7,7 @@ Description: Thème fait dans le cours 5W5
 Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
-Text Domain: cidw-5w5
+Text Domain: e4_5w5
 */
 /* -------------------------------------
 INITIALISATION
@@ -343,6 +343,7 @@ h3 {
 }
 
 h2 {
+  font-family: "Brevia", sans-serif;
   color: #FFA4DC;
 }
 
@@ -350,6 +351,13 @@ h1 {
   font-family: "Neonblitz", Verdana, Geneva, Tahoma, sans-serif;
 }
 
+@font-face {
+  font-family: "Brevia";
+  src: url("fonts/Brevia-Black2.woff2") format("woff2"), url("fonts/Brevia-Black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: "Neon Sans";
   src: url("fonts/NeonSans.woff2") format("woff2"), url("fonts/NeonSans.woff") format("woff");
@@ -393,15 +401,8 @@ LAYOUT
 ----------------------------------------*/
 .site {
   display: grid;
-  gap: 1px;
-  grid-template-columns: auto;
-  grid-template-areas: "header" "barre" "main" "footer";
-}
-@media screen and (min-width: 700px) {
-  .site {
-    grid-template-columns: 30% auto;
-    grid-template-areas: "header header" "barre main" "footer footer";
-  }
+  grid-template-columns: 250px auto;
+  grid-template-areas: "header header" "barre main" "footer footer";
 }
 .site__main {
   grid-area: main;
@@ -409,16 +410,15 @@ LAYOUT
   display: flex;
   flex-wrap: wrap;
   row-gap: 20px;
-  min-height: 80vh;
+  min-height: 85vh;
 }
 .site__barre {
-  position: relative;
   grid-area: barre;
   background-color: #000834;
 }
 .site__footer {
   grid-area: footer;
-  background-color: #161616;
+  background-image: linear-gradient(#000834, #161616);
 }
 .site__copyright {
   border-top: 3px double rgb(59, 59, 59);
@@ -465,8 +465,8 @@ LAYOUT
   width: 95%;
 }
 
-.home {
-  background-color: white;
+body {
+  background-color: #000834;
 }
 
 /* -------------------------------------
@@ -503,9 +503,10 @@ ELEMENTS
   margin: 0 auto;
 }
 .triSession a {
-  background-color: #B44DBB;
+  background-color: #8a2be2;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
   color: white;
+  font-family: lobster;
   font-weight: 900;
   padding: 10px;
 }
@@ -564,9 +565,16 @@ ELEMENTS
 .cours__infos {
   height: 0;
   transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.7);
-  display: flex;
   justify-content: space-around;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+.cours__infos__haut {
+  margin-top: 30px;
+  display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 .cours__infos .cours__desc {
   text-align: justify;
@@ -584,6 +592,7 @@ ELEMENTS
   width: 50%;
 }
 .cours__titre a {
+  font-family: "Brevia", sans-serif;
   color: white;
 }
 .cours__titre a:hover {
@@ -601,7 +610,19 @@ input:checked ~ label > .cours__btn {
   transform: rotate(-180deg) scale(1.5);
 }
 input:checked ~ .cours__infos {
-  height: 127px;
+  height: 250px;
+}
+
+.site__main__cours {
+  background-color: #000834;
+  height: 100vh;
+  overflow: hidden;
+}
+.site__main__cours div {
+  font-family: "Brevia", sans-serif;
+  text-align: justify;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .listeProfs {
@@ -627,9 +648,11 @@ input:checked ~ .cours__infos {
   border: 3px solid #8a2be2;
   width: clamp(250px, 30%, 350px);
   margin: 10px;
+  box-shadow: #56CBFE 1px -1px 10px;
 }
 .prof__titre {
   border-bottom: 2px solid #8a2be2;
+  font-family: "Brevia", sans-serif;
 }
 .prof__texte {
   padding: 10px;
@@ -646,10 +669,28 @@ input:checked ~ .cours__infos {
   transform: scale(1.05);
 }
 
-.unProf__img {
-  overflow: hidden;
-  height: 300px;
+.unProf__titre {
+  height: 30px;
+  text-align: center;
 }
+.unProf img {
+  max-height: 500px;
+  border: 3px solid #8a2be2;
+  margin: 10px;
+  transition: 0.4s;
+}
+.unProf img:hover {
+  box-shadow: 5px 10px #56CBFE;
+}
+.unProf__infos {
+  display: flex;
+  width: clamp(300px, 100%, 800px);
+  margin: 0 auto;
+}
+.unProf__anecdote {
+  margin-left: 50%;
+}
+
 iframe {
   border: 5px solid #FFA4DC;
   margin: 0 auto;
@@ -660,6 +701,39 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.avenir figcaption {
+  color: white;
+  font-family: "Brevia", sans-serif;
+}
+.avenir .wp-block-image {
+  transition: 0.4s;
+  overflow: hidden;
+  box-shadow: #56CBFE 1px -1px 10px;
+}
+.avenir .wp-block-image img {
+  transition: 0.4s;
+}
+.avenir .wp-block-image:hover {
+  box-shadow: #8a2be2 1px -1px 10px;
+}
+.avenir .wp-block-image:hover img {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+._page {
+  display: flex;
+  flex-direction: column;
+}
+._page h1 {
+  text-align: center;
+}
+@media screen and (min-width: 1000px) {
+  ._page {
+    min-height: 115vh !important;
+  }
 }
 
 /* -------------------------------------
@@ -677,7 +751,7 @@ COMPOSANTS
   align-items: center;
 }
 .site__header__titre h1,
-.site__header__titre h2 {
+.site__header__titre h6 {
   color: #56CBFE;
   text-shadow: 0 0 0.3em rgb(249, 245, 245), 0 0 0.3em rgb(255, 255, 255);
 }
@@ -689,162 +763,4 @@ COMPOSANTS
   margin-top: -25px;
   font-family: "Neonblitz", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 9px;
-}
-
-.menu-menu_cours-container {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.menu-menu_cours-container .menu {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.menu-menu_cours-container .menu-item {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.menu-menu_cours-container .menu-item a {
-  display: block;
-  margin-left: 0;
-  padding-left: 0;
-  color: white;
-  font-size: 1.2rem;
-  padding: 9px 0;
-}
-
-/*
-
-<section class="site__barre">
-    <!-- <input type="checkbox" id="chk-burger">
-    <div class="burgerMenuParent">
-        <label for="chk-burger" id="burger">
-            <div class="ligne"></div>
-            <div class="ligne"></div>
-            <div class="ligne"></div>
-        </label>
-    </div> -->
-
-    <?php
-    // $icone= '<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" color="#000"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>';
-    ?>
-</section>
-*/
-#chk-burger {
-  display: block;
-}
-
-#chk-burger:checked ~ .burgerMenuParent {
-  transform: rotate(90deg);
-}
-
-#chk-burger:checked ~ .menu-principal-container {
-  transform: translateX(0);
-}
-
-.menu-principal-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  transform: translateX(-100vw);
-  transition: transform 0.5s;
-}
-@media screen and (min-width: 700px) {
-  .menu-principal-container {
-    position: static;
-    transform: translateX(0);
-    width: 100%;
-  }
-}
-
-.burgerMenuParent {
-  border: 1px solid #aaa;
-  background-color: white;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  transform: rotate(0deg);
-  transition: transform 0.5s;
-}
-
-.ligne {
-  width: 100%;
-  height: 33%;
-  border: 1px solid black;
-  background-color: white;
-}
-
-.ligne:nth-of-type(1) {
-  top: 0;
-  background-color: blue;
-}
-
-.ligne:nth-of-type(2) {
-  top: 35px;
-  background-color: red;
-}
-
-.ligne:nth-of-type(3) {
-  top: 85px;
-  background-color: green;
-}
-
-.menu {
-  list-style: none;
-  font-family: lobster;
-}
-.menu-principal-container a {
-  margin-left: 20px;
-  color: white;
-  padding: 4px;
-  text-shadow: 0px 2px 0px grey;
-  transition-duration: 0.4s;
-}
-.menu-principal-container a:visited {
-  color: white;
-}
-.menu-principal-container li {
-  margin-bottom: 10px;
-}
-.menu-principal-container li:hover a {
-  text-shadow: 0 0 0.3em rgb(249, 245, 245), 0 0 0.3em rgb(255, 255, 255);
-}
-.menu-principal-container .current-menu-item a {
-  color: #56CBFE !important;
-}
-
-.triSession {
-  display: flex;
-  justify-content: space-around;
-  width: max-content;
-  margin: 0 auto;
-}
-.triSession a {
-  background-color: #B44DBB;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-  color: white;
-  font-family: lobster;
-  font-weight: 900;
-  padding: 10px;
-}
-.triSession a:hover {
-  background: linear-gradient(to top, #f969a2 0, #ff0a64 20%, #ff0a64 49%, #f969a2 50%, #ff0a64);
-}
-.triSession .active {
-  color: #56CBFE;
-}
-
-.colone {
-  clip-path: polygon(13% 0, 87% 0, 100% 100%, 0 100%);
-  background-color: #B44DBB;
-  height: 10px;
-  z-index: 1;
-  box-shadow: 10px 10px 10px #B44DBB;
-  width: 100%;
 }/*# sourceMappingURL=style.css.map */
