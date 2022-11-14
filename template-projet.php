@@ -22,7 +22,9 @@
             <p><?= $description; ?></p>
             <p class="unProf__auteur">Auteur: <?php the_field('auteur'); ?></p>
             <p class="unProf__Logiciel">Réalisé avec: <?php the_field('logiciel'); ?></p>
-            <p class="unProf__Cours">Cours: <?php the_field('cours'); ?></p>
+            <p class="unProf__Cours">Cours:
+               <a target="popup" onclick="window.open('<?php the_field('cours'); ?>','popup','width=600,height=600'); return false;"> <?php the_field('nom_du_cours'); ?> </a>
+            </p> 
          </div>
       </div>
    </section>
