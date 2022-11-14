@@ -54,8 +54,7 @@
                                     <!-- <p class="cours__code"><?= $codeCours; ?> </p> -->
                                     <p class="cours__desc"> <?= $descCours; ?></p>
                                 </div>
-                                <p class="cours__logiciel">Logiciel(s) utilisé(s):
-                                <?php the_field('Logiciel'); ?>
+                                <p class="cours__logiciel">Logiciel(s) utilisé(s): <?php the_field('logiciel'); ?>
                                 </p>
                             </div>
                             

@@ -602,6 +602,7 @@ ELEMENTS
 .cours__titre a {
   font-family: "Brevia", sans-serif;
   color: white;
+  transition: 0.2s;
 }
 .cours__titre a:hover {
   color: hsl(198deg, 99%, 67%) !important;
@@ -714,6 +715,39 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.avenir figcaption {
+  color: white;
+  font-family: "Brevia", sans-serif;
+}
+.avenir .wp-block-image {
+  transition: 0.4s;
+  overflow: hidden;
+  box-shadow: hsl(198deg, 99%, 67%) 1px -1px 10px;
+}
+.avenir .wp-block-image img {
+  transition: 0.4s;
+}
+.avenir .wp-block-image:hover {
+  box-shadow: hsl(271deg, 76%, 53%) 1px -1px 10px;
+}
+.avenir .wp-block-image:hover img {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+._page {
+  display: flex;
+  flex-direction: column;
+}
+._page h1 {
+  text-align: center;
+}
+@media screen and (min-width: 1000px) {
+  ._page {
+    min-height: 115vh !important;
+  }
 }
 
 /* -------------------------------------

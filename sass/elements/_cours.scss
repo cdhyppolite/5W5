@@ -73,6 +73,7 @@
             a {
                 font-family: $font2;
                 color: $couleur_texte1;
+                transition: .2s;
                 &:hover {
                     color: $couleur_texte2 !important;
                     cursor: pointer;
