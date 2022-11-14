@@ -6,7 +6,7 @@ Description: Thème fait dans le cours 5W5
 Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
-Text Domain: e4_5w5
+Text Domain: cidw-5w5
 */
 
 
@@ -40,7 +40,6 @@ ELEMENTS
 @import "elements/cours";
 @import "elements/profs";
 @import "elements/accueil";
-@import "elements/avenir";
 
 /* -------------------------------------
 COMPOSANTS
@@ -49,3 +48,5 @@ COMPOSANTS
 @import "composantes/entete";
 @import "composantes/footer";
 @import "composantes/navigation";
+@import "composantes/burger";
+@import "composantes/menu";

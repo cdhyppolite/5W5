@@ -80,6 +80,8 @@
     //     }
     // }
     &__desc {
+        display: flex;
+        flex-direction: column;
         // grid-area: pInfos;
         // max-width: 200px;
     }
