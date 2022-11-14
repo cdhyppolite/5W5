@@ -66,6 +66,7 @@
     }
     &__infos {
         display: flex;
+        flex-wrap: wrap;
         width: clamp(300px, 100%, 800px);
         margin: 0 auto;
     }

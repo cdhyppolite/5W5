@@ -1,9 +1,21 @@
 .menu {
     list-style: none;
     font-family: $fontsMenu;
+    &-item {
+        // Ligne en dessous du texte
+        &__ligne {
+            clip-path: polygon(13% 0, 87% 0, 100% 100%, 0 100%);
+            background-color: $couleur_fond2;
+            height: 5px;
+            z-index: 1;
+            box-shadow: 10px 10px 10px $couleur_fond2;
+            margin-top: 5px;
+        }
+    }
     &-principal {
         &-container {
             a {
+                font-size: 25px;
                 margin-left: 20px;
                 color: $couleur_texte1;
                 padding: 4px;
@@ -63,12 +75,4 @@
     .active {
         color: $couleur_texte2;
     }
-}
-
-.colone {
-    clip-path: polygon(13% 0, 87% 0, 100% 100%, 0 100%);
-    background-color: $couleur_fond2;
-    height: 10px;
-    z-index: 1;
-    box-shadow: 10px 10px 10px $couleur_fond2;
 }

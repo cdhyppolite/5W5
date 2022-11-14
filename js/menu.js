@@ -5,5 +5,5 @@ let liMenuPrincipal = menuPrincipal.querySelectorAll("li");
 // console.log(liMenuPrincipal.length);
 
 for (let i = 0; i < liMenuPrincipal.length; i++) {
-        liMenuPrincipal[i].innerHTML += '<div class="colone"></div>';
-    }
+    liMenuPrincipal[i].innerHTML += '<div class="menu-item__ligne"></div>';
+}

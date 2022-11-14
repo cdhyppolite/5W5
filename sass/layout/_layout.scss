@@ -39,7 +39,7 @@
     }
     &__footer {
         grid-area: footer;
-        background-color: $color__background-footer;
+        background-image: linear-gradient($couleur_fond, black);
         // border: 3px solid #bdbdbd;
         // border-radius: 25px;
     }
