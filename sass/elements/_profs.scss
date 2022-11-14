@@ -23,7 +23,6 @@
     border: 3px solid $couleur_fond2;
     width: clamp(250px, 30%, 350px);
     margin: 10px;
-    box-shadow: $couleur_texte2 1px -1px 10px;
     &__titre {
         border-bottom: 2px solid $couleur_fond2;
         font-family: $font2;

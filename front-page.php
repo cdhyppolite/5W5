@@ -7,6 +7,6 @@
     <iframe width="1280" height="720" 
         src="https://www.youtube.com/embed/YOo92SwTZEs?<?= $YT_Params; ?>">
     </iframe>
-    <p>Bienvenu sur le site du collège de Maisonneuve!</p>
+    <p>Bienvenue sur le site du collège de Maisonneuve!</p>
 </main>
 <?php get_footer() ?>

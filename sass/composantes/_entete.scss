@@ -22,10 +22,12 @@
 }
 
 .header {
-    &__principal {}
+    &__principal {
+        font-size: 7em;
+    }
     &__secondaire {
         margin-top: -25px;
         font-family: 'Neonblitz', Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 9px;
+        font-size: 4em;
     }
 }
