@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme name: 5W5 - Équipe 4
+Theme name: 5W5 - Équipe 4 -ZA
 Author: Équipe 4
 Author URI: https://github.com/cdhyppolite/5W5
 Description: Thème fait dans le cours 5W5
@@ -183,9 +183,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -193,9 +193,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -204,9 +204,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -250,8 +250,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -259,8 +259,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -268,7 +268,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
@@ -276,7 +276,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -352,46 +352,54 @@ h1 {
 }
 
 @font-face {
-  font-family: "Brevia";
+  font-family: 'Brevia';
   src: url("fonts/Brevia-Black2.woff2") format("woff2"), url("fonts/Brevia-Black.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
-  font-family: "Neon Sans";
+  font-family: 'Neon Sans';
   src: url("fonts/NeonSans.woff2") format("woff2"), url("fonts/NeonSans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
-  font-family: "Las Enter";
+  font-family: 'Las Enter';
   src: url("fonts/LasEnterPersonalUseOnly.woff2") format("woff2"), url("fonts/LasEnterPersonalUseOnly.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
-  font-family: "Neonblitz";
+  font-family: 'Neonblitz';
   src: url("fonts/Neonblitz.woff2") format("woff2"), url("fonts/Neonblitz.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 a {
   text-decoration: none;
   color: #4169e1;
 }
+
 a:visited {
   color: #800080;
 }
+
 a:hover, a:focus, a:active {
   color: #191970;
 }
+
 a:focus {
   outline: thin dotted;
 }
+
 a:hover, a:active {
   outline: 0;
 }
@@ -404,6 +412,7 @@ LAYOUT
   grid-template-columns: 250px auto;
   grid-template-areas: "header header" "barre main" "footer footer";
 }
+
 .site__main {
   grid-area: main;
   background-color: #000834;
@@ -412,40 +421,49 @@ LAYOUT
   row-gap: 20px;
   min-height: 85vh;
 }
+
 .site__barre {
   grid-area: barre;
   background-color: #000834;
 }
+
 .site__footer {
   grid-area: footer;
   background-image: linear-gradient(#000834, #161616);
 }
+
 .site__copyright {
-  border-top: 3px double rgb(59, 59, 59);
+  border-top: 3px double #3b3b3b;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .site__copyright nav,
 .site__copyright h2 {
   margin: 0 auto;
 }
+
 .site__copyright nav a {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.15em;
 }
+
 .site__info {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+
 .site__info section:first-child {
   margin-left: 2%;
 }
+
 .site__info section:last-child {
   margin-right: 2%;
 }
+
 .site__info__liens {
   display: flex;
   flex-direction: column;
@@ -460,6 +478,7 @@ LAYOUT
   font-size: 2rem;
   font-style: oblique;
 }
+
 .header__description {
   display: inline-block;
   width: 95%;
@@ -476,22 +495,27 @@ ELEMENTS
   list-style: none;
   font-family: lobster;
 }
+
 .menu-principal-container a {
   margin-left: 20px;
   color: white;
   padding: 4px;
   text-shadow: 0px 2px 0px grey;
-  transition-duration: 0.4s;
+  transition-duration: .4s;
 }
+
 .menu-principal-container a:visited {
   color: white;
 }
+
 .menu-principal-container li {
   margin-bottom: 10px;
 }
+
 .menu-principal-container li:hover a {
-  text-shadow: 0 0 0.3em rgb(249, 245, 245), 0 0 0.3em rgb(255, 255, 255);
+  text-shadow: 0 0 0.3em #f9f5f5, 0 0 0.3em white;
 }
+
 .menu-principal-container .current-menu-item a {
   color: #56CBFE !important;
 }
@@ -502,6 +526,7 @@ ELEMENTS
   width: max-content;
   margin: 0 auto;
 }
+
 .triSession a {
   background-color: #8a2be2;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
@@ -510,9 +535,11 @@ ELEMENTS
   font-weight: 900;
   padding: 10px;
 }
+
 .triSession a:hover {
   background: linear-gradient(to top, #f969a2 0, #ff0a64 20%, #ff0a64 49%, #f969a2 50%, #ff0a64);
 }
+
 .triSession .active {
   color: #56CBFE;
 }
@@ -529,6 +556,7 @@ ELEMENTS
   width: clamp(300px, 100%, 750px);
   margin: 0 auto;
 }
+
 .listeCours__titre {
   text-align: center;
 }
@@ -539,12 +567,15 @@ ELEMENTS
   border-bottom: 1px dotted white;
   position: relative;
 }
+
 .cours a:visited {
   color: white;
 }
+
 .cours:last-child {
   border-bottom: none;
 }
+
 .cours__btn {
   position: absolute;
   right: 20px;
@@ -558,10 +589,12 @@ ELEMENTS
   height: 12px;
   transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.7);
 }
+
 .cours__btn:hover {
   cursor: pointer;
   background-color: #56CBFE;
 }
+
 .cours__infos {
   height: 0;
   transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.7);
@@ -570,31 +603,38 @@ ELEMENTS
   overflow: hidden;
   flex-direction: column;
 }
+
 .cours__infos__haut {
   margin-top: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+
 .cours__infos .cours__desc {
   text-align: justify;
 }
+
 .cours__img {
   width: 100px;
   height: 100px;
   overflow: hidden;
 }
+
 .cours__img img {
   width: 100%;
   height: 100%;
 }
+
 .cours__desc {
   width: 50%;
 }
+
 .cours__titre a {
   font-family: "Brevia", sans-serif;
   color: white;
 }
+
 .cours__titre a:hover {
   color: #56CBFE !important;
   cursor: pointer;
@@ -603,12 +643,15 @@ ELEMENTS
 input {
   display: none;
 }
+
 input:checked {
   display: none;
 }
+
 input:checked ~ label > .cours__btn {
   transform: rotate(-180deg) scale(1.5);
 }
+
 input:checked ~ .cours__infos {
   height: 250px;
 }
@@ -618,6 +661,7 @@ input:checked ~ .cours__infos {
   height: 100vh;
   overflow: hidden;
 }
+
 .site__main__cours div {
   font-family: "Brevia", sans-serif;
   text-align: justify;
@@ -629,12 +673,14 @@ input:checked ~ .cours__infos {
   display: grid;
   grid-template-columns: 1fr;
 }
+
 .listeProfs__liste {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   justify-content: space-around;
 }
+
 .listeProfs__titre {
   border: 3px solid #FFA4DC;
   text-align: center;
@@ -644,26 +690,31 @@ input:checked ~ .cours__infos {
 }
 
 .prof {
-  transition-duration: 0.4s;
+  transition-duration: .4s;
   border: 3px solid #8a2be2;
   width: clamp(250px, 30%, 350px);
   margin: 10px;
   box-shadow: #56CBFE 1px -1px 10px;
 }
+
 .prof__titre {
   border-bottom: 2px solid #8a2be2;
   font-family: "Brevia", sans-serif;
 }
+
 .prof__texte {
   padding: 10px;
 }
+
 .prof__img {
   overflow: hidden;
 }
+
 .prof__img img {
   width: 100%;
   height: 100%;
 }
+
 .prof:hover {
   box-shadow: 5px 10px #56CBFE;
   transform: scale(1.05);
@@ -673,20 +724,24 @@ input:checked ~ .cours__infos {
   height: 30px;
   text-align: center;
 }
+
 .unProf img {
   max-height: 500px;
   border: 3px solid #8a2be2;
   margin: 10px;
-  transition: 0.4s;
+  transition: .4s;
 }
+
 .unProf img:hover {
   box-shadow: 5px 10px #56CBFE;
 }
+
 .unProf__infos {
   display: flex;
   width: clamp(300px, 100%, 800px);
   margin: 0 auto;
 }
+
 .unProf__anecdote {
   margin-left: 50%;
 }
@@ -707,33 +762,96 @@ iframe {
   color: white;
   font-family: "Brevia", sans-serif;
 }
+
 .avenir .wp-block-image {
-  transition: 0.4s;
+  transition: .4s;
   overflow: hidden;
   box-shadow: #56CBFE 1px -1px 10px;
 }
+
 .avenir .wp-block-image img {
-  transition: 0.4s;
+  transition: .4s;
 }
+
 .avenir .wp-block-image:hover {
   box-shadow: #8a2be2 1px -1px 10px;
 }
+
 .avenir .wp-block-image:hover img {
   transform: scale(1.1);
-  opacity: 0.7;
+  opacity: .7;
 }
 
 ._page {
   display: flex;
   flex-direction: column;
 }
+
 ._page h1 {
   text-align: center;
 }
+
 @media screen and (min-width: 1000px) {
   ._page {
     min-height: 115vh !important;
   }
+}
+
+.universite {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.universite .imgUniversite {
+  width: 40%;
+}
+
+.universite .imgUniversite img {
+  width: 90%;
+}
+
+.universite .descUniversite {
+  width: 45%;
+}
+
+.stages {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.stages .imgStages {
+  width: 40%;
+}
+
+.stages .imgStages img {
+  width: 90%;
+}
+
+.stages .descStages {
+  width: 45%;
+}
+
+.emplois {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.emplois .imgEmplois {
+  width: 40%;
+}
+
+.emplois .imgEmplois img {
+  width: 90%;
+}
+
+.emplois .descEmplois {
+  width: 45%;
 }
 
 /* -------------------------------------
@@ -743,6 +861,7 @@ COMPOSANTS
   grid-area: header;
   background-color: #000834;
 }
+
 .site__header__titre {
   margin-left: 50px;
   display: flex;
@@ -750,17 +869,20 @@ COMPOSANTS
   width: 200px;
   align-items: center;
 }
+
 .site__header__titre h1,
 .site__header__titre h6 {
   color: #56CBFE;
-  text-shadow: 0 0 0.3em rgb(249, 245, 245), 0 0 0.3em rgb(255, 255, 255);
+  text-shadow: 0 0 0.3em #f9f5f5, 0 0 0.3em white;
 }
+
 .site__header__titre:visited {
   color: #56CBFE;
 }
 
 .header__secondaire {
   margin-top: -25px;
-  font-family: "Neonblitz", Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Neonblitz', Verdana, Geneva, Tahoma, sans-serif;
   font-size: 9px;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
