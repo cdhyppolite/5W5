@@ -1,0 +1,24 @@
+.stages{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    
+    width: 100%;
+
+    .imgStages{
+        width: 40%;
+
+        img{
+            width: 90%;
+        }
+      
+        
+    }
+    .descStages{
+        width: 45%;
+
+    }
+
+
+
+}

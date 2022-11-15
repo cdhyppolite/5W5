@@ -1,0 +1,92 @@
+.listeProfs {
+    // width: clamp(300px, 100%, 750px);
+    display: grid;
+    grid-template-columns: 1fr;
+    &__liste {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-around;
+    }
+    &__titre {
+        border: 3px solid $couleur_texte3;
+        text-align: center;
+        // clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+        max-width: 50%;
+        margin: 0 auto;
+        max-height: 3.5vh;
+    }
+}
+
+.prof {
+    transition-duration: .4s;
+    border: 3px solid $couleur_fond2;
+    width: clamp(250px, 30%, 350px);
+    margin: 10px;
+    box-shadow: $couleur_texte2 1px -1px 10px;
+    &__titre {
+        border-bottom: 2px solid $couleur_fond2;
+        font-family: $font2;
+    }
+    &__texte {
+        padding: 10px;
+    }
+    &__img {
+        // width: 100px;
+        // height: 100px;
+        // max-height: 190px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &:hover {
+        box-shadow: 5px 10px $couleur_texte2;
+        transform: scale(1.05);
+    }
+}
+
+.unProf {
+    // display: grid;
+    // grid-template-areas: "pTitre pTitre" "pImg pInfos" "pAutres pAutres";
+    &__titre {
+        // grid-area: pTitre;
+        height: 30px;
+        text-align: center;
+    }
+    img {
+        max-height: 500px;
+        border: 3px solid $couleur_fond2;
+        margin: 10px;
+        transition: .4s;
+        &:hover {
+            box-shadow: 5px 10px $couleur_texte2;
+        }
+    }
+    &__infos {
+        display: flex;
+        width: clamp(300px, 100%, 800px);
+        margin: 0 auto;
+    }
+    // &__img {
+    //     // grid-area: pImg;
+    //     overflow: hidden;
+    //     height: 400px;
+    //     width: 267px;
+    //     // width: auto;
+    //     img {
+    //         // width: 100%;
+    //         height: 100%;
+    //     }
+    // }
+    &__desc {
+        // grid-area: pInfos;
+        // max-width: 200px;
+    }
+    &__anecdote {
+        // grid-area: pAutres;
+        // margin: 0 auto;
+        margin-left: 50%;
+    }
+}

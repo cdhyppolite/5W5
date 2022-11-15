@@ -1,0 +1,17 @@
+.emplois{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    
+    width: 100%;
+    .imgEmplois{
+        width: 40%;
+
+        img{
+            width: 90%;
+        }
+    }
+    .descEmplois{
+        width: 45%;
+    }
+}
