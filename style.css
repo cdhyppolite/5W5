@@ -432,6 +432,7 @@ LAYOUT
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .site__copyright nav,
 .site__copyright h2 {
