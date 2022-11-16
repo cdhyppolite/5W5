@@ -15,38 +15,27 @@
             $titre = get_the_title();  $count++?>
 
 
-            <!-- <article class="projet" style="animation-delay:-<?= $count; ?>s;">
+            <article class="projet" style="animation-delay:-<?= $count; ?>s;">
+                <div class="projet__texte">
+                    <h3 class="projet__titre"><?= $titre; ?></h3>
+                </div>
                 <a href="<?= get_permalink(); ?>">
-                    <div class="prof__img">
+                    <div class="projet__img">
                         <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt="">
                     </div>
                 </a>
-                <div class="prof__texte">
-                    <h3 class="prof__titre"><?= $titre; ?></h3>
-                </div>
-            </article> -->
-            
+            </article>            
 
                 <?php endwhile ?>
             <?php endif ?>
             <?php /* Fin boucle */ ?>
-            <div class="projet" style="animation-delay:-1s;">PROGRAMADOR</div>
-            <div class="projet" style="animation-delay:-2s;">HTML</div>
-            <div class="projet" style="animation-delay:-3s;">CSS</div>
-            <div class="projet" style="animation-delay:-4s;">JS</div>
-            <div class="projet" style="animation-delay:-5s;">GIT</div>
-            <div class="projet" style="animation-delay:-6s;">REACT</div>
-            <div class="projet" style="animation-delay:-7s;">LÓGICA</div>
             
         </div>
     </section>
 </main>
 <style>
     .projet {
-        /* -webkit-animation-duration: <?= $count*2.5; ?>s; */
-        /* -moz-animation-duration: <?= $count*2.5; ?>s; */
-        animation-duration: 10s;
-        
+        animation-duration: <?= $count; ?>s;
     }
 </style>
 <?php get_footer() ?>
