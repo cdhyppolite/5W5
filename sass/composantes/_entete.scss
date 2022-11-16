@@ -6,14 +6,15 @@
         // margin-left: 5%;
         margin-left: 50px;
         display: flex;
-        flex-direction: column;
-        width: 200px;
+        flex-direction: row;
+        width: 425px;
+        height: 150px;
         align-items: center;
-        // justify-content: center;
+        padding: 0;
         h1,
         h6 {
-            color: $couleur_texte2;
             text-shadow: 0 0 0.3em rgb(249, 245, 245), 0 0 0.3em rgb(255, 255, 255);
+            color: $couleur_texte2;
         }
         &:visited {
             color: $couleur_texte2;
@@ -24,10 +25,13 @@
 .header {
     &__principal {
         font-size: 7em;
+        padding-right: 30px;
     }
     &__secondaire {
-        margin-top: -25px;
+        // margin-top: -25px;
         font-family: 'Neonblitz', Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 4em;
+        font-size: 2em;
+        display: flex;
+        flex-wrap: wrap;
     }
 }

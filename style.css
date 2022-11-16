@@ -657,7 +657,6 @@ input:checked ~ .cours__infos {
   border: 3px solid hsl(271deg, 76%, 53%);
   width: clamp(250px, 30%, 350px);
   margin: 10px;
-  box-shadow: hsl(198deg, 99%, 67%) 1px -1px 10px;
 }
 .prof__titre {
   border-bottom: 2px solid hsl(271deg, 76%, 53%);
@@ -700,6 +699,7 @@ input:checked ~ .cours__infos {
 .unProf__desc {
   display: flex;
   flex-direction: column;
+  font-family: "Brevia", sans-serif;
 }
 .unProf__anecdote {
   margin-left: 50%;
@@ -760,23 +760,30 @@ COMPOSANTS
 .site__header__titre {
   margin-left: 50px;
   display: flex;
-  flex-direction: column;
-  width: 200px;
+  flex-direction: row;
+  width: 425px;
+  height: 150px;
   align-items: center;
+  padding: 0;
 }
 .site__header__titre h1,
 .site__header__titre h6 {
-  color: hsl(198deg, 99%, 67%);
   text-shadow: 0 0 0.3em rgb(249, 245, 245), 0 0 0.3em rgb(255, 255, 255);
+  color: hsl(198deg, 99%, 67%);
 }
 .site__header__titre:visited {
   color: hsl(198deg, 99%, 67%);
 }
 
+.header__principal {
+  font-size: 7em;
+  padding-right: 30px;
+}
 .header__secondaire {
-  margin-top: -25px;
   font-family: "Neonblitz", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 9px;
+  font-size: 2em;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .menu-menu_cours-container {

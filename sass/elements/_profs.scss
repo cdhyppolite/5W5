@@ -83,6 +83,10 @@
     &__desc {
         display: flex;
         flex-direction: column;
+        font-family: $font2;
+        p {
+            // font-family: $font2;
+        }
         // grid-area: pInfos;
         // max-width: 200px;
     }
