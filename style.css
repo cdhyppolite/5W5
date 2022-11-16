@@ -866,8 +866,12 @@ iframe {
   width: 90%;
 }
 
-.stages .descStages {
+.stages .txtStages {
   width: 45%;
+}
+
+.stages .descStages {
+  width: 100%;
 }
 
 .stages .listeStage {
