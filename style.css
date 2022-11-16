@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme name: 5W5 - Équipe 4 -ZA
+Theme name: 5W5 - Équipe 4
 Author: Équipe 4
 Author URI: https://github.com/cdhyppolite/5W5
 Description: Thème fait dans le cours 5W5
@@ -848,6 +848,14 @@ iframe {
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
+}
+
+.stages a {
+  color: white;
+}
+
+.stages a:hover {
+  color: #191970;
 }
 
 .stages .imgStages {

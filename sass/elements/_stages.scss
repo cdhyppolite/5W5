@@ -4,7 +4,15 @@
     align-items: flex-start;
     
     width: 100%;
+    a{
+        color: white;
+    
 
+        &:hover{
+           color:  $color__link-hover;
+        }
+    }
+    
     .imgStages{
         width: 40%;
 
