@@ -733,7 +733,7 @@ COMPOSANTS
 </section>
 */
 #chk-burger {
-  display: block;
+  display: none;
 }
 
 #chk-burger:checked ~ .burgerMenuParent {
@@ -772,6 +772,11 @@ COMPOSANTS
   transform: rotate(0deg);
   transition: transform 0.5s;
 }
+@media screen and (min-width: 700px) {
+  .burgerMenuParent {
+    display: none;
+  }
+}
 
 .ligne {
   width: 100%;
@@ -782,17 +787,17 @@ COMPOSANTS
 
 .ligne:nth-of-type(1) {
   top: 0;
-  background-color: blue;
+  background-color: #B44DBB;
 }
 
 .ligne:nth-of-type(2) {
   top: 35px;
-  background-color: red;
+  background-color: #B44DBB;
 }
 
 .ligne:nth-of-type(3) {
   top: 85px;
-  background-color: green;
+  background-color: #B44DBB;
 }
 
 .menu {

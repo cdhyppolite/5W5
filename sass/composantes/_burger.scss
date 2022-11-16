@@ -18,7 +18,7 @@
 */
 
 #chk-burger {
-    display: block;
+    display: none;
 }
 #chk-burger:checked ~ .burgerMenuParent {
    transform:rotate(90deg);
@@ -39,7 +39,7 @@
     @media screen and (min-width: 700px) {
        position: static;
        transform: translateX(0);
-       width: 100%; 
+       width: 100%;
     }
 
 
@@ -56,6 +56,9 @@
    z-index: 2;
    transform:rotate(0deg);
    transition: transform 0.5s;
+   @media screen and (min-width: 700px) {
+    display: none;
+     }
 }
 
 .ligne {
@@ -67,15 +70,17 @@
 
 .ligne:nth-of-type(1){
     top: 0;
-    background-color: blue;
+    background-color: #B44DBB;
 }
 
 .ligne:nth-of-type(2){
     top: 35px;
-    background-color: red;
+    background-color:  #B44DBB;
 }
+
 
 .ligne:nth-of-type(3){
     top: 85px;
-    background-color: green;
+    background-color:  #B44DBB;
 }
+
