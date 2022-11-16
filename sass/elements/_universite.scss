@@ -14,4 +14,13 @@
     .descUniversite{
         width: 45%;
     }
+    .listeUni{
+        list-style:decimal;
+        list-style-position: inside;
+        padding-left: 0;
+        li{
+            margin-top: 20px;
+            
+        }
+    }
 }

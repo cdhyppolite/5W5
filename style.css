@@ -338,7 +338,8 @@ VARIABLES
 ----------------------------------------*/
 p,
 h1,
-h3 {
+h3,
+li {
   color: white;
 }
 
@@ -832,6 +833,16 @@ iframe {
   width: 45%;
 }
 
+.universite .listeUni {
+  list-style: decimal;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.universite .listeUni li {
+  margin-top: 20px;
+}
+
 .stages {
   display: flex;
   flex-direction: row;
@@ -851,6 +862,15 @@ iframe {
   width: 45%;
 }
 
+.stages .listeStage {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.stages .listeStage li {
+  margin-top: 20px;
+}
+
 .emplois {
   display: flex;
   flex-direction: row;
@@ -868,6 +888,15 @@ iframe {
 
 .emplois .descEmplois {
   width: 45%;
+}
+
+.emplois .listeEmplois {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.emplois .listeEmplois li {
+  margin-top: 20px;
 }
 
 /* -------------------------------------

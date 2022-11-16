@@ -11,7 +11,15 @@ get_header();
     <h1><?php the_title() ?></h1>
     <Section class="stages">
         <div class="imgStages"> <img src="http://localhost/2022_4w4/wp-content/uploads/2022/11/GrosStage.jpg" alt=""></div>
-        <div class="descStages"> <p>Le stage en entreprise complète la formation de l’étudiant en lui permettant d’intégrer et de mettre en application ses différents acquis dans le milieu professionnel. L’étudiant joint une véritable équipe de travail en multimédia, ce qui lui permet également de réaliser une synthèse de ses compétences par la réalisation de mandats concrets et réels et de tâches spécifiques visant à répondre aux besoins de l’entreprise et de ses clients. Les stages sont d’une durée de 6 semaines.</p></div>
+        <div class="descStages"> <p>Durant votre sixième session, vous devrez participer à un stage de deux mois en entreprise. Encadré par vos enseignants et employeurs, vous aurez l'opportunité de travailler, et d’apprendre dans des compagnies tels que:</p>
+        <ul class="listeStage">
+            <li><a href="https://www.ubisoft.com/fr-ca/">Ubisoft</a></li>
+            <li><a href="https://lg2.com/">LG2</a></li>
+            <li><a href="https://bob.ca/fr/">Bob</a></li>
+            <li><a href="https://www.valnetinc.com/fr/">Valnet</a></li>
+            <li><a href="https://www.bhvr.com/fr/">Behaviour Interactive</a></li>
+        </ul>
+    </div>
     </Section>
 
 </main>
