@@ -1,22 +1,12 @@
 .site {
     display: grid;
-   gap: 1px;
-   grid-template-columns:  auto;
-   grid-template-areas: 
-   "header"
-   "barre"
-   "main"
-   "footer"; 
-   
-    @media screen   and (min-width : 700px){
-      
-    grid-template-columns: ($size__site-sidebar) auto;
-    grid-template-areas: 
-    "header header"
-    "barre main"
-    "footer footer"; 
+    //    gap: 1px;
+    grid-template-columns: auto;
+    grid-template-areas: "header" "barre" "main" "footer";
+    @media screen and (min-width: 700px) {
+        grid-template-columns: ($size__site-sidebar) auto;
+        grid-template-areas: "header header" "barre main" "footer footer";
     }
-  
     &__main {
         grid-area: main;
         background-color: $couleur_fond;
@@ -32,11 +22,8 @@
         position: relative;
         grid-area: barre;
         background-color: $couleur_fond;
-     
-       // transform: translateX(-100vw);
-        @media screen and (min-width : 700px){
-
-        }
+        // transform: translateX(-100vw);
+        @media screen and (min-width: 700px) {}
         // border: 3px solid #bdbdbd;
         // border-radius: 25px;
         // nav {
@@ -52,7 +39,7 @@
     }
     &__footer {
         grid-area: footer;
-        background-color: $color__background-footer;
+        background-image: linear-gradient($couleur_fond, black);
         // border: 3px solid #bdbdbd;
         // border-radius: 25px;
     }

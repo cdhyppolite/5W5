@@ -9,7 +9,7 @@
         <!-- Menu des cours pour les sessions -->
         <nav class="triSession">
             <?php
-            //Empecher l'utilisateur d'écrire n'importe quoi la la variable session
+            //Empêcher l'utilisateur d'écrire n'importe quoi dans la variable session
                 if (isset($_GET["session"])) {
                     if (($_GET["session"]<1) || ($_GET["session"]> 6)) {
                         unset($_GET["session"]); // Détruire la vartiable
@@ -31,6 +31,7 @@
                         $nbHeures = substr($titre, -6);
                         $codeCours = substr($titre, 0,3);
                         $descCours = get_the_excerpt();
+                        // $descCours = get_the_content();
                     ?>
                     
                     <?php
@@ -45,13 +46,16 @@
                             </label>
 
                             <div class="cours__infos">
-                                <!-- <div class="cours__nbre-heure"><?= $nbHeures; ?></div> -->
-                                <div class="cours__img">
-                                    <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt="">
+                                <div class="cours__infos__haut">
+                                        <!-- <div class="cours__nbre-heure"><?= $nbHeures; ?></div> -->
+                                    <div class="cours__img">
+                                        <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt="">
+                                    </div>
+                                    <!-- <p class="cours__code"><?= $codeCours; ?> </p> -->
+                                    <p class="cours__desc"> <?= $descCours; ?></p>
                                 </div>
-                                <!-- <p class="cours__code"><?= $codeCours; ?> </p> -->
-                                <p class="cours__desc"> <?= $descCours; ?></p>
-                                <p class="cours__logiciel">Logiciel(s) utilisé(s): </p>
+                                <p class="cours__logiciel">Logiciel(s) utilisé(s): <?php the_field('logiciel'); ?>
+                                </p>
                             </div>
                             
                         </article>

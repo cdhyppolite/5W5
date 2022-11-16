@@ -20,11 +20,12 @@
 
 .prof {
     transition-duration: .4s;
-    border: 3px solid $couleur_fond3;
+    border: 3px solid $couleur_fond2;
     width: clamp(250px, 30%, 350px);
     margin: 10px;
     &__titre {
-        border-bottom: 2px solid $couleur_fond3;
+        border-bottom: 2px solid $couleur_fond2;
+        font-family: $font2;
     }
     &__texte {
         padding: 10px;
@@ -46,13 +47,48 @@
 }
 
 .unProf {
-    &__img {
-        overflow: hidden;
-        height: 300px;
-        // width: auto;
-        img {
-            // width: 100%;
-            // height: 100%;
+    // display: grid;
+    // grid-template-areas: "pTitre pTitre" "pImg pInfos" "pAutres pAutres";
+    &__titre {
+        // grid-area: pTitre;
+        height: 30px;
+        text-align: center;
+    }
+    img {
+        max-height: 500px;
+        border: 3px solid $couleur_fond2;
+        margin: 10px;
+        transition: .4s;
+        &:hover {
+            box-shadow: 5px 10px $couleur_texte2;
         }
+    }
+    &__infos {
+        display: flex;
+        flex-wrap: wrap;
+        width: clamp(300px, 100%, 800px);
+        margin: 0 auto;
+    }
+    // &__img {
+    //     // grid-area: pImg;
+    //     overflow: hidden;
+    //     height: 400px;
+    //     width: 267px;
+    //     // width: auto;
+    //     img {
+    //         // width: 100%;
+    //         height: 100%;
+    //     }
+    // }
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        // grid-area: pInfos;
+        // max-width: 200px;
+    }
+    &__anecdote {
+        // grid-area: pAutres;
+        // margin: 0 auto;
+        margin-left: 50%;
     }
 }

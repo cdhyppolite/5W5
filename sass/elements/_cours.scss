@@ -38,11 +38,19 @@
             }
         }
         &__infos {
+            &__haut {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
             height: 0;
             transition: .4s cubic-bezier(.5, 0, .5, 1.7);
-            display: flex;
             justify-content: space-around;
-            flex-direction: row;
+            display: flex;
+            overflow: hidden;
+            // flex-wrap: wrap;
+            flex-direction: column;
             .cours {
                 &__desc {
                     text-align: justify;
@@ -63,7 +71,9 @@
         }
         &__titre {
             a {
+                font-family: $font2;
                 color: $couleur_texte1;
+                transition: .2s;
                 &:hover {
                     color: $couleur_texte2 !important;
                     cursor: pointer;
@@ -82,9 +92,22 @@
             }
             ~.cours {
                 &__infos {
-                    height: 127px;
+                    height: 250px;
+                    // height: 360px;
                     // align-items: center;
                 }
             }
+        }
+    }
+    
+    .site__main__cours {
+        background-color: $couleur_fond;
+        height: 100vh;
+        overflow: hidden;
+        div {
+            font-family: $font2;
+            text-align: justify;
+            margin-left: 5px;
+            margin-right: 5px;
         }
     }
