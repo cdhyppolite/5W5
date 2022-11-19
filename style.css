@@ -585,6 +585,7 @@ ELEMENTS
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
 .cours__infos .cours__desc {
   text-align: justify;
@@ -602,6 +603,7 @@ ELEMENTS
   height: 100%;
 }
 .cours__desc {
+  font-size: 14px;
   width: 50%;
 }
 .cours__titre a {
@@ -649,6 +651,9 @@ input:checked ~ .cours__infos {
   text-align: justify;
   margin-left: 20px;
   margin-right: 20px;
+}
+.site__main__cours p {
+  font-size: 14px;
 }
 
 .listeProfs {

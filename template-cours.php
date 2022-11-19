@@ -7,6 +7,10 @@
  * @subpackage e4_5w5
  */
     $imageBlank = get_bloginfo('template_directory')."/images/blank.jpg";
+    $titre = get_the_title();
+    $titreFiltreCours = substr($titre, 3, -6);
+    $nbHeures = substr($titre, -4, 3);
+    $codeCours = get_field('code_du_cours')
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +27,11 @@
 <!-- Afficher le titre et la description complète du cours -->
 <main class="site__main__cours">
     <article class="article__seul">
-        <h2><?php the_title(); ?></h2>
+        <h2><?= $titreFiltreCours; ?></h2>
+        <div>
+            <p>Cours du cours: <?= $codeCours; ?></p>
+            <p>Nombre d'heures: <?= $nbHeures; ?></p>
+        </div>
         <div class="article__seul__contenu">
             <?php the_content(); ?>
         </div>
