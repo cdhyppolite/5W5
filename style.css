@@ -589,12 +589,15 @@ ELEMENTS
   text-align: justify;
 }
 .cours__img {
-  width: 100px;
-  height: 100px;
+  width: auto;
+  height: 130px;
   overflow: hidden;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
 }
 .cours__img img {
-  width: 100%;
+  width: auto;
   height: 100%;
 }
 .cours__desc {
