@@ -572,6 +572,7 @@ ELEMENTS
   background-color: hsl(198deg, 99%, 67%);
 }
 .cours__infos {
+  font-family: "Brevia", sans-serif;
   height: 0;
   transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.7);
   justify-content: space-around;
@@ -612,6 +613,18 @@ ELEMENTS
   color: hsl(198deg, 99%, 67%) !important;
   cursor: pointer;
 }
+.cours__solo__img {
+  overflow: hidden;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
+  margin: 0 auto !important;
+  width: fit-content;
+  height: 230px;
+}
+.cours__solo__img img {
+  height: 230px;
+}
 
 input {
   display: none;
@@ -634,8 +647,8 @@ input:checked ~ .cours__infos {
 .site__main__cours div {
   font-family: "Brevia", sans-serif;
   text-align: justify;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .listeProfs {

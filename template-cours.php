@@ -6,6 +6,7 @@
  * @package WordPress
  * @subpackage e4_5w5
  */
+    $imageBlank = get_bloginfo('template_directory')."/images/blank.jpg";
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +26,9 @@
         <h2><?php the_title(); ?></h2>
         <div class="article__seul__contenu">
             <?php the_content(); ?>
+        </div>
+        <div class="cours__solo__img">
+            <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt="">
         </div>
     </article>
 </main>

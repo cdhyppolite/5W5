@@ -53,7 +53,7 @@
                                     <p class="cours__desc"> <?= $descCours; ?></p>
                                 </div>
                                 <?php if (get_field('logiciel') != "") : ?>
-                                    <p class="cours__logiciel">Logiciel(s) / Langages  utilisé(s): <?= get_field('logiciel'); ?></p>
+                                    <p class="cours__logiciel">Logiciel(s) / Langage(s)  utilisé(s): <?= get_field('logiciel'); ?></p>
                                 <?php endif; ?>
                             </div>
                             
