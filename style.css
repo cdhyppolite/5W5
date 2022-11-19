@@ -338,7 +338,8 @@ VARIABLES
 ----------------------------------------*/
 p,
 h1,
-h3 {
+h3,
+li {
   color: white;
 }
 
@@ -700,6 +701,8 @@ input:checked ~ .cours__infos {
 .unProf__desc {
   display: flex;
   flex-direction: column;
+  font-family: "Brevia", sans-serif;
+  text-align: justify;
 }
 .unProf__anecdote {
   margin-left: 50%;
@@ -717,24 +720,39 @@ iframe {
   align-items: center;
 }
 
-.avenir figcaption {
-  color: white;
-  font-family: "Brevia", sans-serif;
+.avenir {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
-.avenir .wp-block-image {
+.avenir .conteneur_avenir {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: 0.4s;
   overflow: hidden;
   box-shadow: hsl(198deg, 99%, 67%) 1px -1px 10px;
+  width: 100%;
+  height: 90%;
 }
-.avenir .wp-block-image img {
+.avenir .conteneur_avenir img {
   transition: 0.4s;
 }
-.avenir .wp-block-image:hover {
+.avenir .conteneur_avenir:hover {
   box-shadow: hsl(271deg, 76%, 53%) 1px -1px 10px;
 }
-.avenir .wp-block-image:hover img {
+.avenir .conteneur_avenir:hover img {
   transform: scale(1.1);
   opacity: 0.7;
+}
+.avenir .blocTxt {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  transform: translateY(-100px);
+  background-color: rgba(0, 8, 52, 0.5333333333);
 }
 
 ._page {
@@ -750,6 +768,158 @@ iframe {
   }
 }
 
+.universite {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+.universite .imgUniversite {
+  width: 40%;
+}
+.universite .imgUniversite img {
+  width: 90%;
+}
+.universite .descUniversite {
+  width: 45%;
+}
+.universite .listeUni {
+  list-style: decimal;
+  list-style-position: inside;
+  padding-left: 0;
+}
+.universite .listeUni li {
+  margin-top: 20px;
+}
+
+.stages {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+.stages a {
+  color: white;
+}
+.stages a:hover {
+  color: #191970;
+}
+.stages .imgStages {
+  width: 40%;
+}
+.stages .imgStages img {
+  width: 90%;
+}
+.stages .txtStages {
+  width: 45%;
+}
+.stages .descStages {
+  width: 100%;
+}
+.stages .listeStage {
+  list-style-position: inside;
+  padding-left: 0;
+}
+.stages .listeStage li {
+  margin-top: 20px;
+}
+
+.emplois {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+.emplois .imgEmplois {
+  width: 40%;
+}
+.emplois .imgEmplois img {
+  width: 90%;
+}
+.emplois .descEmplois {
+  width: 45%;
+}
+.emplois .listeEmplois {
+  list-style-position: inside;
+  padding-left: 0;
+}
+.emplois .listeEmplois li {
+  margin-top: 20px;
+}
+
+.listeProjets {
+  width: 100%;
+  position: relative;
+}
+.listeProjets__liste {
+  perspective: 250px;
+  transform: scale(3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.projet {
+  transition-duration: 0.4s;
+  border: 3px solid white;
+  background-color: hsl(286deg, 62%, 37%);
+  overflow: hidden;
+  width: 90px;
+  height: 100px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  font-size: 9px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  animation-name: mouvementCarrosel;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.projet__titre {
+  border-bottom: 2px solid white;
+  font-family: "Brevia", sans-serif;
+}
+.projet__img {
+  margin: 0 auto;
+  width: 90%;
+  overflow: hidden;
+}
+.projet__img img {
+  border: 2px dotted hsl(198deg, 99%, 67%);
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+}
+.projet__img:hover {
+  box-shadow: hsl(271deg, 76%, 53%) 1px -1px 10px;
+}
+.projet__img:hover img {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+@keyframes mouvementCarrosel {
+  from {
+    transform: rotateY(360deg) translateZ(60px) rotateY(-360deg);
+    z-index: 10;
+    opacity: 1;
+  }
+  50% {
+    z-index: -10;
+  }
+  to {
+    transform: rotateY(0deg) translateZ(60px) rotateY(0deg);
+    z-index: 10;
+    opacity: 1;
+  }
+}
 /* -------------------------------------
 COMPOSANTS
 ----------------------------------------*/
@@ -760,14 +930,16 @@ COMPOSANTS
 .site__header__titre {
   margin-left: 50px;
   display: flex;
-  flex-direction: column;
-  width: 200px;
+  flex-direction: row;
+  width: 425px;
+  height: 150px;
   align-items: center;
+  padding: 0;
 }
 .site__header__titre h1,
 .site__header__titre h6 {
-  color: hsl(198deg, 99%, 67%);
   text-shadow: 0 0 0.3em rgb(249, 245, 245), 0 0 0.3em rgb(255, 255, 255);
+  color: hsl(198deg, 99%, 67%);
 }
 .site__header__titre:visited {
   color: hsl(198deg, 99%, 67%);
@@ -775,11 +947,13 @@ COMPOSANTS
 
 .header__principal {
   font-size: 7em;
+  padding-right: 30px;
 }
 .header__secondaire {
-  margin-top: -25px;
   font-family: "Neonblitz", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 4em;
+  font-size: 2em;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .menu-menu_cours-container {
