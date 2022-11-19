@@ -31,12 +31,10 @@
                         $nbHeures = substr($titre, -6);
                         $codeCours = substr($titre, 0,3);
                         $descCours = get_the_excerpt();
-                        // $descCours = get_the_content();
                     ?>
                     
                     <?php
                         if ( (isset($_GET["session"]) && $_GET["session"] == $codeCours[0]) || (!isset($_GET["session"]))) :?>
-                        <?php /** style="background-image: url('<?= get_the_post_thumbnail_url(); ?>');" */ ?>
                         <article class="cours">
                         <input type="checkbox" id="cours-btn_<?= $count; ?>">
                             <h3 class="cours__titre" title="Voir la description complète"> <a target="popup" onclick="window.open('<?= get_permalink(); ?>','popup','width=600,height=600'); return false;"> <?= $titreFiltreCours /*. " - ". $count*/; ?> </a></h3>
@@ -54,8 +52,9 @@
                                     <!-- <p class="cours__code"><?= $codeCours; ?> </p> -->
                                     <p class="cours__desc"> <?= $descCours; ?></p>
                                 </div>
-                                <p class="cours__logiciel">Logiciel(s) utilisé(s): <?php the_field('logiciel'); ?>
-                                </p>
+                                <?php if (get_field('logiciel') != "") : ?>
+                                    <p class="cours__logiciel">Logiciel(s) / Langages  utilisé(s): <?= get_field('logiciel'); ?></p>
+                                <?php endif; ?>
                             </div>
                             
                         </article>

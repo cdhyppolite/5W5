@@ -7,10 +7,10 @@
         grid-template-columns: ($size__site-sidebar) auto;
         grid-template-areas: "header header" "barre main" "footer footer";
     }
- //   @media screen and (min-width: 1200px) and (max-width:1600px) {
- //       grid-template-columns: ($size__site-sidebar) auto;
- //       grid-template-areas: "header header" "barre main" "footer footer";
- //   }
+    //   @media screen and (min-width: 1200px) and (max-width:1600px) {
+    //       grid-template-columns: ($size__site-sidebar) auto;
+    //       grid-template-areas: "header header" "barre main" "footer footer";
+    //   }
     &__main {
         grid-area: main;
         background-color: $couleur_fond;
@@ -48,7 +48,7 @@
         // border-radius: 25px;
     }
     &__copyright {
-        border-top: 3px double rgb(59, 59, 59);
+        // border-top: 3px double rgb(59, 59, 59);
         display: flex;
         flex-direction: column;
         justify-content: center;
