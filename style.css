@@ -404,7 +404,7 @@ LAYOUT
   grid-template-columns: auto;
   grid-template-areas: "header" "barre" "main" "footer";
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 700px) and (max-width: 1199px) {
   .site {
     grid-template-columns: 30% auto;
     grid-template-areas: "header header" "barre main" "footer footer";
@@ -432,6 +432,7 @@ LAYOUT
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .site__copyright nav,
 .site__copyright h2 {
@@ -699,8 +700,6 @@ input:checked ~ .cours__infos {
 .unProf__desc {
   display: flex;
   flex-direction: column;
-  font-family: "Brevia", sans-serif;
-  text-align: justify;
 }
 .unProf__anecdote {
   margin-left: 50%;
@@ -751,79 +750,6 @@ iframe {
   }
 }
 
-.listeProjets {
-  width: 100%;
-  position: relative;
-}
-.listeProjets__liste {
-  perspective: 250px;
-  transform: scale(3);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100px;
-  height: 100px;
-}
-
-.projet {
-  transition-duration: 0.4s;
-  border: 3px solid white;
-  background-color: hsl(286deg, 62%, 37%);
-  overflow: hidden;
-  width: 90px;
-  height: 100px;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  justify-content: center;
-  align-items: center;
-  font-size: 9px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-  text-align: center;
-  animation-name: mouvementCarrosel;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-.projet__titre {
-  border-bottom: 2px solid white;
-  font-family: "Brevia", sans-serif;
-}
-.projet__img {
-  margin: 0 auto;
-  width: 90%;
-  overflow: hidden;
-}
-.projet__img img {
-  border: 2px dotted hsl(198deg, 99%, 67%);
-  width: 100%;
-  height: 100%;
-  transition: 0.4s;
-}
-.projet__img:hover {
-  box-shadow: hsl(271deg, 76%, 53%) 1px -1px 10px;
-}
-.projet__img:hover img {
-  transform: scale(1.1);
-  opacity: 0.7;
-}
-
-@keyframes mouvementCarrosel {
-  from {
-    transform: rotateY(360deg) translateZ(60px) rotateY(-360deg);
-    z-index: 10;
-    opacity: 1;
-  }
-  50% {
-    z-index: -10;
-  }
-  to {
-    transform: rotateY(0deg) translateZ(60px) rotateY(0deg);
-    z-index: 10;
-    opacity: 1;
-  }
-}
 /* -------------------------------------
 COMPOSANTS
 ----------------------------------------*/
@@ -834,16 +760,14 @@ COMPOSANTS
 .site__header__titre {
   margin-left: 50px;
   display: flex;
-  flex-direction: row;
-  width: 425px;
-  height: 150px;
+  flex-direction: column;
+  width: 200px;
   align-items: center;
-  padding: 0;
 }
 .site__header__titre h1,
 .site__header__titre h6 {
-  text-shadow: 0 0 0.3em rgb(249, 245, 245), 0 0 0.3em rgb(255, 255, 255);
   color: hsl(198deg, 99%, 67%);
+  text-shadow: 0 0 0.3em rgb(249, 245, 245), 0 0 0.3em rgb(255, 255, 255);
 }
 .site__header__titre:visited {
   color: hsl(198deg, 99%, 67%);
@@ -851,13 +775,11 @@ COMPOSANTS
 
 .header__principal {
   font-size: 7em;
-  padding-right: 30px;
 }
 .header__secondaire {
+  margin-top: -25px;
   font-family: "Neonblitz", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 2em;
-  display: flex;
-  flex-wrap: wrap;
+  font-size: 4em;
 }
 
 .menu-menu_cours-container {
@@ -902,7 +824,7 @@ COMPOSANTS
 </section>
 */
 #chk-burger {
-  display: block;
+  display: none;
 }
 
 #chk-burger:checked ~ .burgerMenuParent {
@@ -920,6 +842,12 @@ COMPOSANTS
   width: 100vw;
   transform: translateX(-100vw);
   transition: transform 0.5s;
+  /*   @media screen and (min-width: 1200px) {
+         position: static;
+         transform: translateX(0);
+         width: 100%;
+      }
+  */
 }
 @media screen and (min-width: 700px) {
   .menu-principal-container {
@@ -932,14 +860,19 @@ COMPOSANTS
 .burgerMenuParent {
   border: 1px solid #aaa;
   background-color: white;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
   transform: rotate(0deg);
   transition: transform 0.5s;
+}
+@media screen and (min-width: 1200px) {
+  .burgerMenuParent {
+    display: none;
+  }
 }
 
 .ligne {
@@ -951,17 +884,17 @@ COMPOSANTS
 
 .ligne:nth-of-type(1) {
   top: 0;
-  background-color: blue;
+  background-color: #B44DBB;
 }
 
 .ligne:nth-of-type(2) {
   top: 35px;
-  background-color: red;
+  background-color: #B44DBB;
 }
 
 .ligne:nth-of-type(3) {
   top: 85px;
-  background-color: green;
+  background-color: #B44DBB;
 }
 
 .menu {
