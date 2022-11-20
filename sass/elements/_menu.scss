@@ -1,6 +1,8 @@
 .menu {
+    li {
+        font-family: $fontsMenu !important;
+    }
     list-style: none;
-    font-family: $fontsMenu;
     &-item {
         // Ligne en dessous du texte
         &__ligne {
@@ -64,7 +66,7 @@
         background-color: $couleur_fond2;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
         color: $couleur_texte1;
-        font-family: $fontsMenu;
+        font-family: $fontsMenu !important;
         font-weight: 900;
         // margin: 0;
         padding: 10px;

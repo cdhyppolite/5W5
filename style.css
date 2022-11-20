@@ -337,6 +337,11 @@ html {
 VARIABLES
 ----------------------------------------*/
 p,
+li {
+  font-family: "Brevia", sans-serif;
+}
+
+p,
 h1,
 h3,
 li {
@@ -482,7 +487,9 @@ ELEMENTS
 ----------------------------------------*/
 .menu {
   list-style: none;
-  font-family: lobster;
+}
+.menu li {
+  font-family: lobster !important;
 }
 .menu-item__ligne {
   clip-path: polygon(13% 0, 87% 0, 100% 100%, 0 100%);
@@ -523,7 +530,7 @@ ELEMENTS
   background-color: hsl(271deg, 76%, 53%);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
   color: white;
-  font-family: lobster;
+  font-family: lobster !important;
   font-weight: 900;
   padding: 10px;
 }

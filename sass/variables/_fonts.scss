@@ -8,6 +8,12 @@ sans-serif;
 $fontsMenu: lobster;
 // Séparation
 p,
+li {
+    font-family: $font2;
+    // color: $couleur_texte1;
+}
+
+p,
 h1,
 h3,
 li {
