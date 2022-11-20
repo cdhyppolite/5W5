@@ -365,20 +365,6 @@ h1 {
   font-display: swap;
 }
 @font-face {
-  font-family: "Neon Sans";
-  src: url("fonts/NeonSans.woff2") format("woff2"), url("fonts/NeonSans.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Las Enter";
-  src: url("fonts/LasEnterPersonalUseOnly.woff2") format("woff2"), url("fonts/LasEnterPersonalUseOnly.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: "Neonblitz";
   src: url("fonts/Neonblitz.woff2") format("woff2"), url("fonts/Neonblitz.woff") format("woff");
   font-weight: normal;
