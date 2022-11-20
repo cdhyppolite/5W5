@@ -30,7 +30,7 @@
                         $titreFiltreCours = substr($titre, 3, -6);
                         $nbHeures = substr($titre, -6);
                         $codeCours = substr($titre, 0,3);
-                        $descCours = get_the_excerpt();
+                        $descriptionCours = get_the_excerpt();
                     ?>
                     
                     <?php
@@ -45,12 +45,10 @@
 
                             <div class="cours__infos">
                                 <div class="cours__infos__haut">
-                                        <!-- <div class="cours__nbre-heure"><?= $nbHeures; ?></div> -->
                                     <div class="cours__img">
                                         <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt="">
                                     </div>
-                                    <!-- <p class="cours__code"><?= $codeCours; ?> </p> -->
-                                    <p class="cours__desc"> <?= $descCours; ?></p>
+                                    <p class="cours__desc"> <?= wp_trim_words($descriptionCours,50); ?></p>
                                 </div>
                                 <?php if (get_field('logiciel') != "") : ?>
                                     <p class="cours__logiciel">Logiciel(s) / Langage(s)  utilisé(s): <?= get_field('logiciel'); ?></p>
