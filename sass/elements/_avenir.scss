@@ -1,4 +1,6 @@
 .avenir {
+    padding-left: 30px;
+    padding-right: 30px;
     figcaption {
         color: $couleur_texte1;
         font-family: $font2;
@@ -7,6 +9,12 @@
         transition: .4s;
         overflow: hidden;
         box-shadow: $couleur_texte2 1px -1px 10px;
+        figcaption {
+            padding-bottom: 30px !important;
+            color: $couleur_texte3 !important;
+            font-size: 1.5rem !important;
+            text-decoration: underline;
+        }
         img {
             transition: .4s;
         }
