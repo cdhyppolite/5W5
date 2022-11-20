@@ -376,10 +376,10 @@ a {
   color: #4169e1;
 }
 a:visited {
-  color: #800080;
+  color: hsl(271deg, 76%, 53%);
 }
 a:hover, a:focus, a:active {
-  color: #191970;
+  color: hsl(240deg, 64%, 27%);
 }
 a:focus {
   outline: thin dotted;
@@ -810,7 +810,7 @@ iframe {
   color: white;
 }
 .stages a:hover {
-  color: #191970;
+  color: hsl(240deg, 64%, 27%);
 }
 .stages .imgStages {
   width: 40%;
@@ -928,6 +928,16 @@ iframe {
     opacity: 1;
   }
 }
+.intro {
+  text-align: justify;
+}
+@media screen and (min-width: 1000px) {
+  .intro {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 /* -------------------------------------
 COMPOSANTS
 ----------------------------------------*/
@@ -1009,7 +1019,7 @@ COMPOSANTS
   transform: rotate(0deg);
   transition: transform 0.5s;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 600px) {
   .burgerMenuParent {
     display: none;
   }
@@ -1023,15 +1033,15 @@ COMPOSANTS
 }
 .ligne:nth-of-type(1) {
   top: 0;
-  background-color: #B44DBB;
+  background-color: hsl(286deg, 62%, 37%);
 }
 .ligne:nth-of-type(2) {
   top: 35px;
-  background-color: #B44DBB;
+  background-color: hsl(286deg, 62%, 37%);
 }
 .ligne:nth-of-type(3) {
   top: 85px;
-  background-color: #B44DBB;
+  background-color: hsl(286deg, 62%, 37%);
 }
 
 .menu {

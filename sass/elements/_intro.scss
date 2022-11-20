@@ -1,0 +1,7 @@
+.intro {
+    text-align: justify;
+    @media screen and (min-width: $largeur__media-desktop) {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
