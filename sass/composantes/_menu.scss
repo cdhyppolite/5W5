@@ -3,6 +3,22 @@
     font-family: $fontsMenu;
     &-principal {
         &-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            transform: translateX(-100vw);
+            transition: transform 0.5s;
+            @media screen and (min-width: 700px) {
+                position: static;
+                transform: translateX(0);
+                width: 100%;
+            }
+            /*@media screen and (min-width: 1200px) {
+                position: static;
+                transform: translateX(0);
+                width: 100%;
+            }*/
             a {
                 margin-left: 20px;
                 color: $couleur_texte1;

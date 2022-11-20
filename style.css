@@ -987,55 +987,14 @@ COMPOSANTS
   padding: 9px 0;
 }
 
-/*
-
-<section class="site__barre">
-    <!-- <input type="checkbox" id="chk-burger">
-    <div class="burgerMenuParent">
-        <label for="chk-burger" id="burger">
-            <div class="ligne"></div>
-            <div class="ligne"></div>
-            <div class="ligne"></div>
-        </label>
-    </div> -->
-
-    <?php
-    // $icone= '<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" color="#000"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>';
-    ?>
-</section>
-*/
 #chk-burger {
   display: none;
 }
-
 #chk-burger:checked ~ .burgerMenuParent {
   transform: rotate(90deg);
 }
-
 #chk-burger:checked ~ .menu-principal-container {
   transform: translateX(0);
-}
-
-.menu-principal-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  transform: translateX(-100vw);
-  transition: transform 0.5s;
-  /*   @media screen and (min-width: 1200px) {
-         position: static;
-         transform: translateX(0);
-         width: 100%;
-      }
-  */
-}
-@media screen and (min-width: 700px) {
-  .menu-principal-container {
-    position: static;
-    transform: translateX(0);
-    width: 100%;
-  }
 }
 
 .burgerMenuParent {
@@ -1062,17 +1021,14 @@ COMPOSANTS
   border: 1px solid black;
   background-color: white;
 }
-
 .ligne:nth-of-type(1) {
   top: 0;
   background-color: #B44DBB;
 }
-
 .ligne:nth-of-type(2) {
   top: 35px;
   background-color: #B44DBB;
 }
-
 .ligne:nth-of-type(3) {
   top: 85px;
   background-color: #B44DBB;
@@ -1081,6 +1037,26 @@ COMPOSANTS
 .menu {
   list-style: none;
   font-family: lobster;
+}
+.menu-principal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  transform: translateX(-100vw);
+  transition: transform 0.5s;
+  /*@media screen and (min-width: 1200px) {
+      position: static;
+      transform: translateX(0);
+      width: 100%;
+  }*/
+}
+@media screen and (min-width: 700px) {
+  .menu-principal-container {
+    position: static;
+    transform: translateX(0);
+    width: 100%;
+  }
 }
 .menu-principal-container a {
   margin-left: 20px;
