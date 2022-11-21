@@ -691,6 +691,9 @@ input:checked ~ .cours__infos {
   transform: scale(1.05);
 }
 
+.unProf {
+  margin: 0 auto;
+}
 .unProf__titre {
   height: 30px;
   text-align: center;

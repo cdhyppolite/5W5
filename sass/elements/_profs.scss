@@ -46,6 +46,7 @@
 .unProf {
     // display: grid;
     // grid-template-areas: "pTitre pTitre" "pImg pInfos" "pAutres pAutres";
+    margin: 0 auto;
     &__titre {
         // grid-area: pTitre;
         height: 30px;
