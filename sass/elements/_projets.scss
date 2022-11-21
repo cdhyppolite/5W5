@@ -77,10 +77,6 @@ $deplacement:60px;
     &:checked~ {
         .listeProjets {
             &__liste {
-                @media screen and (min-width: 1120px) {
-                    // top: 8%;
-                }
-                // overflow: hidden;
                 margin: 0 auto;
                 transform: scale(1);
                 display: flex;
@@ -136,17 +132,3 @@ $deplacement:60px;
         }
     }
 }
-
-
-/*._projets {
-    @media screen and (min-width: 1670px) {
-        height: 170vh !important;
-        .listeProjets__liste {
-            top: 8% !important;
-        }
-        // display: none;
-    }
-    @media screen and (min-width: 1120px) {
-        height: 300vh !important;
-    }
-}*/

@@ -9,7 +9,7 @@
         <h2 class="listeProfs__titre">Liste <?= $nomCategorie; ?></h2>
         <input type="checkbox" id="chk-projets">
         <label for="chk-projets" class="btn-projets">
-            <div>Changer l'affichage</div>
+            <div class="btn-projets__enfant">Changer l'affichage</div>
         </label>
         
         <div class="listeProjets__liste">
