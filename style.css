@@ -726,9 +726,20 @@ input:checked ~ .cours__infos {
   margin-left: 50%;
 }
 
-iframe {
-  border: 5px solid hsl(323deg, 100%, 82%);
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
   margin: 0 auto;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .home .site__main {
