@@ -928,6 +928,42 @@ iframe {
     opacity: 1;
   }
 }
+#chk-projets:checked ~ .listeProjets__liste {
+  margin: 0 auto;
+  transform: scale(1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: unset;
+  left: unset;
+  width: 70%;
+}
+#chk-projets:checked ~ .listeProjets__liste .projet {
+  width: clamp(250px, 30%, 350px);
+  margin: 10px;
+  height: unset;
+  position: unset;
+  animation-name: unset;
+  animation-iteration-count: unset;
+  animation-timing-function: unset;
+}
+#chk-projets:checked ~ .btn-projets div {
+  background-color: aqua;
+}
+
+.btn-projets {
+  width: 70px;
+  height: 30px;
+  margin: 0 auto;
+}
+.btn-projets div {
+  background-color: gold;
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+  text-align: center;
+}
+
 .intro {
   text-align: justify;
 }

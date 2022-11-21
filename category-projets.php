@@ -6,7 +6,14 @@
 ?>
 <main class="site__main">
     <section class="listeProfs listeProjets">
+
+    <input type="checkbox" id="chk-projets">
+        <label for="chk-projets" class="btn-projets">
+            <div>Clique</div>
+        </label>
+
         <h2 class="listeProfs__titre">Liste <?= $nomCategorie; ?></h2>
+        
         <div class="listeProjets__liste">
 
             <?php /* Début boucle */ ?>
