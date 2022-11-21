@@ -37,7 +37,7 @@
                         if ( (isset($_GET["session"]) && $_GET["session"] == $codeCours[0]) || (!isset($_GET["session"]))) :?>
                         <article class="cours">
                         <input type="checkbox" id="cours-btn_<?= $count; ?>">
-                            <h3 class="cours__titre" title="Voir la description complète"> <a target="popup" onclick="window.open('<?= get_permalink(); ?>','popup','width=600,height=600'); return false;"> <?= $titreFiltreCours /*. " - ". $count*/; ?> </a></h3>
+                            <h3 class="cours__titre" title="Voir la description complète"> <a target="popup" onclick="window.open('<?= get_permalink(); ?>','popup','width=600,height=800'); return false;"> <?= $titreFiltreCours /*. " - ". $count*/; ?> </a></h3>
 
                             <label for="cours-btn_<?= $count; ?>">
                                 <div class="cours__btn" title="En savoir plus"></div>
