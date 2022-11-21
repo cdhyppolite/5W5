@@ -57,6 +57,7 @@
         border: 3px solid $couleur_fond2;
         margin: 10px;
         transition: .4s;
+        margin: 0 auto;
         &:hover {
             box-shadow: 5px 10px $couleur_texte2;
         }
@@ -83,6 +84,7 @@
         flex-direction: column;
         font-family: $font2;
         text-align: justify;
+        margin: 0 auto;
         p {
             // font-family: $font2;
         }

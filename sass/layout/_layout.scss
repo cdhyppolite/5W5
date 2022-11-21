@@ -3,7 +3,8 @@
     //    gap: 1px;
     grid-template-columns: auto;
     grid-template-areas: "header" "barre" "main" "footer";
-    @media screen and (min-width: 700px) and (max-width: 1199px) {
+    // @media screen and (min-width: 700px) and (max-width: 1199px) {
+    @media screen and (min-width: 700px) {
         grid-template-columns: ($size__site-sidebar) auto;
         grid-template-areas: "header header" "barre main" "footer footer";
     }
@@ -28,6 +29,7 @@
         background-color: $couleur_fond;
         // transform: translateX(-100vw);
         @media screen and (min-width: 700px) {}
+        z-index: 20;
         // border: 3px solid #bdbdbd;
         // border-radius: 25px;
         // nav {

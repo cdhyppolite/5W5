@@ -4,7 +4,7 @@
     $nomCategorie = get_queried_object() -> name;
     $count =0;
 ?>
-<main class="site__main">
+<main class="site__main _projets">
     <section class="listeProjets">
         <h2 class="listeProfs__titre">Liste <?= $nomCategorie; ?></h2>
         <input type="checkbox" id="chk-projets">

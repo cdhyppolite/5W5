@@ -5,7 +5,7 @@
         perspective: 250px;
         transform: scale(3);
         position: absolute;
-        top: 50%;
+        top: 30%;
         left: 50%;
         width: 100px;
         height: 100px;
@@ -77,6 +77,9 @@ $deplacement:60px;
     &:checked~ {
         .listeProjets {
             &__liste {
+                @media screen and (min-width: 1120px) {
+                    // top: 8%;
+                }
                 // overflow: hidden;
                 margin: 0 auto;
                 transform: scale(1);
@@ -96,14 +99,12 @@ $deplacement:60px;
                     font-size: 2em;
                     // Unset
                     height: unset;
+                    // max-height: 330px;
                     position: unset;
                     animation-name: unset;
                     animation-iteration-count: unset;
                     animation-timing-function: unset;
                 }
-            }
-            .site__main {
-                min-height: 200vh;
             }
         }
         .btn-projets {
@@ -135,3 +136,17 @@ $deplacement:60px;
         }
     }
 }
+
+
+/*._projets {
+    @media screen and (min-width: 1670px) {
+        height: 170vh !important;
+        .listeProjets__liste {
+            top: 8% !important;
+        }
+        // display: none;
+    }
+    @media screen and (min-width: 1120px) {
+        height: 300vh !important;
+    }
+}*/

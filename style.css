@@ -396,7 +396,7 @@ LAYOUT
   grid-template-columns: auto;
   grid-template-areas: "header" "barre" "main" "footer";
 }
-@media screen and (min-width: 700px) and (max-width: 1199px) {
+@media screen and (min-width: 700px) {
   .site {
     grid-template-columns: 30% auto;
     grid-template-areas: "header header" "barre main" "footer footer";
@@ -414,6 +414,7 @@ LAYOUT
   position: relative;
   grid-area: barre;
   background-color: hsl(231deg, 100%, 10%);
+  z-index: 20;
 }
 .site__footer {
   grid-area: footer;
@@ -703,6 +704,7 @@ input:checked ~ .cours__infos {
   border: 3px solid hsl(271deg, 76%, 53%);
   margin: 10px;
   transition: 0.4s;
+  margin: 0 auto;
 }
 .unProf img:hover {
   box-shadow: 5px 10px hsl(198deg, 99%, 67%);
@@ -718,6 +720,7 @@ input:checked ~ .cours__infos {
   flex-direction: column;
   font-family: "Brevia", sans-serif;
   text-align: justify;
+  margin: 0 auto;
 }
 .unProf__anecdote {
   margin-left: 50%;
@@ -865,7 +868,7 @@ iframe {
   perspective: 250px;
   transform: scale(3);
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   width: 100px;
   height: 100px;
@@ -950,9 +953,6 @@ iframe {
   animation-iteration-count: unset;
   animation-timing-function: unset;
 }
-#chk-projets:checked ~ .listeProjets .site__main {
-  min-height: 200vh;
-}
 #chk-projets:checked ~ .btn-projets div {
   background: linear-gradient(to top, #f969a2 0, #ff0a64 20%, #ff0a64 49%, #f969a2 50%, #ff0a64);
 }
@@ -978,6 +978,18 @@ iframe {
   color: hsl(198deg, 99%, 67%);
 }
 
+/*._projets {
+    @media screen and (min-width: 1670px) {
+        height: 170vh !important;
+        .listeProjets__liste {
+            top: 8% !important;
+        }
+        // display: none;
+    }
+    @media screen and (min-width: 1120px) {
+        height: 300vh !important;
+    }
+}*/
 .intro {
   text-align: justify;
 }
