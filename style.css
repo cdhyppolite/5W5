@@ -821,6 +821,10 @@ iframe {
   width: 100%;
 }
 
+.universite p {
+  width: 100%;
+}
+
 .universite .imgUniversite {
   width: 40%;
 }
@@ -856,6 +860,10 @@ iframe {
 
 .stages a:hover {
   color: #191970;
+}
+
+.stages p {
+  width: 100%;
 }
 
 .stages .imgStages {
@@ -896,6 +904,10 @@ iframe {
 
 .emplois .imgEmplois img {
   width: 90%;
+}
+
+.emplois p {
+  width: 100%;
 }
 
 .emplois .descEmplois {
