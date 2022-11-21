@@ -5,14 +5,12 @@
     $count =0;
 ?>
 <main class="site__main">
-    <section class="listeProfs listeProjets">
-
-    <input type="checkbox" id="chk-projets">
-        <label for="chk-projets" class="btn-projets">
-            <div>Clique</div>
-        </label>
-
+    <section class="listeProjets">
         <h2 class="listeProfs__titre">Liste <?= $nomCategorie; ?></h2>
+        <input type="checkbox" id="chk-projets">
+        <label for="chk-projets" class="btn-projets">
+            <div>Changer l'affichage</div>
+        </label>
         
         <div class="listeProjets__liste">
 

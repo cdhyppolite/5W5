@@ -93,6 +93,7 @@ $deplacement:60px;
                 .projet {
                     width: clamp(250px, 30%, 350px);
                     margin: 10px;
+                    font-size: 2em;
                     // Unset
                     height: unset;
                     position: unset;
@@ -101,10 +102,13 @@ $deplacement:60px;
                     animation-timing-function: unset;
                 }
             }
+            .site__main {
+                min-height: 200vh;
+            }
         }
         .btn-projets {
             div {
-                background-color: aqua;
+                background: linear-gradient(to top, #f969a2 0, #ff0a64 20%, #ff0a64 49%, #f969a2 50%, #ff0a64);
             }
         }
     }
@@ -115,10 +119,19 @@ $deplacement:60px;
     height: 30px;
     margin: 0 auto;
     div {
-        background-color: gold;
-        width: 100%;
-        height: 100%;
-        border: 1px solid red;
+        width: clamp(100px, 30%, 200px);
         text-align: center;
+        margin: 0 auto;
+        // --------
+        background-color: $couleur_fond2;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+        color: $couleur_texte1;
+        font-family: $fontsMenu !important;
+        font-weight: 900;
+        padding: 10px;
+        margin-top: 10px;
+        &:hover {
+            color: $couleur_texte2;
+        }
     }
 }
