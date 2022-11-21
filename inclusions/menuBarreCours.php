@@ -1,6 +1,6 @@
 <section class="site__barre">
     <input type="checkbox" id="chk-burger">
-        <label  class="burgerMenuParent" for="chk-burger" id="burger">
+        <label  class="burgerMenuParent" for="chk-burger" id="burger" class="burger">
             
             <div class="ligne"></div>
             <div class="ligne"></div>
