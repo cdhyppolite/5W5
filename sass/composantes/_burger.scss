@@ -35,9 +35,14 @@
     top: 0;
     left: 0;
     width: 100vw;
-    transform: translateX(-100vw);
+    transform: translateX(-200vw);
     transition: transform 0.5s;
     background-color: #080923;
+
+    a {
+        font-size: clamp(1rem,2vw,3rem);
+    }
+    
     @media screen and (min-width: 900px) {
        position: static;
        transform: translateX(0);
