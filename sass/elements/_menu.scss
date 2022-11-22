@@ -1,4 +1,8 @@
 .menu {
+    background-color: $couleur_fond;
+    @media screen and (min-width: 700px) {
+        background-color: unset;
+    }
     li {
         font-family: $fontsMenu !important;
     }
