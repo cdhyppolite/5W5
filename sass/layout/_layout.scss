@@ -1,5 +1,7 @@
 .site {
     display: grid;
+    overflow-x: hidden;
+    background-color: $couleur_fond;
     //    gap: 1px;
     grid-template-columns: auto;
     grid-template-areas: "header" "barre" "main" "footer";

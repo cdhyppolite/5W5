@@ -2,6 +2,9 @@
     width: 100%;
     position: relative;
     &__liste {
+        @media screen and (max-width: 500px) {
+            perspective: unset;
+        }
         perspective: 250px;
         transform: scale(3);
         position: absolute;

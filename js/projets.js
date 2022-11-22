@@ -6,7 +6,7 @@ let isPressed = false;
 
 (function() {
 
-    btnProjet.addEventListener('mousedown', function() {
+    btnProjet.addEventListener('click', function() {
         changerHeight();
     })
 
