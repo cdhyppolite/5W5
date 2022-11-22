@@ -403,6 +403,7 @@ LAYOUT
   }
 }
 .site__main {
+  overflow: hidden;
   grid-area: main;
   background-color: hsl(231deg, 100%, 10%);
   display: flex;
@@ -1018,7 +1019,7 @@ COMPOSANTS
   background-color: hsl(231deg, 100%, 10%);
 }
 .site__header__titre {
-  margin-left: 50px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   width: 425px;
@@ -1026,8 +1027,12 @@ COMPOSANTS
   align-items: center;
   padding: 0;
 }
+@media screen and (min-width: 700px) {
+  .site__header__titre {
+    margin: 0 0 0 50px;
+  }
+}
 .site__header__titre h1 {
-  text-shadow: 0 0 0.3em rgb(249, 245, 245), 0 0 0.3em rgb(255, 255, 255);
   color: hsl(198deg, 99%, 67%);
 }
 .site__header__titre:visited {

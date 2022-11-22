@@ -13,6 +13,7 @@
     //       grid-template-areas: "header header" "barre main" "footer footer";
     //   }
     &__main {
+        overflow: hidden;
         grid-area: main;
         background-color: $couleur_fond;
         display: flex;
