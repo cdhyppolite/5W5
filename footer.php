@@ -1,4 +1,5 @@
 <!-- Informations du footer (Sera modifié plustard) -->
+<div class="boiteTransparent"></div>
 <footer class="site__footer">
     <div class="site__info">
         <section class="site__info__adresse">
