@@ -14,8 +14,11 @@
         align-items: center;
         padding: 0;
         h1 {
-            // text-shadow: 0 0 0.3em rgb(249, 245, 245), 0 0 0.3em rgb(255, 255, 255);
             color: $couleur_texte2;
+        }
+        &:hover {
+            
+            text-shadow: 0 0 0.3em rgb(249, 245, 245), 0 0 0.3em rgb(255, 255, 255);
         }
         &:visited {
             color: $couleur_texte2;
