@@ -102,6 +102,7 @@
                 height: 230px;
             }
         }
+        
     }
     
     input {
@@ -114,9 +115,12 @@
             }
             ~.cours {
                 &__infos {
-                    height: 250px;
+                    height: 280px;
                     // height: 360px;
                     // align-items: center;
+                }
+                &__logiciel {
+                    position: absolute;
                 }
             }
         }

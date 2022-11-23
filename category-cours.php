@@ -48,7 +48,7 @@
                                     <div class="cours__img">
                                         <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt="">
                                     </div>
-                                    <p class="cours__desc"> <?= wp_trim_words($descriptionCours,50); ?></p>
+                                    <p class="cours__desc"> <?= wp_trim_words($descriptionCours,40); ?></p>
                                 </div>
                                 <?php if (get_field('logiciel') != "") : ?>
                                     <p class="cours__logiciel">Logiciel(s) / Langage(s)  utilisé(s): <?= get_field('logiciel'); ?></p>

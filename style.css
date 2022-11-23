@@ -637,7 +637,10 @@ input:checked ~ label > .cours__btn {
   transform: rotate(-180deg) scale(1.5);
 }
 input:checked ~ .cours__infos {
-  height: 250px;
+  height: 280px;
+}
+input:checked ~ .cours__logiciel {
+  position: absolute;
 }
 
 .site__main__cours {
@@ -1104,7 +1107,7 @@ COMPOSANTS
   transform: rotate(0deg);
   transition: transform 0.5s;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   .burgerMenuParent {
     display: none;
   }
