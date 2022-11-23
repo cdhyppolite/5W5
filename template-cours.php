@@ -25,6 +25,12 @@
 </head>
 
 <!-- Afficher le titre et la description complète du cours -->
+
+
+<div class="btnBack seul" onclick="window.close()">
+    <div></div>
+</div>
+
 <main class="site__main__cours">
     <article class="article__seul">
         <h2><?= $titreFiltreCours; ?></h2>

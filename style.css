@@ -1190,6 +1190,10 @@ COMPOSANTS
   height: 20px;
 }
 
+.seul {
+  top: 10vh !important;
+}
+
 .menu {
   background-color: hsl(231deg, 100%, 10%);
   list-style: none;
