@@ -8,6 +8,9 @@
             <div class="ligne"></div>
         </label>
     </div>
+    <div class="btnBack" onclick="history.back()">
+        <div></div>
+    </div>
 
     <?php wp_nav_menu(
         array("menu"=>"principal",

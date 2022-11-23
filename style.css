@@ -1090,6 +1090,9 @@ COMPOSANTS
   align-items: center;
   justify-content: center;
   transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.7);
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
 }
 @media screen and (min-width: 700px) {
   .burgerMenuParent {
@@ -1152,6 +1155,41 @@ COMPOSANTS
     transform: scale(1.2);
   }
 }
+.btnBack {
+  position: fixed;
+  top: 17vh;
+  right: 7vw;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: hsl(323deg, 100%, 82%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
+}
+@media screen and (min-width: 700px) {
+  .btnBack {
+    display: none;
+  }
+}
+.btnBack:hover {
+  -webkit-animation: brasser 1s infinite;
+          animation: brasser 1s infinite;
+}
+.btnBack div {
+  -webkit-mask-image: url(https://s2.svgbox.net/hero-outline.svg?ic=arrow-left);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  transform: scale(2);
+  width: 20px;
+  height: 20px;
+}
+
 .menu {
   background-color: hsl(231deg, 100%, 10%);
   list-style: none;

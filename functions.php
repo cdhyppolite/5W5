@@ -38,7 +38,7 @@ function e4_5w5_pre_get_posts(WP_Query $query)
 {
     if (is_admin()
     || !$query ->is_main_query()
-    || !$query ->is_category(array('cours','web','jeu','design','utilitaire','creation-3d','video','profs'))   )
+    || !$query ->is_category(array('cours','web','jeu','design','utilitaire','creation-3d','video','profs', 'projets'))   )
     {
         return $query;
     }        

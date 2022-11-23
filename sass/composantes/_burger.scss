@@ -47,6 +47,9 @@
     &:hover {
         animation: brasser 1s infinite;
     }
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg 76% 53%), 0 0 0.8rem hsl(271deg 76% 53%), 0 0 2.8rem hsl(271deg 76% 53%), inset 0 0 1.3rem hsl(271deg 76% 53%);
 }
 
 #burger {
@@ -85,5 +88,39 @@
     }
     50% {
         transform: scale(1.2);
+    }
+}
+.btnBack {
+    position: fixed;
+    top: 17vh;
+    right: 7vw;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $couleur_texte3;
+    // color: $couleur_fond2;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg 76% 53%), 0 0 0.8rem hsl(271deg 76% 53%), 0 0 2.8rem hsl(271deg 76% 53%), inset 0 0 1.3rem hsl(271deg 76% 53%);
+    @media screen and (min-width: 700px) {
+        display: none;
+    }
+    
+    &:hover {
+        animation: brasser 1s infinite;
+    }
+    div {
+        -webkit-mask-image: url(https://s2.svgbox.net/hero-outline.svg?ic=arrow-left);
+    background-repeat: no-repeat;
+            background-position: center;
+            // background-color: $couleur_fond2;
+            background-color: white;
+            transform: scale(2);
+            width: 20px;
+            height: 20px;
     }
 }
