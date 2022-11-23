@@ -47,9 +47,7 @@
     &:hover {
         animation: brasser 1s infinite;
     }
-    border: 0.2rem solid #fff;
-    border-radius: 2rem;
-    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg 76% 53%), 0 0 0.8rem hsl(271deg 76% 53%), 0 0 2.8rem hsl(271deg 76% 53%), inset 0 0 1.3rem hsl(271deg 76% 53%);
+    @include effetNeon();
 }
 
 #burger {
@@ -103,9 +101,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.2rem solid #fff;
-    border-radius: 2rem;
-    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg 76% 53%), 0 0 0.8rem hsl(271deg 76% 53%), 0 0 2.8rem hsl(271deg 76% 53%), inset 0 0 1.3rem hsl(271deg 76% 53%);
+    @include effetNeon();
     @media screen and (min-width: 700px) {
         display: none;
     }

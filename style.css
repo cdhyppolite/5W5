@@ -558,11 +558,11 @@ ELEMENTS
   border: 0.2rem solid #fff;
   border-radius: 2rem;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
-  margin: 0 auto !important;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 230px;
+  margin: 0 auto !important;
 }
 .cours__solo__img img {
   height: 230px;

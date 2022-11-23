@@ -63,9 +63,7 @@
             width: auto;
             height: 130px;
             overflow: hidden;
-            border: 0.2rem solid #fff;
-            border-radius: 2rem;
-            box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem $couleur_fond2, 0 0 0.8rem $couleur_fond2, 0 0 2.8rem $couleur_fond2, inset 0 0 1.3rem $couleur_fond2;
+            @include effetNeon();
             img {
                 width: auto;
                 height: 100%;
@@ -91,12 +89,10 @@
         }
         &__solo__img {
             overflow: hidden;
-            border: 0.2rem solid #fff;
-            border-radius: 2rem;
-            box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem $couleur_fond2, 0 0 0.8rem $couleur_fond2, 0 0 2.8rem $couleur_fond2, inset 0 0 1.3rem $couleur_fond2;
-            margin: 0 auto !important;
+            @include effetNeon();
             width: fit-content;
             height: 230px;
+            margin: 0 auto !important;
             img {
                 // width: auto;
                 height: 230px;
