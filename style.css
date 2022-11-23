@@ -86,7 +86,8 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /**
@@ -558,6 +559,8 @@ ELEMENTS
   border-radius: 2rem;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
   margin: 0 auto !important;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   height: 230px;
 }
@@ -863,9 +866,12 @@ input:checked ~ .cours__logiciel {
   border-radius: 8px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   text-align: center;
-  animation-name: mouvementCarrosel;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  -webkit-animation-name: mouvementCarrosel;
+          animation-name: mouvementCarrosel;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 .projet__titre {
   border-bottom: 2px solid white;
@@ -888,6 +894,22 @@ input:checked ~ .cours__logiciel {
 .projet__img:hover img {
   transform: scale(1.1);
   opacity: 0.7;
+}
+
+@-webkit-keyframes mouvementCarrosel {
+  from {
+    transform: rotateY(360deg) translateZ(60px) rotateY(-360deg);
+    z-index: 10;
+    opacity: 1;
+  }
+  50% {
+    z-index: -10;
+  }
+  to {
+    transform: rotateY(0deg) translateZ(60px) rotateY(0deg);
+    z-index: 10;
+    opacity: 1;
+  }
 }
 
 @keyframes mouvementCarrosel {
@@ -921,9 +943,12 @@ input:checked ~ .cours__logiciel {
   font-size: 2em;
   height: unset;
   position: unset;
-  animation-name: unset;
-  animation-iteration-count: unset;
-  animation-timing-function: unset;
+  -webkit-animation-name: unset;
+          animation-name: unset;
+  -webkit-animation-iteration-count: unset;
+          animation-iteration-count: unset;
+  -webkit-animation-timing-function: unset;
+          animation-timing-function: unset;
 }
 #chk-projets:checked ~ .btn-projets div {
   background: linear-gradient(to top, #f969a2 0, #ff0a64 20%, #ff0a64 49%, #f969a2 50%, #ff0a64);
@@ -1040,14 +1065,17 @@ COMPOSANTS
   background-color: hsl(198deg, 99%, 67%);
 }
 #chk-burger:checked ~ .burgerMenuParent #burger .ligne:first-child {
-  clip-path: polygon(7.1% -7.1%, 107.1% 92.9%, 92.9% 107.1%, -7.1% 7.1%);
+  -webkit-clip-path: polygon(7.1% -7.1%, 107.1% 92.9%, 92.9% 107.1%, -7.1% 7.1%);
+          clip-path: polygon(7.1% -7.1%, 107.1% 92.9%, 92.9% 107.1%, -7.1% 7.1%);
 }
 #chk-burger:checked ~ .burgerMenuParent #burger .ligne:nth-child(2) {
-  clip-path: polygon(35% 50%, 50% 35%, 65% 50%, 50% 65%);
+  -webkit-clip-path: polygon(35% 50%, 50% 35%, 65% 50%, 50% 65%);
+          clip-path: polygon(35% 50%, 50% 35%, 65% 50%, 50% 65%);
   opacity: 0;
 }
 #chk-burger:checked ~ .burgerMenuParent #burger .ligne:last-child {
-  clip-path: polygon(-7.1% 92.9%, 92.9% -7.1%, 107.1% 7.1%, 7.1% 107.1%);
+  -webkit-clip-path: polygon(-7.1% 92.9%, 92.9% -7.1%, 107.1% 7.1%, 7.1% 107.1%);
+          clip-path: polygon(-7.1% 92.9%, 92.9% -7.1%, 107.1% 7.1%, 7.1% 107.1%);
 }
 
 .burgerMenuParent {
@@ -1069,7 +1097,8 @@ COMPOSANTS
   }
 }
 .burgerMenuParent:hover {
-  animation: brasser 1s infinite;
+  -webkit-animation: brasser 1s infinite;
+          animation: brasser 1s infinite;
 }
 
 #burger {
@@ -1094,13 +1123,25 @@ COMPOSANTS
   transition: 0.4s;
 }
 #burger .ligne:nth-child(1) {
-  clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
+          clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
 }
 #burger .ligne:nth-child(2) {
-  clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
+  -webkit-clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
+          clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
 }
 #burger .ligne:nth-child(3) {
-  clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0 100%);
+          clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0 100%);
+}
+
+@-webkit-keyframes brasser {
+  100%, 0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 @keyframes brasser {
@@ -1125,7 +1166,8 @@ COMPOSANTS
   font-family: lobster !important;
 }
 .menu-item__ligne {
-  clip-path: polygon(13% 0, 87% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(13% 0, 87% 0, 100% 100%, 0 100%);
+          clip-path: polygon(13% 0, 87% 0, 100% 100%, 0 100%);
   background-color: hsl(271deg, 76%, 53%);
   height: 5px;
   z-index: 1;
@@ -1177,6 +1219,8 @@ COMPOSANTS
 .triSession {
   display: flex;
   justify-content: space-around;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
 }
@@ -1196,7 +1240,7 @@ COMPOSANTS
 }
 
 .boiteTransparent {
-  background-color: rgba(39, 40, 39, 0.7);
+  background-color: hsla(271deg, 76%, 53%, 0.3);
   position: fixed;
   width: 100%;
   height: 100%;
