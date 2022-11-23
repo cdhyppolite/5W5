@@ -468,10 +468,6 @@ LAYOUT
   width: 95%;
 }
 
-.home {
-  background-color: white;
-}
-
 /* -------------------------------------
 ELEMENTS
 ----------------------------------------*/
@@ -1052,7 +1048,7 @@ COMPOSANTS
 }
 
 .header__principal {
-  font-size: 7em;
+  font-size: clamp(3.5rem, 2.5vw, 4rem);
   padding-right: 30px;
 }
 .header__secondaire {
@@ -1102,7 +1098,7 @@ COMPOSANTS
   width: 50px;
   height: 50px;
   position: absolute;
-  top: 0;
+  top: -30px;
   left: 0;
   z-index: 2;
   transform: rotate(0deg);
