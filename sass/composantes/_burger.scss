@@ -80,14 +80,17 @@
         }
     }
 }
+
 @keyframes brasser {
-    100%,0% {
+    100%,
+    0% {
         transform: scale(1);
     }
     50% {
         transform: scale(1.2);
     }
 }
+
 .btnBack {
     position: fixed;
     top: 17vh;
@@ -105,21 +108,24 @@
     @media screen and (min-width: 700px) {
         display: none;
     }
-    
-    
     &:hover {
         animation: brasser 1s infinite;
     }
     div {
         -webkit-mask-image: url(https://s2.svgbox.net/hero-outline.svg?ic=arrow-left);
-    background-repeat: no-repeat;
-            background-position: center;
-            // background-color: $couleur_fond2;
-            background-color: white;
-            transform: scale(2);
-            width: 20px;
-            height: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        // background-color: $couleur_fond2;
+        background-color: white;
+        transform: scale(2);
+        width: 20px;
+        height: 20px;
     }
-}.seul {
-        top: 10vh !important;
+}
+
+.seul {
+    top: 10vh !important;
+    div {
+        -webkit-mask-image: url(https://s2.svgbox.net/hero-solid.svg?ic=x);
     }
+}

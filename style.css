@@ -86,8 +86,7 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /**
@@ -558,8 +557,6 @@ ELEMENTS
   border: 0.2rem solid #fff;
   border-radius: 2rem;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   height: 230px;
   margin: 0 auto !important;
@@ -866,12 +863,9 @@ input:checked ~ .cours__logiciel {
   border-radius: 8px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   text-align: center;
-  -webkit-animation-name: mouvementCarrosel;
-          animation-name: mouvementCarrosel;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-name: mouvementCarrosel;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 .projet__titre {
   border-bottom: 2px solid white;
@@ -894,22 +888,6 @@ input:checked ~ .cours__logiciel {
 .projet__img:hover img {
   transform: scale(1.1);
   opacity: 0.7;
-}
-
-@-webkit-keyframes mouvementCarrosel {
-  from {
-    transform: rotateY(360deg) translateZ(60px) rotateY(-360deg);
-    z-index: 10;
-    opacity: 1;
-  }
-  50% {
-    z-index: -10;
-  }
-  to {
-    transform: rotateY(0deg) translateZ(60px) rotateY(0deg);
-    z-index: 10;
-    opacity: 1;
-  }
 }
 
 @keyframes mouvementCarrosel {
@@ -943,12 +921,9 @@ input:checked ~ .cours__logiciel {
   font-size: 2em;
   height: unset;
   position: unset;
-  -webkit-animation-name: unset;
-          animation-name: unset;
-  -webkit-animation-iteration-count: unset;
-          animation-iteration-count: unset;
-  -webkit-animation-timing-function: unset;
-          animation-timing-function: unset;
+  animation-name: unset;
+  animation-iteration-count: unset;
+  animation-timing-function: unset;
 }
 #chk-projets:checked ~ .btn-projets div {
   background: linear-gradient(to top, #f969a2 0, #ff0a64 20%, #ff0a64 49%, #f969a2 50%, #ff0a64);
@@ -1065,17 +1040,14 @@ COMPOSANTS
   background-color: hsl(198deg, 99%, 67%);
 }
 #chk-burger:checked ~ .burgerMenuParent #burger .ligne:first-child {
-  -webkit-clip-path: polygon(7.1% -7.1%, 107.1% 92.9%, 92.9% 107.1%, -7.1% 7.1%);
-          clip-path: polygon(7.1% -7.1%, 107.1% 92.9%, 92.9% 107.1%, -7.1% 7.1%);
+  clip-path: polygon(7.1% -7.1%, 107.1% 92.9%, 92.9% 107.1%, -7.1% 7.1%);
 }
 #chk-burger:checked ~ .burgerMenuParent #burger .ligne:nth-child(2) {
-  -webkit-clip-path: polygon(35% 50%, 50% 35%, 65% 50%, 50% 65%);
-          clip-path: polygon(35% 50%, 50% 35%, 65% 50%, 50% 65%);
+  clip-path: polygon(35% 50%, 50% 35%, 65% 50%, 50% 65%);
   opacity: 0;
 }
 #chk-burger:checked ~ .burgerMenuParent #burger .ligne:last-child {
-  -webkit-clip-path: polygon(-7.1% 92.9%, 92.9% -7.1%, 107.1% 7.1%, 7.1% 107.1%);
-          clip-path: polygon(-7.1% 92.9%, 92.9% -7.1%, 107.1% 7.1%, 7.1% 107.1%);
+  clip-path: polygon(-7.1% 92.9%, 92.9% -7.1%, 107.1% 7.1%, 7.1% 107.1%);
 }
 
 .burgerMenuParent {
@@ -1100,8 +1072,7 @@ COMPOSANTS
   }
 }
 .burgerMenuParent:hover {
-  -webkit-animation: brasser 1s infinite;
-          animation: brasser 1s infinite;
+  animation: brasser 1s infinite;
 }
 
 #burger {
@@ -1126,25 +1097,13 @@ COMPOSANTS
   transition: 0.4s;
 }
 #burger .ligne:nth-child(1) {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
-          clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
 }
 #burger .ligne:nth-child(2) {
-  -webkit-clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
-          clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
+  clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
 }
 #burger .ligne:nth-child(3) {
-  -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0 100%);
-          clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0 100%);
-}
-
-@-webkit-keyframes brasser {
-  100%, 0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
+  clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0 100%);
 }
 
 @keyframes brasser {
@@ -1177,8 +1136,7 @@ COMPOSANTS
   }
 }
 .btnBack:hover {
-  -webkit-animation: brasser 1s infinite;
-          animation: brasser 1s infinite;
+  animation: brasser 1s infinite;
 }
 .btnBack div {
   -webkit-mask-image: url(https://s2.svgbox.net/hero-outline.svg?ic=arrow-left);
@@ -1192,6 +1150,9 @@ COMPOSANTS
 
 .seul {
   top: 10vh !important;
+}
+.seul div {
+  -webkit-mask-image: url(https://s2.svgbox.net/hero-solid.svg?ic=x);
 }
 
 .menu {
@@ -1208,8 +1169,7 @@ COMPOSANTS
   font-family: lobster !important;
 }
 .menu-item__ligne {
-  -webkit-clip-path: polygon(13% 0, 87% 0, 100% 100%, 0 100%);
-          clip-path: polygon(13% 0, 87% 0, 100% 100%, 0 100%);
+  clip-path: polygon(13% 0, 87% 0, 100% 100%, 0 100%);
   background-color: hsl(271deg, 76%, 53%);
   height: 5px;
   z-index: 1;
@@ -1261,8 +1221,6 @@ COMPOSANTS
 .triSession {
   display: flex;
   justify-content: space-around;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
 }
