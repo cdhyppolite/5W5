@@ -1180,7 +1180,7 @@ COMPOSANTS
   left: 0;
   width: 100vw;
   transform: translateX(-100vw);
-  transition: transform 0.5s;
+  transition: 0.5s cubic-bezier(0.5, 0, 0.5, 1.7);
 }
 @media screen and (max-width: 700px) {
   .menu-principal-container {

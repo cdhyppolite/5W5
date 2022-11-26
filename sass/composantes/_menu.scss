@@ -30,7 +30,7 @@
             left: 0;
             width: 100vw;
             transform: translateX(-100vw);
-            transition: transform 0.5s;
+            transition: .5s cubic-bezier(.5, 0, .5, 1.7);
             @media screen and (min-width: 700px) {
                 position: static;
                 transform: translateX(0);

@@ -1,11 +1,12 @@
 #chk-burger {
-    // display: none;
     &:checked~ {
         .menu-principal-container {
             transform: translateX(0);
         }
+        .boiteTransparent {
+            // transform: scale(1) !important;
+        }
         .burgerMenuParent {
-            // top: 1vh;
             background-color: $couleur_fond2;
             #burger {
                 border-radius: 10%;

@@ -1,5 +1,5 @@
 <section class="site__barre">
-    <input type="checkbox" id="chk-burger">
+    <input type="checkbox" id="chk-burger" autocomplete="off">
 
     <div class="burgerMenuParent">
         <label for="chk-burger" id="burger">
