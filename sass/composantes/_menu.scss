@@ -6,7 +6,6 @@
     li {
         font-family: $fontsMenu !important;
     }
-    
     list-style: none;
     font-family: $fontsMenu;
     &-item {
@@ -23,7 +22,7 @@
     &-principal {
         &-container {
             @media screen and (max-width: 700px) {
-                position:fixed;
+                position: fixed;
                 top: 20vh;
             }
             position: absolute;
@@ -99,6 +98,7 @@
         color: $couleur_texte2;
     }
 }
+
 .boiteTransparent {
     background-color: $couleur_fond2_transparent;
     position: fixed;
@@ -110,6 +110,11 @@
         display: none;
     }
 }
+
 .ouvrir {
     transform: scale(1) !important;
+}
+
+.bloquer {
+    overflow-y: hidden;
 }

@@ -3,6 +3,7 @@ let menuPrincipal = document.getElementById("menu-principal");
 let liMenuPrincipal = menuPrincipal.querySelectorAll("li");
 let menuBurger = document.getElementById('burger');
 let boiteTransparent = document.querySelector('.boiteTransparent');
+let page = document.querySelector('html');
 
 // console.log(liMenuPrincipal.length);
 
@@ -13,8 +14,16 @@ for (let i = 0; i < liMenuPrincipal.length; i++) {
 (function() {
 
     menuBurger.addEventListener('click', function() {
-        console.log("menu burger click")
-        boiteTransparent.classList.toggle('ouvrir');
+        afficherMenu();
+    })
+    boiteTransparent.addEventListener('click', function() {
+        afficherMenu();
     })
 
 }())
+
+function afficherMenu() {
+    console.log("menu burger click")
+    boiteTransparent.classList.toggle('ouvrir');
+    page.classList.toggle('bloquer');
+}

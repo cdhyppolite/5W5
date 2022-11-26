@@ -35,7 +35,7 @@
     <article class="article__seul">
         <h2><?= $titreFiltreCours; ?></h2>
         <div>
-            <p>Cours du cours: <?= $codeCours; ?></p>
+            <p>Code du cours: <?= $codeCours; ?></p>
             <p>Nombre d'heures: <?= $nbHeures; ?></p>
         </div>
         <div class="article__seul__contenu">
