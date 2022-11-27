@@ -345,7 +345,7 @@ p,
 h1,
 h3,
 li {
-  color: white;
+  color: #F2F2F2;
 }
 
 h2 {
@@ -455,19 +455,6 @@ LAYOUT
   justify-content: space-evenly;
 }
 
-.header__titre {
-  color: #1976D2;
-  margin-bottom: -10px;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  margin-left: 5%;
-  font-size: 2rem;
-  font-style: oblique;
-}
-.header__description {
-  display: inline-block;
-  width: 95%;
-}
-
 /* -------------------------------------
 ELEMENTS
 ----------------------------------------*/
@@ -486,7 +473,7 @@ ELEMENTS
   position: relative;
 }
 .cours a:visited {
-  color: white;
+  color: #F2F2F2;
 }
 .cours:last-child {
   border-bottom: none;
@@ -498,7 +485,7 @@ ELEMENTS
   -webkit-mask-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-down-bold);
   background-repeat: no-repeat;
   background-position: center;
-  background-color: white;
+  background-color: #F2F2F2;
   transform: scale(1.5);
   width: 13px;
   height: 12px;
@@ -545,7 +532,7 @@ ELEMENTS
 }
 .cours__titre a {
   font-family: "Brevia", sans-serif;
-  color: white;
+  color: #F2F2F2;
   transition: 0.2s;
 }
 .cours__titre a:hover {
@@ -700,7 +687,7 @@ input:checked ~ .cours__logiciel {
   padding-right: 30px;
 }
 .avenir figcaption {
-  color: white;
+  color: #F2F2F2;
   font-family: "Brevia", sans-serif;
 }
 .avenir .wp-block-image {
@@ -938,7 +925,7 @@ input:checked ~ .cours__logiciel {
   margin: 0 auto;
   background-color: hsl(271deg, 76%, 53%);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-  color: white;
+  color: #F2F2F2;
   font-family: lobster !important;
   font-weight: 900;
   padding: 10px;
@@ -998,6 +985,53 @@ COMPOSANTS
   font-size: 2em;
   display: flex;
   flex-wrap: wrap;
+}
+.header__titre {
+  color: #1976D2;
+  margin-bottom: -10px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  margin-left: 5%;
+  font-size: 2rem;
+  font-style: oblique;
+}
+.header__description {
+  display: inline-block;
+  width: 95%;
+}
+
+.site__footer {
+  margin-top: auto;
+  padding-top: 2vh;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  height: auto;
+  color: #F2F2F2;
+  font-family: "Brevia", sans-serif !important;
+}
+.site__footer h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.site__footer__conteneur {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  padding: 1rem;
+  gap: 1.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.site__footer__conteneur div:nth-child(1) {
+  border: 1px solid red;
+}
+.site__footer__conteneur div:nth-child(2) {
+  border: 1px solid blue;
+}
+.site__footer__conteneur div:nth-child(3) {
+  border: 1px solid green;
+}
+.site__footer__conteneur div:nth-child(4) {
+  border: 1px solid yellow;
 }
 
 .menu-menu_cours-container {
@@ -1198,13 +1232,13 @@ COMPOSANTS
 .menu-principal-container a {
   font-size: 50px;
   margin-left: 20px;
-  color: white;
+  color: #F2F2F2;
   padding: 4px;
   text-shadow: 0px 2px 0px grey;
   transition-duration: 0.4s;
 }
 .menu-principal-container a:visited {
-  color: white;
+  color: #F2F2F2;
 }
 .menu-principal-container li {
   margin-bottom: 10px;
@@ -1225,7 +1259,7 @@ COMPOSANTS
 .triSession a {
   background-color: hsl(271deg, 76%, 53%);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-  color: white;
+  color: #F2F2F2;
   font-family: lobster;
   font-weight: 900;
   padding: 10px;

@@ -49,8 +49,6 @@
     &__footer {
         grid-area: footer;
         background-image: linear-gradient($couleur_fond, black);
-        // border: 3px solid #bdbdbd;
-        // border-radius: 25px;
     }
     &__copyright {
         // border-top: 3px double rgb(59, 59, 59);
@@ -85,20 +83,5 @@
             flex-direction: column;
             justify-content: space-evenly;
         }
-    }
-}
-
-.header {
-    &__titre {
-        color: #1976D2;
-        margin-bottom: -10px;
-        font-family: Roboto, Arial, Helvetica, sans-serif;
-        margin-left: 5%;
-        font-size: 2rem;
-        font-style: oblique;
-    }
-    &__description {
-        display: inline-block;
-        width: 95%;
     }
 }
