@@ -586,8 +586,7 @@ input:checked ~ .cours__logiciel {
 }
 
 .listeProfs {
-  display: grid;
-  grid-template-columns: 1fr;
+  width: 100%;
 }
 .listeProfs__liste {
   display: flex;
@@ -603,8 +602,11 @@ input:checked ~ .cours__logiciel {
 }
 
 .prof {
+  overflow: hidden;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
   transition-duration: 0.4s;
-  border: 3px solid hsl(271deg, 76%, 53%);
   width: clamp(250px, 30%, 350px);
   margin: 10px;
 }
@@ -623,7 +625,6 @@ input:checked ~ .cours__logiciel {
   height: 100%;
 }
 .prof:hover {
-  box-shadow: 5px 10px hsl(198deg, 99%, 67%);
   transform: scale(1.05);
 }
 
@@ -635,14 +636,16 @@ input:checked ~ .cours__logiciel {
   text-align: center;
 }
 .unProf img {
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
   width: 100%;
-  border: 3px solid hsl(271deg, 76%, 53%);
   margin: 10px;
   transition: 0.4s;
   margin: 0 auto;
 }
 .unProf img:hover {
-  box-shadow: 5px 10px hsl(198deg, 99%, 67%);
+  border: 3px solid hsl(271deg, 76%, 53%);
 }
 .unProf__infos {
   display: flex;

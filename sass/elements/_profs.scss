@@ -1,7 +1,5 @@
 .listeProfs {
-    // width: clamp(300px, 100%, 750px);
-    display: grid;
-    grid-template-columns: 1fr;
+    width: 100%;
     &__liste {
         display: flex;
         flex-wrap: wrap;
@@ -19,8 +17,9 @@
 }
 
 .prof {
+    overflow: hidden;
+    @include effetNeon();
     transition-duration: .4s;
-    border: 3px solid $couleur_fond2;
     width: clamp(250px, 30%, 350px);
     margin: 10px;
     &__titre {
@@ -38,29 +37,24 @@
         }
     }
     &:hover {
-        box-shadow: 5px 10px $couleur_texte2;
         transform: scale(1.05);
     }
 }
 
 .unProf {
-    // display: grid;
-    // grid-template-areas: "pTitre pTitre" "pImg pInfos" "pAutres pAutres";
     margin: 0 auto;
     &__titre {
-        // grid-area: pTitre;
         height: 30px;
         text-align: center;
     }
     img {
+        @include effetNeon();
         width: 100%;
-        // max-height: 500px;
-        border: 3px solid $couleur_fond2;
         margin: 10px;
         transition: .4s;
         margin: 0 auto;
         &:hover {
-            box-shadow: 5px 10px $couleur_texte2;
+            border: 3px solid $couleur_fond2;
         }
     }
     &__infos {
@@ -69,17 +63,6 @@
         width: clamp(300px, 100%, 800px);
         margin: 0 auto;
     }
-    // &__img {
-    //     // grid-area: pImg;
-    //     overflow: hidden;
-    //     height: 400px;
-    //     width: 267px;
-    //     // width: auto;
-    //     img {
-    //         // width: 100%;
-    //         height: 100%;
-    //     }
-    // }
     &__desc {
         display: flex;
         flex-direction: column;
@@ -87,15 +70,8 @@
         text-align: justify;
         margin: 0 auto;
         padding: 10px;
-        p {
-            // font-family: $font2;
-        }
-        // grid-area: pInfos;
-        // max-width: 200px;
     }
     &__anecdote {
-        // grid-area: pAutres;
-        // margin: 0 auto;
         margin-left: 50%;
     }
 }
