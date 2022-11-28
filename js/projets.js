@@ -7,29 +7,7 @@ let isPressed = false;
     console.log("catégorie: projets");
     listeProjets.classList.add('listeProjets');
     btnProjet.addEventListener('click', function() {
-        // changerHeight();
         listeProjets.classList.toggle('listeProjets');
     })
 
 }())
-
-function changerHeight() {
-    isPressed = !isPressed;
-    if (!isPressed) {
-        siteMain.style.height = "unset";
-    } else {
-        if (window.innerWidth <= 1120) {
-            siteMain.style.height = "300vh";
-            return;
-        }
-        if (window.innerWidth <= 1670) {
-            siteMain.style.height = "170vh";
-            return;
-        }
-        if (window.innerWidth >= 1671) {
-            siteMain.style.height = "155vh";
-            return;
-        }
-    }
-
-}

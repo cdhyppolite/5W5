@@ -820,7 +820,7 @@ input:checked ~ .cours__logiciel {
 
 @keyframes mouvementCarrosel {
   from {
-    transform: rotateY(360deg) translateZ(60px) rotateY(-360deg);
+    transform: rotateY(360deg) translateZ(120px) rotateY(-360deg);
     z-index: 10;
     opacity: 1;
   }
@@ -828,7 +828,7 @@ input:checked ~ .cours__logiciel {
     z-index: -10;
   }
   to {
-    transform: rotateY(0deg) translateZ(60px) rotateY(0deg);
+    transform: rotateY(0deg) translateZ(120px) rotateY(0deg);
     z-index: 10;
     opacity: 1;
   }

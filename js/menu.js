@@ -5,8 +5,7 @@ let menuBurger = document.getElementById('burger');
 let boiteTransparent = document.querySelector('.boiteTransparent');
 let page = document.querySelector('html');
 let btnMenuBurger = document.querySelector('#chk-burger');
-
-// console.log(liMenuPrincipal.length);
+let menuOuvert = false;
 
 for (let i = 0; i < liMenuPrincipal.length; i++) {
     liMenuPrincipal[i].innerHTML += '<div class="menu-item__ligne"></div>';
@@ -21,15 +20,17 @@ for (let i = 0; i < liMenuPrincipal.length; i++) {
         afficherMenu();
     })
 
-    /*if (btnMenuBurger.checked)
-        boiteTransparent.classList.remove('bloquer');
-    else
-        boiteTransparent.classList.add('bloquer');*/
-
 }())
 
 function afficherMenu() {
-    console.log("menu burger click")
-    boiteTransparent.classList.toggle('ouvrir');
+    menuOuvert = !menuOuvert;
+    // console.log("menu burger click");
     page.classList.toggle('bloquer');
+    if (menuOuvert) {
+        page.classList.add('bloquer');
+        boiteTransparent.classList.add('ouvrir');
+    } else {
+        page.classList.remove('bloquer');
+        boiteTransparent.classList.remove('ouvrir');
+    }
 }

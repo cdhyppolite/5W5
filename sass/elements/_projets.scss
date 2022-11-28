@@ -17,7 +17,7 @@
     }
 }
 
-$deplacement:60px;
+$deplacement:120px;
 @keyframes mouvementCarrosel {
     from {
         transform: rotateY(360deg) translateZ($deplacement) rotateY(-360deg);
