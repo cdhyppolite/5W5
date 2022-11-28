@@ -8,8 +8,15 @@ sans-serif;
 $fontsMenu: lobster;
 // Séparation
 p,
+li {
+    font-family: $font2;
+    // color: $couleur_texte1;
+}
+
+p,
 h1,
-h3 {
+h3,
+li {
     color: $couleur_texte1
 }
 
@@ -26,22 +33,6 @@ h1 {
 @font-face {
     font-family: 'Brevia';
     src: url('fonts/Brevia-Black2.woff2') format('woff2'), url('fonts/Brevia-Black.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Neon Sans';
-    src: url('fonts/NeonSans.woff2') format('woff2'), url('fonts/NeonSans.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Las Enter';
-    src: url('fonts/LasEnterPersonalUseOnly.woff2') format('woff2'), url('fonts/LasEnterPersonalUseOnly.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

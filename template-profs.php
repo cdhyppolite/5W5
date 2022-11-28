@@ -11,7 +11,7 @@
     $imageBlank = get_bloginfo('template_directory')."/images/blank.jpg";
 ?>
 
-<main class="site__main"><!-- style="background-color: <?php the_field('couleur'); ?>;" -->
+<main class="site__main">
    <section class="unProf">
       <h1 class="unProf__titre"><?php the_title() ?></h1>
 

@@ -1,0 +1,46 @@
+.stages{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    
+    width: 100%;
+    a{
+        color: white;
+    
+
+        &:hover{
+           color:  $color__link-hover;
+        }
+    }
+    p{
+        width: 100%;
+    }
+    
+    .imgStages{
+        width: 40%;
+
+        img{
+            width: 90%;
+        }
+      
+        
+    }
+    .txtStages{
+        width: 45%;
+    }
+    .descStages{
+        width:100%;
+
+    }
+    .listeStage{
+        list-style-position: inside;
+        padding-left: 0;
+        li{
+            margin-top: 20px;
+            
+        }
+    }
+
+
+
+}

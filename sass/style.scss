@@ -16,6 +16,7 @@ INITIALISATION
 
 @import "init/normalize";
 @import "init/largeurboite";
+@import "init/mixins";
 
 /* -------------------------------------
 VARIABLES
@@ -36,11 +37,15 @@ LAYOUT
 ELEMENTS
 ----------------------------------------*/
 
-@import "elements/menu";
 @import "elements/cours";
 @import "elements/profs";
 @import "elements/accueil";
 @import "elements/avenir";
+@import "elements/universite";
+@import "elements/stages";
+@import "elements/emplois";
+@import "elements/projets";
+@import "elements/intro";
 
 /* -------------------------------------
 COMPOSANTS

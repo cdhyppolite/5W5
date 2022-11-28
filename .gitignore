@@ -1,6 +1,9 @@
 # misc
-.DS_Store
+*.DS_Store
+*.pack
+*.icloud
 
 # Fichers à ignorer
 style.css.map
 z-gitignore/*
+*.mp4

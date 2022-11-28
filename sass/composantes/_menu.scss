@@ -1,9 +1,43 @@
 .menu {
+    background-color: $couleur_fond;
+    @media screen and (min-width: 700px) {
+        background-color: unset;
+    }
+    li {
+        font-family: $fontsMenu !important;
+    }
     list-style: none;
     font-family: $fontsMenu;
+    &-item {
+        // Ligne en dessous du texte
+        &__ligne {
+            clip-path: polygon(13% 0, 87% 0, 100% 100%, 0 100%);
+            background-color: $couleur_fond2;
+            height: 5px;
+            z-index: 1;
+            box-shadow: 10px 10px 10px $couleur_fond2;
+            margin-top: 5px;
+        }
+    }
     &-principal {
         &-container {
+            @media screen and (max-width: 700px) {
+                position: fixed;
+                top: 20vh;
+            }
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            transform: translateX(-100vw);
+            transition: .5s cubic-bezier(.5, 0, .5, 1.7);
+            @media screen and (min-width: 700px) {
+                position: static;
+                transform: translateX(0);
+                width: 100%;
+            }
             a {
+                font-size: 50px;
                 margin-left: 20px;
                 color: $couleur_texte1;
                 padding: 4px;
@@ -65,12 +99,22 @@
     }
 }
 
-.colone {
-    clip-path: polygon(13% 0, 87% 0, 100% 100%, 0 100%);
-    background-color: $couleur_fond2;
-    height: 10px;
-    z-index: 1;
-    box-shadow: 10px 10px 10px $couleur_fond2;
+.boiteTransparent {
+    background-color: $couleur_fond2_transparent;
+    position: fixed;
     width: 100%;
-    // width: clamp(300px, 100%, 750px);
+    height: 100%;
+    z-index: 9;
+    transform: scale(0);
+    @media screen and (min-width: 700px) {
+        display: none;
+    }
+}
+
+.ouvrir {
+    transform: scale(1) !important;
+}
+
+.bloquer {
+    overflow-y: hidden;
 }

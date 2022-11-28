@@ -1,0 +1,57 @@
+.site__footer {
+    margin-top: auto;
+    padding-top: 2vh;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    height: auto;
+    color: $couleur_texte1;
+    font-family: $font2 !important;
+    h4 {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    &__logo {
+        // display: flex;
+        // align-items: center;
+        img {
+            width: 50%;
+filter: invert(30%) sepia(30%) saturate(700%) hue-rotate(220deg) brightness(88%) contrast(90%);
+        }
+    }
+    &__reseaux {
+        div {
+            display: flex;
+            justify-content: space-around;
+        }
+        .wp-social-link {
+            transition: .4s;
+            background-color: $couleur_fond2 !important;
+            &:hover {
+                animation: brasser 1s infinite;
+            }
+        }
+    }
+    &__conteneur {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        padding: 1rem;
+        gap: 1.5rem;
+        font-size: 0.8rem;
+        text-align: center;
+        /*div {
+            &:nth-child(1) {
+                border: 1px solid red;
+            }
+            &:nth-child(2) {
+                border: 1px solid blue;
+            }
+            &:nth-child(3) {
+                border: 1px solid green;
+            }
+            &:nth-child(4) {
+                border: 1px solid yellow;
+            }
+        }*/
+    }
+}

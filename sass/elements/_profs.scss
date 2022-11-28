@@ -9,7 +9,7 @@
         justify-content: space-around;
     }
     &__titre {
-        border: 3px solid $couleur_texte3;
+        // border: 3px solid $couleur_texte3;
         text-align: center;
         // clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
         max-width: 50%;
@@ -31,9 +31,6 @@
         padding: 10px;
     }
     &__img {
-        // width: 100px;
-        // height: 100px;
-        // max-height: 190px;
         overflow: hidden;
         img {
             width: 100%;
@@ -49,16 +46,19 @@
 .unProf {
     // display: grid;
     // grid-template-areas: "pTitre pTitre" "pImg pInfos" "pAutres pAutres";
+    margin: 0 auto;
     &__titre {
         // grid-area: pTitre;
         height: 30px;
         text-align: center;
     }
     img {
-        max-height: 500px;
+        width: 100%;
+        // max-height: 500px;
         border: 3px solid $couleur_fond2;
         margin: 10px;
         transition: .4s;
+        margin: 0 auto;
         &:hover {
             box-shadow: 5px 10px $couleur_texte2;
         }
@@ -83,6 +83,13 @@
     &__desc {
         display: flex;
         flex-direction: column;
+        font-family: $font2;
+        text-align: justify;
+        margin: 0 auto;
+        padding: 10px;
+        p {
+            // font-family: $font2;
+        }
         // grid-area: pInfos;
         // max-width: 200px;
     }

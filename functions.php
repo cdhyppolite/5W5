@@ -4,9 +4,11 @@ function e4_5w5_enqueue(){
     
     wp_enqueue_style('5w5-le-style', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), false);
     wp_register_script('5w5-menuJS', get_template_directory_uri() . '/js/menu.js', array(), filemtime(get_template_directory() . '/js/menu.js'), true);
+    wp_register_script('5w5-projetsJS', get_template_directory_uri() . '/js/projets.js', array(), filemtime(get_template_directory() . '/js/projets.js'), true);
     
     // Ajout des scripts JS
     wp_enqueue_script('5w5-menuJS');
+    wp_enqueue_script('5w5-projetsJS');
 }
 
 add_action("wp_enqueue_scripts", "e4_5w5_enqueue");
@@ -31,12 +33,30 @@ add_action( 'after_setup_theme', 'e4_5w5_register_nav_menu', 0 );
  }
 add_action( 'after_setup_theme', 'e4_5w5_add_theme_support' );
 
+
+// ------------------------------------ Enregistrement des side bar
+add_action( 'widgets_init', 'e4_5w5_register_sidebars' );
+function e4_5w5_register_sidebars() {
+    // Réseaux
+    register_sidebar(
+        array(
+            'id'            => 'reseaux_sb',
+            'name'          => __( 'Réseaux sociaux' ),
+            'description'   => __( 'Affiche les réaux sociaux' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+}
+
 // Afficher les cours en ordre de session.
 function e4_5w5_pre_get_posts(WP_Query $query)
 {
     if (is_admin()
     || !$query ->is_main_query()
-    || !$query ->is_category(array('cours','web','jeu','design','utilitaire','creation-3d','video','profs'))   )
+    || !$query ->is_category(array('cours','profs', 'projets')))
     {
         return $query;
     }        
