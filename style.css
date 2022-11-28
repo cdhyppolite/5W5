@@ -1013,6 +1013,9 @@ COMPOSANTS
   text-transform: uppercase;
   font-weight: bold;
 }
+.site__footer__logo img {
+  width: 50%;
+}
 .site__footer__reseaux div {
   display: flex;
   justify-content: space-around;

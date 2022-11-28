@@ -1,7 +1,11 @@
+<?php $logo1 = get_bloginfo('template_directory')."/images/logo-college.svg"; ?>
+
 <label class="boiteTransparent" for="chk-burger"></label>
 <footer class="site__footer">
     <div class="site__footer__conteneur">
-        <div>bonjour</div>
+        <div class="site__footer__logo">
+            <img src="<?= $logo1; ?>" alt="">
+        </div>
         <div class="site__footer__adresse">
             <h4>Adresse</h4>
             <p>3800 Rue Sherbrooke E, Montréal, QC</p>

@@ -11,6 +11,11 @@
         text-transform: uppercase;
         font-weight: bold;
     }
+    &__logo {
+        img {
+            width: 50%;
+        }
+    }
     &__reseaux {
         div {
             display: flex;
