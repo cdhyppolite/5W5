@@ -421,25 +421,6 @@ LAYOUT
   background-color: hsl(231deg, 100%, 10%);
   z-index: 20;
 }
-.site__footer {
-  grid-area: footer;
-  background-image: linear-gradient(hsl(231deg, 100%, 10%), black);
-}
-.site__copyright {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.site__copyright nav,
-.site__copyright h2 {
-  margin: 0 auto;
-}
-.site__copyright nav a {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.15em;
-}
 .site__info {
   display: flex;
   flex-direction: row;
@@ -1007,6 +988,8 @@ COMPOSANTS
 }
 
 .site__footer {
+  grid-area: footer;
+  background-image: linear-gradient(hsl(231deg, 100%, 10%), hsl(271deg, 76%, 53%));
   margin-top: auto;
   padding-top: 2vh;
   width: 100%;
@@ -1042,7 +1025,7 @@ COMPOSANTS
 .site__footer__conteneur {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  padding: 1rem;
+  padding: 5rem 0;
   gap: 1.5rem;
   font-size: 0.8rem;
   text-align: center;
