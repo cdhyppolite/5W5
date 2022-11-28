@@ -12,8 +12,11 @@
         font-weight: bold;
     }
     &__logo {
+        // display: flex;
+        // align-items: center;
         img {
             width: 50%;
+filter: invert(30%) sepia(30%) saturate(700%) hue-rotate(220deg) brightness(88%) contrast(90%);
         }
     }
     &__reseaux {

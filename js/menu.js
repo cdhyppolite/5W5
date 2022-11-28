@@ -4,6 +4,7 @@ let liMenuPrincipal = menuPrincipal.querySelectorAll("li");
 let menuBurger = document.getElementById('burger');
 let boiteTransparent = document.querySelector('.boiteTransparent');
 let page = document.querySelector('html');
+let btnMenuBurger = document.querySelector('#chk-burger');
 
 // console.log(liMenuPrincipal.length);
 
@@ -19,6 +20,11 @@ for (let i = 0; i < liMenuPrincipal.length; i++) {
     boiteTransparent.addEventListener('click', function() {
         afficherMenu();
     })
+
+    /*if (btnMenuBurger.checked)
+        boiteTransparent.classList.remove('bloquer');
+    else
+        boiteTransparent.classList.add('bloquer');*/
 
 }())
 

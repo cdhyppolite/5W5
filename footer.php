@@ -4,7 +4,9 @@
 <footer class="site__footer">
     <div class="site__footer__conteneur">
         <div class="site__footer__logo">
-            <img src="<?= $logo1; ?>" alt="">
+            <a href="https://www.cmaisonneuve.qc.ca">
+                <img src="<?= $logo1; ?>" alt="">
+            </a>
         </div>
         <div class="site__footer__adresse">
             <h4>Adresse</h4>
