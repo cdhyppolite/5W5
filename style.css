@@ -1015,6 +1015,7 @@ COMPOSANTS
 }
 .site__footer__logo img {
   width: 50%;
+  filter: invert(30%) sepia(30%) saturate(700%) hue-rotate(220deg) brightness(88%) contrast(90%);
 }
 .site__footer__reseaux div {
   display: flex;
@@ -1022,6 +1023,10 @@ COMPOSANTS
 }
 .site__footer__reseaux .wp-social-link {
   transition: 0.4s;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
+  border: none !important;
   background-color: hsl(271deg, 76%, 53%) !important;
 }
 .site__footer__reseaux .wp-social-link:hover {

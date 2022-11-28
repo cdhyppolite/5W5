@@ -4,7 +4,7 @@
 <footer class="site__footer">
     <div class="site__footer__conteneur">
         <div class="site__footer__logo">
-            <a href="https://www.cmaisonneuve.qc.ca">
+            <a href="https://www.cmaisonneuve.qc.ca" target="_blank">
                 <img src="<?= $logo1; ?>" alt="">
             </a>
         </div>
@@ -15,7 +15,7 @@
             <p>(514) 254-7131</p>
         </div>
         <?php get_sidebar('reseaux_sb'); ?>
-        <div class="site__copyright">
+        <div class="site__footer__copyright">
             <h2>&copy; <?php echo date("Y"); ?> - TIM Maisonneuve - Tous droits réservés</h2>
         </div>
     </div>

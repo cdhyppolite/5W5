@@ -11,12 +11,15 @@
         text-transform: uppercase;
         font-weight: bold;
     }
+    &__copyright {
+        // grid-column: auto / span 3;
+    }
     &__logo {
         // display: flex;
         // align-items: center;
         img {
             width: 50%;
-filter: invert(30%) sepia(30%) saturate(700%) hue-rotate(220deg) brightness(88%) contrast(90%);
+            filter: invert(30%) sepia(30%) saturate(700%) hue-rotate(220deg) brightness(88%) contrast(90%);
         }
     }
     &__reseaux {
@@ -26,6 +29,8 @@ filter: invert(30%) sepia(30%) saturate(700%) hue-rotate(220deg) brightness(88%)
         }
         .wp-social-link {
             transition: .4s;
+            @include effetNeon();
+            border: none !important;
             background-color: $couleur_fond2 !important;
             &:hover {
                 animation: brasser 1s infinite;
