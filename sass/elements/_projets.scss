@@ -1,59 +1,18 @@
 .listeProjets {
     width: 100%;
     position: relative;
-    &__liste {
-        @media screen and (max-width: 500px) {
-            perspective: unset;
-        }
+    .listeProfs__liste {
         perspective: 250px;
-        transform: scale(3);
         position: absolute;
         top: 30%;
         left: 50%;
-        width: 100px;
-        height: 100px;
-    }
-}
-
-.projet {
-    @include effetNeon();
-    transition-duration: .4s;
-    border: 3px solid white;
-    background-color: $couleur_fond2;
-    overflow: hidden;
-    width: 90px;
-    height: 100px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-    justify-content: center;
-    align-items: center;
-    font-size: 9px;
-    border-radius: 8px;
-    text-align: center;
-    animation-name: mouvementCarrosel;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    &__titre {
-        border-bottom: 2px solid white;
-        font-family: $font2;
-    }
-    &__img {
-        margin: 0 auto;
-        width: 90%;
-        overflow: hidden;
-        img {
-            width: 100%;
-            height: 100%;
-            transition: .4s;
-        }
-        &:hover {
-            box-shadow: $couleur_fond2 1px -1px 10px;
-            img {
-                transform: scale(1.1);
-                opacity: .7;
-            }
+        .prof {
+            position: absolute;
+            text-align: center;
+            animation-name: mouvementCarrosel;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            background-image: linear-gradient($couleur_fond, $couleur_fond2);
         }
     }
 }
@@ -77,34 +36,6 @@ $deplacement:60px;
 
 #chk-projets {
     &:checked~ {
-        .listeProjets {
-            &__liste {
-                margin: 0 auto;
-                transform: scale(1);
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                // UNSET
-                // perspective: unset;
-                position: unset;
-                // top: unset;
-                left: unset;
-                width: 70%;
-                // height: unset;
-                .projet {
-                    width: clamp(250px, 30%, 350px);
-                    margin: 10px;
-                    font-size: 2em;
-                    // Unset
-                    height: unset;
-                    // max-height: 330px;
-                    position: unset;
-                    animation-name: unset;
-                    animation-iteration-count: unset;
-                    animation-timing-function: unset;
-                }
-            }
-        }
         .btn-projets {
             div {
                 background: linear-gradient(to top, #f969a2 0, #ff0a64 20%, #ff0a64 49%, #f969a2 50%, #ff0a64);

@@ -8,7 +8,9 @@ function e4_5w5_enqueue(){
     
     // Ajout des scripts JS
     wp_enqueue_script('5w5-menuJS');
-    wp_enqueue_script('5w5-projetsJS');
+    if ((get_queried_object() -> slug)=="projets") {
+        wp_enqueue_script('5w5-projetsJS');
+    }
 }
 
 add_action("wp_enqueue_scripts", "e4_5w5_enqueue");

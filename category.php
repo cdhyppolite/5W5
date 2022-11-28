@@ -2,22 +2,32 @@
 <?php get_header();
     $imageBlank = get_bloginfo('template_directory')."/images/blank.jpg"; //Image par défault
     $nomCategorie = get_queried_object() -> name;
+    $count =0;
+    $isPageProjet = (get_queried_object() -> slug)=="projets";
 ?>
 <main class="site__main">
     <section class="listeProfs">
         <h2 class="listeProfs__titre">Liste <?= $nomCategorie; ?></h2>
+
+        <?php if ($isPageProjet) : ?>
+            <input type="checkbox" id="chk-projets">
+            <label for="chk-projets" class="btn-projets">
+                <div class="btn-projets__enfant">Changer l'affichage</div>
+            </label>
+        <?php endif; ?>
+
         <div class="listeProfs__liste">
 
-            <!-- Début boucle -->
+            <?php //Début boucle ?>
             <?php if (have_posts()):
             while (have_posts()): the_post();
-            $titre = get_the_title(); ?>
+            $titre = get_the_title(); $count++;?>
 
-            <!-- Afficher les infos -->
-            <article class="prof">
+            <?php //Afficher les infos ?>
+            <article class="prof" style="animation-delay:-<?= $count; ?>s;">
                 <a href="<?= get_permalink(); ?>">
                     <div class="prof__img">
-                        <!-- Afficher l'image -->
+                        <?php //Afficher l'image ?>
                         <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt="">
                     </div>
                 </a>
@@ -28,9 +38,16 @@
 
                 <?php endwhile ?>
             <?php endif ?>
-            <!-- Fin boucle -->
+            <?php //Fin boucle ?>
             
         </div>
     </section>
 </main>
+<?php if ($isPageProjet) : ?>
+    <style>
+    .prof {
+        animation-duration: <?= $count; ?>s;
+    }
+</style>
+<?php endif; ?>
 <?php get_footer() ?>
