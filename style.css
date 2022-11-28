@@ -1013,6 +1013,17 @@ COMPOSANTS
   text-transform: uppercase;
   font-weight: bold;
 }
+.site__footer__reseaux div {
+  display: flex;
+  justify-content: space-around;
+}
+.site__footer__reseaux .wp-social-link {
+  transition: 0.4s;
+  background-color: hsl(271deg, 76%, 53%) !important;
+}
+.site__footer__reseaux .wp-social-link:hover {
+  animation: brasser 1s infinite;
+}
 .site__footer__conteneur {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
@@ -1020,18 +1031,20 @@ COMPOSANTS
   gap: 1.5rem;
   font-size: 0.8rem;
   text-align: center;
-}
-.site__footer__conteneur div:nth-child(1) {
-  border: 1px solid red;
-}
-.site__footer__conteneur div:nth-child(2) {
-  border: 1px solid blue;
-}
-.site__footer__conteneur div:nth-child(3) {
-  border: 1px solid green;
-}
-.site__footer__conteneur div:nth-child(4) {
-  border: 1px solid yellow;
+  /*div {
+      &:nth-child(1) {
+          border: 1px solid red;
+      }
+      &:nth-child(2) {
+          border: 1px solid blue;
+      }
+      &:nth-child(3) {
+          border: 1px solid green;
+      }
+      &:nth-child(4) {
+          border: 1px solid yellow;
+      }
+  }*/
 }
 
 .menu-menu_cours-container {

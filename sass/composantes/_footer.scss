@@ -11,6 +11,19 @@
         text-transform: uppercase;
         font-weight: bold;
     }
+    &__reseaux {
+        div {
+            display: flex;
+            justify-content: space-around;
+        }
+        .wp-social-link {
+            transition: .4s;
+            background-color: $couleur_fond2 !important;
+            &:hover {
+                animation: brasser 1s infinite;
+            }
+        }
+    }
     &__conteneur {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
@@ -18,7 +31,7 @@
         gap: 1.5rem;
         font-size: 0.8rem;
         text-align: center;
-        div {
+        /*div {
             &:nth-child(1) {
                 border: 1px solid red;
             }
@@ -31,6 +44,6 @@
             &:nth-child(4) {
                 border: 1px solid yellow;
             }
-        }
+        }*/
     }
 }

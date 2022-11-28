@@ -19,14 +19,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php the_title(); ?></title>
+    <title><?= $titreFiltreCours; ?> | <?php bloginfo('name'); ?></title>
     <!-- Récupérer le ficher style.css -->
     <link rel="stylesheet" href="<?php echo (get_bloginfo('template_directory')."/style.css"); ?>">
 </head>
 
 <!-- Afficher le titre et la description complète du cours -->
-
-
 <div class="btnBack seul" onclick="window.close()">
     <div></div>
 </div>
