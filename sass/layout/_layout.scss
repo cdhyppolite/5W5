@@ -29,6 +29,7 @@
     &__barre {
         position: fixed;
         width: 30%;
+        // width: clamp(325px, 30%, 30%);
         top: 14vh;
         grid-area: barre;
         background-color: $couleur_fond;

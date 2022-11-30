@@ -8,7 +8,7 @@ function e4_5w5_enqueue(){
     
     // Ajout des scripts JS
     wp_enqueue_script('5w5-menuJS');
-    if ((get_queried_object() -> slug)=="projets") {
+    if (is_category('projets')) {
         wp_enqueue_script('5w5-projetsJS');
     }
 }

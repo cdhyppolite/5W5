@@ -1,8 +1,7 @@
     .listeCours {
-        // background-color: white;
-        // padding: 0 1vw 0 1vw;
         width: clamp(300px, 100%, 750px);
         margin: 0 auto;
+        margin-top: 5vh;
         &__titre {
             text-align: center;
         }
@@ -98,7 +97,6 @@
                 height: 230px;
             }
         }
-        
     }
     
     input {

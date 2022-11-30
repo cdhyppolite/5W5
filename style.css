@@ -359,7 +359,7 @@ h1 {
 
 @font-face {
   font-family: "Brevia";
-  src: url("fonts/Brevia-Black2.woff2") format("woff2"), url("fonts/Brevia-Black.woff") format("woff");
+  src: url("fonts/Brevia-Black.woff2") format("woff2"), url("fonts/Brevia-Black.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -444,6 +444,7 @@ ELEMENTS
 .listeCours {
   width: clamp(300px, 100%, 750px);
   margin: 0 auto;
+  margin-top: 5vh;
 }
 .listeCours__titre {
   text-align: center;
@@ -568,6 +569,7 @@ input:checked ~ .cours__logiciel {
 
 .listeProfs {
   width: 100%;
+  margin-top: 5vh;
 }
 .listeProfs__liste {
   display: flex;
@@ -822,7 +824,6 @@ input:checked ~ .cours__logiciel {
   from {
     transform: rotateY(360deg) translateZ(120px) rotateY(-360deg);
     z-index: 10;
-    opacity: 1;
   }
   50% {
     z-index: -10;
@@ -830,7 +831,6 @@ input:checked ~ .cours__logiciel {
   to {
     transform: rotateY(0deg) translateZ(120px) rotateY(0deg);
     z-index: 10;
-    opacity: 1;
   }
 }
 #chk-projets:checked ~ .btn-projets div {
@@ -1173,6 +1173,11 @@ COMPOSANTS
   padding: 4px;
   text-shadow: 0px 2px 0px grey;
   transition-duration: 0.4s;
+}
+@media screen and (min-width: 700px) {
+  .menu-principal-container a {
+    font-size: clamp(1rem, 12vw, 2.5rem);
+  }
 }
 .menu-principal-container a:visited {
   color: #F2F2F2;

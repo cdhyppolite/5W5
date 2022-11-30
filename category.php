@@ -3,7 +3,7 @@
     $imageBlank = get_bloginfo('template_directory')."/images/blank.jpg"; //Image par défault
     $nomCategorie = get_queried_object() -> name;
     $count =0;
-    $isPageProjet = (get_queried_object() -> slug)=="projets";
+    $isPageProjet = is_category('projets');
 ?>
 <main class="site__main">
     <section class="listeProfs">
@@ -28,7 +28,7 @@
                 <a href="<?= get_permalink(); ?>">
                     <div class="prof__img">
                         <?php //Afficher l'image ?>
-                        <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt="">
+                        <img src="<?= (has_post_thumbnail()) ? get_the_post_thumbnail_url() : $imageBlank; ?>" alt="">
                     </div>
                 </a>
                 <div class="prof__texte">
@@ -45,9 +45,9 @@
 </main>
 <?php if ($isPageProjet) : ?>
     <style>
-    .prof {
-        animation-duration: <?= $count; ?>s;
-    }
-</style>
+        .prof {
+            animation-duration: <?=$count; ?>s;
+        }
+    </style>
 <?php endif; ?>
 <?php get_footer() ?>
