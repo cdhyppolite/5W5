@@ -4,10 +4,12 @@ let listeProjets = document.querySelector('.listeProfs');
 let isPressed = false;
 
 (function() {
-    console.log("catégorie: projets");
     listeProjets.classList.add('listeProjets');
     btnProjet.addEventListener('click', function() {
+
         listeProjets.classList.toggle('listeProjets');
+        isPressed = !isPressed;
+        btnProjet.innerHTML = (isPressed) ? "Affichage en carousel" : "Affichage en grille";
     })
 
 }())

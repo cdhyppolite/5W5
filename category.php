@@ -12,7 +12,7 @@
         <?php if ($isPageProjet) : ?>
             <input type="checkbox" id="chk-projets">
             <label for="chk-projets" class="btn-projets">
-                <div class="btn-projets__enfant">Changer l'affichage</div>
+                <div class="btn-projets__enfant">Affichage en grille</div>
             </label>
         <?php endif; ?>
 
