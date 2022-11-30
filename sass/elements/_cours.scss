@@ -19,21 +19,35 @@
         }
         position: relative;
         &__btn {
-            // border-radius: 50%;
+            div {
+                transition: .4s cubic-bezier(.5, 0, .5, 1.7);
+                background-color: white;
+                -webkit-mask-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-down-bold);
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 15px;
+                height: 15px;
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $couleur_fond2 !important;
+            @include effetNeon();
+            border: 2px solid $couleur_texte1;
+            box-shadow: none;
             position: absolute;
             right: 20px;
             top: 20px;
-            -webkit-mask-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-down-bold);
-            background-repeat: no-repeat;
-            background-position: center;
             background-color: $couleur_texte1;
             transform: scale(1.5);
-            width: 13px;
-            height: 12px;
+            width: 24px;
+            height: 24px;
             transition: .4s cubic-bezier(.5, 0, .5, 1.7);
             &:hover {
                 cursor: pointer;
-                background-color: $couleur_texte2;
+                div {
+                    background-color: $couleur_texte2;
+                }
             }
         }
         &__infos {
@@ -105,8 +119,10 @@
         &:checked {
             display: none;
             ~label>.cours__btn {
-                // background-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-up-bold);
                 transform: rotate(-180deg) scale(1.5);
+                div {
+                    background-color: $couleur_texte2;
+                }
             }
             ~.cours {
                 &__infos {

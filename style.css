@@ -463,20 +463,37 @@ ELEMENTS
   border-bottom: none;
 }
 .cours__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(271deg, 76%, 53%) !important;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
+  border: 2px solid #F2F2F2;
+  box-shadow: none;
   position: absolute;
   right: 20px;
   top: 20px;
+  background-color: #F2F2F2;
+  transform: scale(1.5);
+  width: 24px;
+  height: 24px;
+  transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.7);
+}
+.cours__btn div {
+  transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.7);
+  background-color: white;
   -webkit-mask-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-down-bold);
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #F2F2F2;
-  transform: scale(1.5);
-  width: 13px;
-  height: 12px;
-  transition: 0.4s cubic-bezier(0.5, 0, 0.5, 1.7);
+  width: 15px;
+  height: 15px;
 }
 .cours__btn:hover {
   cursor: pointer;
+}
+.cours__btn:hover div {
   background-color: hsl(198deg, 99%, 67%);
 }
 .cours__infos {
@@ -547,6 +564,9 @@ input:checked {
 }
 input:checked ~ label > .cours__btn {
   transform: rotate(-180deg) scale(1.5);
+}
+input:checked ~ label > .cours__btn div {
+  background-color: hsl(198deg, 99%, 67%);
 }
 input:checked ~ .cours__infos {
   height: 280px;

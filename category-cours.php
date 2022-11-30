@@ -45,7 +45,9 @@
                 </h3>
 
                 <label for="cours-btn_<?= $count; ?>">
-                    <div class="cours__btn" title="En savoir plus"></div>
+                    <div class="cours__btn" title="En savoir plus">
+                        <div></div>
+                    </div>
                 </label>
 
                 <div class="cours__infos">
