@@ -16,11 +16,11 @@
                         unset($_GET["session"]); // Détruire la variable
                     }
                 ?>
-                <a href="?" class="<?php if (!isset($_GET["session"])) echo "active" ?>">Tous</a>
+                <a href="?" <?php if (!isset($_GET["session"])) echo 'class="active"' ?>>Tous</a>
                 <?php // Boucle ?>
                 <?php for ($nbSessions = 1; $nbSessions <= 6; $nbSessions++) : ?>
                 <a href="?session=<?= $nbSessions; ?>"
-                    class="<?= (isset($_GET["session"]) && ($_GET["session"]==$nbSessions)) ? "active" :""; ?>">Session
+                    <?= (isset($_GET["session"]) && ($_GET["session"]==$nbSessions)) ? 'class="active"' :""; ?>>Session
                     <?= $nbSessions; ?></a>
                 <?php endfor; ?>
             </nav>

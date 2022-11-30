@@ -514,6 +514,9 @@ ELEMENTS
   font-size: 14px;
   width: 50%;
 }
+.cours__titre {
+  max-width: 90%;
+}
 .cours__titre a {
   font-family: "Brevia", sans-serif;
   color: #F2F2F2;
@@ -889,7 +892,8 @@ COMPOSANTS
     margin: 0 0 0 50px;
   }
 }
-.site__header__titre h1 {
+.site__header__titre h1,
+.site__header__titre h6 {
   color: hsl(198deg, 99%, 67%);
 }
 .site__header__titre:hover {

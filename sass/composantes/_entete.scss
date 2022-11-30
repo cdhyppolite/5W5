@@ -13,7 +13,8 @@
         height: 150px;
         align-items: center;
         padding: 0;
-        h1 {
+        h1,
+        h6 {
             color: $couleur_texte2;
         }
         &:hover {
