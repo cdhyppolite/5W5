@@ -6,6 +6,13 @@
 - [Zachary Arsenault](https://github.com/TheFrenchBuck)
 ### [Lien du site Siteground](https://timm178.sg-host.com/)
 ### [Lien du Google Sheets](https://docs.google.com/spreadsheets/d/1tfcWJ_KfRK7A1qLzvmbN3c6tjl_g7qarUelLplwTTVQ/edit#gid=0)
+## Éléments réalisés au Sprint 1:
+```
+Création d'un maquette du site sur XD
+Collecte de médias nécessaire au site
+Début du premier prototype du site
+Finalisation du choix des couleurs du site
+```
 ## Éléments réalisés au Sprint 2:
 ```
 Début de la page d'accueil
@@ -27,5 +34,11 @@ Adaptation du site sur d'autres format d'écran
 Réalisation de vidéo de présentation
 Intégration de contenu sur les autres pages du site
 ```
-
+## Éléments réalisés au Sprint 4:
+```
+Amélioration du menu burger
+Ajout d'un bouton pour revenir à l'ancienne page
+Ajout d'informations dans le pied de page
+Modification de la vidéo de présentation
+```
 ![Image](./screenshot.png "Image du Thème")
