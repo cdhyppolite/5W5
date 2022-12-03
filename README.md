@@ -18,4 +18,14 @@ Ajout des polices d'écriture
 Début de l'intégration des couleurs
 ```
 
+## Éléments réalisés au Sprint 3:
+```
+Ajout d'une animation sur la page des projets étudiants
+Finalisation de la page avenir
+Ajout des nouvelles photos des profs modifiés au couleurs du thème
+Adaptation du site sur d'autres format d'écran
+Réalisation de vidéo de présentation
+Intégration de contenu sur les autres pages du site
+```
+
 ![Image](./screenshot.png "Image du Thème")
