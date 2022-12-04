@@ -619,6 +619,10 @@ input:checked ~ .cours__logiciel {
 .prof__titre {
   border-bottom: 2px solid hsl(271deg, 76%, 53%);
   font-family: "Brevia", sans-serif;
+  cursor: pointer;
+}
+.prof__titre:hover {
+  color: hsl(198deg, 99%, 67%);
 }
 .prof__texte {
   padding: 10px;

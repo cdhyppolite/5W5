@@ -24,17 +24,15 @@
             $titre = get_the_title(); $count++;?>
 
             <?php //Afficher les infos ?>
-            <article class="prof" style="animation-delay:-<?= $count; ?>s;">
-                <a href="<?= get_permalink(); ?>">
+            <a href="<?= get_permalink(); ?>" class="prof" style="animation-delay:-<?= $count*3; ?>s;">
                     <div class="prof__img">
                         <?php //Afficher l'image ?>
                         <img src="<?= (has_post_thumbnail()) ? get_the_post_thumbnail_url() : $imageBlank; ?>" alt="">
                     </div>
-                </a>
                 <div class="prof__texte">
                     <h3 class="prof__titre"><?= $titre; ?></h3>
                 </div>
-            </article>
+            </a>
 
                 <?php endwhile ?>
             <?php endif ?>
@@ -46,7 +44,7 @@
 <?php if ($isPageProjet) : ?>
     <style>
         .prof {
-            animation-duration: <?=$count; ?>s;
+            animation-duration: <?=$count*3; ?>s;
         }
     </style>
 <?php endif; ?>

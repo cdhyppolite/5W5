@@ -26,6 +26,10 @@
     &__titre {
         border-bottom: 2px solid $couleur_fond2;
         font-family: $font2;
+        cursor: pointer;
+        &:hover {
+            color: $couleur_texte2;
+        }
     }
     &__texte {
         padding: 10px;
