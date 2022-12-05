@@ -837,19 +837,21 @@ input:checked ~ .cours__logiciel {
   width: 100%;
   position: relative;
 }
-.listeProjets .listeProfs__liste {
-  perspective: 250px;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-}
-.listeProjets .listeProfs__liste .prof {
-  position: absolute;
-  text-align: center;
-  animation-name: mouvementCarrosel;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  background-image: linear-gradient(hsl(231deg, 100%, 10%), hsl(271deg, 76%, 53%));
+@media screen and (min-width: 700px) {
+  .listeProjets .listeProfs__liste {
+    perspective: 250px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+  }
+  .listeProjets .listeProfs__liste .prof {
+    position: absolute;
+    text-align: center;
+    animation-name: mouvementCarrosel;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: linear-gradient(hsl(231deg, 100%, 10%), hsl(271deg, 76%, 53%));
+  }
 }
 
 @keyframes mouvementCarrosel {
@@ -873,6 +875,11 @@ input:checked ~ .cours__logiciel {
   width: 70px;
   height: 30px;
   margin: 0 auto;
+}
+@media screen and (max-width: 700px) {
+  .btn-projets {
+    display: none;
+  }
 }
 .btn-projets div {
   width: clamp(100px, 30%, 200px);
