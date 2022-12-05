@@ -17,6 +17,9 @@
         font-weight: bold;
     }
     &__copyright {
+        h2::first-letter {
+            font-family: Arial, Helvetica, sans-serif;
+        }
         // grid-column: auto / span 3;
     }
     &__logo {
