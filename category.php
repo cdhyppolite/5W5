@@ -24,7 +24,7 @@
             $titre = get_the_title(); $count++;?>
 
             <?php //Afficher les infos ?>
-            <a href="<?= get_permalink(); ?>" class="prof" style="animation-delay:-<?= $count*3; ?>s;">
+            <a href="<?= get_permalink(); ?>" class="prof" style="animation-delay:-<?= $count*(10/3); ?>s;">
                     <div class="prof__img">
                         <?php //Afficher l'image ?>
                         <img src="<?= (has_post_thumbnail()) ? get_the_post_thumbnail_url() : $imageBlank; ?>" alt="">
@@ -42,10 +42,6 @@
     </section>
 </main>
 <?php if ($isPageProjet) : ?>
-    <style>
-        .prof {
-            animation-duration: <?=$count*3; ?>s;
-        }
-    </style>
+    <style> .prof { animation-duration: <?=$count*(10/3); ?>s; } </style>
 <?php endif; ?>
 <?php get_footer() ?>

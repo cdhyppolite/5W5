@@ -66,11 +66,6 @@
             overflow: hidden;
             // flex-wrap: wrap;
             flex-direction: column;
-            .cours {
-                &__desc {
-                    text-align: justify;
-                }
-            }
         }
         &__img {
             width: auto;
@@ -83,6 +78,7 @@
             }
         }
         &__desc {
+            text-align: justify;
             font-size: 14px;
             &::first-letter {
                 // text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px $couleur_fond2, 0 0 82px $couleur_fond2, 0 0 92px $couleur_fond2, 0 0 102px $couleur_fond2, 0 0 151px $couleur_fond2;
