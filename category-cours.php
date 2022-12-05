@@ -40,7 +40,7 @@
             <article class="cours">
                 <input type="checkbox" id="cours-btn_<?= $count; ?>">
                 <h3 class="cours__titre" title="Voir la description complète"><a target="popup"
-                        onclick="window.open('<?= get_permalink(); ?>','popup','width=600,height=800'); return false;">
+                        onclick="window.open('<?= get_permalink(); ?>','popup','width=600,height=900'); return false;">
                         <?= $titreFiltreCours; ?> </a>
                 </h3>
 

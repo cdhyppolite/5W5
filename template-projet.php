@@ -27,7 +27,7 @@
             <?php endif; ?>
 
             <?php if (get_field('cours') != "") : ?>
-               <a target="popup" onclick="window.open('<?php the_field('cours'); ?>','popup','width=600,height=800'); return false;"> <?php the_field('nom_du_cours'); ?> </a></p>
+               <a target="popup" onclick="window.open('<?php the_field('cours'); ?>','popup','width=600,height=900'); return false;"> <?php the_field('nom_du_cours'); ?> </a></p>
             <?php endif; ?>
 
          </div>
