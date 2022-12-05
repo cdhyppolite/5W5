@@ -6,7 +6,7 @@
 ?>
 <main class="site__main _projets">
     <section class="listeProjets">
-        <h2 class="listeProfs__titre">Liste <?= $nomCategorie; ?></h2>
+        <h1 class="listeProfs__titre"><?= $nomCategorie; ?></h1>
         <input type="checkbox" id="chk-projets">
         <label for="chk-projets" class="btn-projets">
             <div class="btn-projets__enfant">Changer l'affichage</div>
