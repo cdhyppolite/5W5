@@ -5,12 +5,16 @@ function e4_5w5_enqueue(){
     wp_enqueue_style('5w5-le-style', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), false);
     wp_register_script('5w5-menuJS', get_template_directory_uri() . '/js/menu.js', array(), filemtime(get_template_directory() . '/js/menu.js'), true);
     wp_register_script('5w5-projetsJS', get_template_directory_uri() . '/js/projets.js', array(), filemtime(get_template_directory() . '/js/projets.js'), true);
+    wp_register_script('5w5-404', 'https://kit.fontawesome.com/4b9ba14b0f.js', array(), 'https://kit.fontawesome.com/4b9ba14b0f.js', true);
     
     // Ajout des scripts JS
     wp_enqueue_script('5w5-menuJS');
+    wp_enqueue_script('5w5-404');
     if (is_category('projets')) {
         wp_enqueue_script('5w5-projetsJS');
     }
+    // <!-- Script pour l'erreur 404 -->
+    // <script src="https://kit.fontawesome.com/4b9ba14b0f.js" crossorigin="anonymous"></script>
 }
 
 add_action("wp_enqueue_scripts", "e4_5w5_enqueue");
