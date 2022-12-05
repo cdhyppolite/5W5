@@ -358,7 +358,7 @@ h1 {
 }
 
 @font-face {
-  font-family: "Brevia";
+  font-family: "Brevia-Black";
   src: url("fonts/Brevia-Black.woff2") format("woff2"), url("fonts/Brevia-Black.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -367,6 +367,13 @@ h1 {
 @font-face {
   font-family: "Neonblitz";
   src: url("fonts/Neonblitz.woff2") format("woff2"), url("fonts/Neonblitz.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Brevia";
+  src: url("fonts/Brevia-Regular.woff2") format("woff2"), url("fonts/Brevia-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -512,9 +519,6 @@ ELEMENTS
   justify-content: space-around;
   align-items: center;
 }
-.cours__infos .cours__desc {
-  text-align: justify;
-}
 .cours__img {
   width: auto;
   height: 130px;
@@ -528,6 +532,7 @@ ELEMENTS
   height: 100%;
 }
 .cours__desc {
+  text-align: justify;
   font-size: 14px;
   width: 50%;
 }

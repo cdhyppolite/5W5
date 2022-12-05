@@ -1,10 +1,6 @@
-$font1:'Neonblitz',
-Verdana,
-Geneva,
-Tahoma,
-sans-serif;
-$font2: 'Brevia',
-sans-serif;
+$font1:'Neonblitz', Verdana, Geneva, Tahoma, sans-serif;
+$font2: 'Brevia', sans-serif;
+$font3: 'Brevia-Black', sans-serif;
 $fontsMenu: lobster;
 // Séparation
 p,
@@ -31,7 +27,7 @@ h1 {
 
 // Polices customs (https://transfonter.org/)
 @font-face {
-    font-family: 'Brevia';
+    font-family: 'Brevia-Black';
     src: url('fonts/Brevia-Black.woff2') format('woff2'), url('fonts/Brevia-Black.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -41,6 +37,14 @@ h1 {
 @font-face {
     font-family: 'Neonblitz';
     src: url('fonts/Neonblitz.woff2') format('woff2'), url('fonts/Neonblitz.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brevia';
+    src: url('fonts/Brevia-Regular.woff2') format('woff2'), url('fonts/Brevia-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
