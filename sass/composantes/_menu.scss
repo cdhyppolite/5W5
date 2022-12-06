@@ -38,6 +38,9 @@
             }
             a {
                 font-size: 50px;
+                @media screen and (min-width: 700px) {
+                    font-size: clamp(1rem, 12vw, 2.5rem);
+                }
                 margin-left: 20px;
                 color: $couleur_texte1;
                 padding: 4px;
@@ -80,15 +83,16 @@
 .triSession {
     display: flex;
     justify-content: space-around;
-    width: max-content;
     margin: 0 auto;
     a {
+        $taille: 100%;
+        width: $taille/7;
+        text-align: center;
         background-color: $couleur_fond2;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
         color: $couleur_texte1;
         font-family: $fontsMenu;
         font-weight: 900;
-        // margin: 0;
         padding: 10px;
         &:hover {
             background: linear-gradient(to top, #f969a2 0, #ff0a64 20%, #ff0a64 49%, #f969a2 50%, #ff0a64);

@@ -27,7 +27,10 @@
         min-height: 80vh;
     }
     &__barre {
-        position: relative;
+        position: fixed;
+        width: 30%;
+        // width: clamp(325px, 30%, 30%);
+        top: 14vh;
         grid-area: barre;
         background-color: $couleur_fond;
         // transform: translateX(-100vw);
@@ -45,26 +48,6 @@
         //         font-size: 1.15em;
         //     }
         // }
-    }
-    &__footer {
-        grid-area: footer;
-        background-image: linear-gradient($couleur_fond, black);
-    }
-    &__copyright {
-        // border-top: 3px double rgb(59, 59, 59);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        nav,
-        h2 {
-            margin: 0 auto;
-        }
-        nav a {
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.15em;
-        }
     }
     &__info {
         display: flex;

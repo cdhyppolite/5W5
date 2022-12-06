@@ -1,4 +1,9 @@
 .site__footer {
+    @media (min-width: 700px) and (max-width: 1050px) {
+        // padding-top: 5vh;
+    }
+    grid-area: footer;
+    background-image: linear-gradient($couleur_fond, $couleur_fond2);
     margin-top: auto;
     padding-top: 2vh;
     width: 100%;
@@ -11,12 +16,18 @@
         text-transform: uppercase;
         font-weight: bold;
     }
+    &__copyright {
+        h2::first-letter {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        // grid-column: auto / span 3;
+    }
     &__logo {
         // display: flex;
         // align-items: center;
         img {
             width: 50%;
-filter: invert(30%) sepia(30%) saturate(700%) hue-rotate(220deg) brightness(88%) contrast(90%);
+            filter: invert(30%) sepia(30%) saturate(700%) hue-rotate(220deg) brightness(88%) contrast(90%);
         }
     }
     &__reseaux {
@@ -26,6 +37,8 @@ filter: invert(30%) sepia(30%) saturate(700%) hue-rotate(220deg) brightness(88%)
         }
         .wp-social-link {
             transition: .4s;
+            @include effetNeon();
+            border: none !important;
             background-color: $couleur_fond2 !important;
             &:hover {
                 animation: brasser 1s infinite;
@@ -34,24 +47,13 @@ filter: invert(30%) sepia(30%) saturate(700%) hue-rotate(220deg) brightness(88%)
     }
     &__conteneur {
         display: grid;
+        @media (min-width: 1600px) {
+            grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+        }
         grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-        padding: 1rem;
+        padding: 5rem 0;
         gap: 1.5rem;
         font-size: 0.8rem;
         text-align: center;
-        /*div {
-            &:nth-child(1) {
-                border: 1px solid red;
-            }
-            &:nth-child(2) {
-                border: 1px solid blue;
-            }
-            &:nth-child(3) {
-                border: 1px solid green;
-            }
-            &:nth-child(4) {
-                border: 1px solid yellow;
-            }
-        }*/
     }
 }

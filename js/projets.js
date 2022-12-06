@@ -1,35 +1,15 @@
-console.log("début");
-
 let btnProjet = document.querySelector('.btn-projets__enfant');
 let siteMain = document.querySelector('.site__main');
+let listeProjets = document.querySelector('.listeProfs');
 let isPressed = false;
 
 (function() {
-
+    listeProjets.classList.add('listeProjets');
     btnProjet.addEventListener('click', function() {
-        changerHeight();
+
+        listeProjets.classList.toggle('listeProjets');
+        isPressed = !isPressed;
+        btnProjet.innerHTML = (isPressed) ? "Affichage en carousel" : "Affichage en grille";
     })
 
 }())
-
-function changerHeight() {
-    console.log("click");
-    isPressed = !isPressed;
-    if (!isPressed) {
-        siteMain.style.height = "unset";
-    } else {
-        if (window.innerWidth <= 1120) {
-            siteMain.style.height = "300vh";
-            return;
-        }
-        if (window.innerWidth <= 1670) {
-            siteMain.style.height = "170vh";
-            return;
-        }
-        if (window.innerWidth >= 1671) {
-            siteMain.style.height = "155vh";
-            return;
-        }
-    }
-
-}

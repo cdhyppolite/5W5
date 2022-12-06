@@ -9,8 +9,10 @@
     $imageBlank = get_bloginfo('template_directory')."/images/blank.jpg";
     $titre = get_the_title();
     $titreFiltreCours = substr($titre, 3, -6);
-    $nbHeures = substr($titre, -4, 3);
-    $codeCours = get_field('code_du_cours')
+    $codeCours = get_field('code_du_cours');
+
+    $nbHeures = substr($titre,strrpos($titre,'(')+1);
+    $nbHeures = substr($nbHeures,0, strrpos($nbHeures,')')-1);
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +36,11 @@
         <h2><?= $titreFiltreCours; ?></h2>
         <div>
             <p>Code du cours: <?= $codeCours; ?></p>
-            <p>Nombre d'heures: <?= $nbHeures; ?></p>
+            <p>Nombre d'heures: <?= "$nbHeures Heures"; ?></p>
+            
+            <?php if (get_field('logiciel') != "") : ?>
+                <p>Logiciel(s) / Langage(s) utilisé(s): <?= get_field('logiciel'); ?></p>
+            <?php endif; ?>
         </div>
         <div class="article__seul__contenu">
             <?php the_content(); ?>
