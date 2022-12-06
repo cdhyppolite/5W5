@@ -44,3 +44,31 @@
 
 
 }
+@media screen and (max-width: 700px) {
+
+    .stages{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .imgStages{
+            width: 80%;
+            height: 300px;
+    
+            img{
+                width: 100%;
+                height: 300px;
+            }
+        }
+        .txtStages{
+            width: 80%;
+        }
+        li{
+        &::marker{
+            color: $couleur_texte3 !important;
+            font-size: 1.5rem
+            
+        }
+        }
+    }
+
+}

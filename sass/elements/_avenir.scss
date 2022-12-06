@@ -47,4 +47,35 @@
     @media screen and (min-width: $largeur__media-desktop) {
         min-height: 115vh !important;
     }
+
+}
+@media screen  and (max-width: 700px) {
+    ._page{
+        align-content: center;
+    }
+    .avenir{
+       
+            display: flex !important;
+            //flex-direction: column !important;
+            //flex-wrap: wrap !important;
+            align-content: center !important;
+            width: 100%;
+           figure{
+               width: 80% !important;
+               margin-bottom: 20px !important;
+               a{
+                   display: flex !important;
+                   width: 100% !important;
+                   
+                   img{
+                      
+                   }
+               }
+           }
+        :last-child{
+            //flex-basis: unset !important;
+            //width: 80% !important;
+        }
+
+    }
 }
