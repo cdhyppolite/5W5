@@ -1,6 +1,6 @@
 .site__header {
     grid-area: header;
-    background-color: $couleur_fond;
+    background: transparent;
     // margin-top: -40px;
     &__titre {
         margin: 0 auto;
@@ -60,15 +60,9 @@
     width: 100%;
     height:100vh;
     z-index: -9;
-    
-    
-    background : linear-gradient(132deg, #24c7dc2a, #3493e665, #ec6ead27, #f8075728, #bc4e9d25); 
-        background-size : 315% 315%;
-         animation : Gradient 18s ease infinite; 
-    
-    
-    background : linear-gradient(132deg, #24c7dc2a, #3493e665, #ec6ead27, #f8075728, #bc4e9d25); 
-        background-size : 315% 315%;
+    opacity: 0.5;    
+         background : linear-gradient(132deg, #24c7dcf3, #3493e665, #420642, #b816c1de, #bc4e9d25); 
+         background-size : 315% 315%;
          animation : Gradient 18s ease infinite; 
          overflow: visible;
   }

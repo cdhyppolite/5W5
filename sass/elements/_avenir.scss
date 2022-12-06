@@ -9,11 +9,19 @@
         transition: .4s;
         overflow: hidden;
         box-shadow: $couleur_texte2 1px -1px 10px;
+
         figcaption {
             padding-bottom: 30px !important;
             color: $couleur_texte3 !important;
             font-size: 1.5rem !important;
-            text-decoration: underline;
+            
+            background: rgba(0, 0, 0, 0.801) !important;
+            padding-top: 30px !important;
+            box-shadow: 0 0 2rem rgba(0, 0, 0, 0.801), 0 0 0.8rem rgba(0, 0, 0, 0.801), 0 0 2.8rem rgba(0, 0, 0, 0.801), inset 0 0 1.3rem rgba(0, 0, 0, 0.801);
+            
+            
+            
+            
         }
         img {
             transition: .4s;
