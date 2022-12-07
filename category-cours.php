@@ -5,7 +5,7 @@
 ?>
 <main class="site__main">
     <section class="listeCours">
-        <h2 class="listeCours__titre">Liste de cours - Techniques d'intégration multimédia</h2>
+        <h1 class="listeCours__titre">Liste de cours - Techniques d'intégration multimédia</h1>
         <div class="listeCours__liste">
 
             <?php // Menu des cours pour les sessions ?>
