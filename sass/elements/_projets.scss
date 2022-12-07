@@ -2,19 +2,17 @@
     width: 100%;
     position: relative;
     .listeProfs__liste {
-        @media screen and (min-width: 700px) {
-            perspective: 250px;
+        perspective: 250px;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        .prof {
             position: absolute;
-            top: 30%;
-            left: 50%;
-            .prof {
-                position: absolute;
-                text-align: center;
-                animation-name: mouvementCarrosel;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-                background-image: linear-gradient($couleur_fond, $couleur_fond2);
-            }
+            text-align: center;
+            animation-name: mouvementCarrosel;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            background-image: linear-gradient($couleur_fond, $couleur_fond2);
         }
     }
 }
@@ -45,9 +43,6 @@ $deplacement:120px;
 }
 
 .btn-projets {
-    @media screen and (max-width: 700px) {
-        display: none;
-    }
     width: 70px;
     height: 30px;
     margin: 0 auto;
