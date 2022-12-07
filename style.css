@@ -414,7 +414,7 @@ LAYOUT
 .site__main {
   overflow: hidden;
   grid-area: main;
-  background-color: hsl(231deg, 100%, 10%);
+  background-color: transparent;
   display: flex;
   flex-wrap: wrap;
   row-gap: 20px;
@@ -425,7 +425,7 @@ LAYOUT
   width: 30%;
   top: 14vh;
   grid-area: barre;
-  background-color: hsl(231deg, 100%, 10%);
+  background-color: transparent;
   z-index: 20;
 }
 .site__info {
@@ -920,11 +920,6 @@ COMPOSANTS
   transform: scale(1.3);
   transition: transform 1s;
 }
-@media screen and (min-width: 1700px) {
-  .erreur404 {
-    transform: scale(2.5);
-  }
-}
 .erreur404 * {
   position: absolute;
   text-shadow: 1px 1px #F2F2F2, 2px 2px #F2F2F2, 3px 3px #F2F2F2;
@@ -963,7 +958,7 @@ COMPOSANTS
 
 .site__header {
   grid-area: header;
-  background-color: hsl(231deg, 100%, 10%);
+  background-color: transparent;
 }
 .site__header__titre {
   margin: 0 auto;
@@ -1013,9 +1008,34 @@ COMPOSANTS
   width: 95%;
 }
 
+.effet_background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -9;
+  background: linear-gradient(132deg, rgba(36, 199, 220, 0.1647058824), rgba(52, 147, 230, 0.3960784314), rgba(236, 110, 173, 0.1529411765), rgba(248, 7, 87, 0.1568627451), rgba(188, 78, 157, 0.1450980392));
+  background-size: 315% 315%;
+  animation: Gradient 18s ease infinite;
+  background: linear-gradient(132deg, rgba(36, 199, 220, 0.1647058824), rgba(52, 147, 230, 0.3960784314), rgba(236, 110, 173, 0.1529411765), rgba(248, 7, 87, 0.1568627451), rgba(188, 78, 157, 0.1450980392));
+  background-size: 315% 315%;
+  animation: Gradient 18s ease infinite;
+  overflow: visible;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .site__footer {
   grid-area: footer;
-  background-image: linear-gradient(hsl(231deg, 100%, 10%), hsl(271deg, 76%, 53%));
+  background-image: linear-gradient(transparent, hsl(271deg, 76%, 53%));
   margin-top: auto;
   padding-top: 2vh;
   width: 100%;
@@ -1063,30 +1083,6 @@ COMPOSANTS
   .site__footer__conteneur {
     grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
   }
-}
-
-.menu-menu_cours-container {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.menu-menu_cours-container .menu {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.menu-menu_cours-container .menu-item {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.menu-menu_cours-container .menu-item a {
-  display: block;
-  margin-left: 0;
-  padding-left: 0;
-  color: white;
-  font-size: 1.2rem;
-  padding: 9px 0;
 }
 
 #chk-burger:checked ~ .menu-principal-container {

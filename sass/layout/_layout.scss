@@ -17,7 +17,7 @@
     &__main {
         overflow: hidden;
         grid-area: main;
-        background-color: $couleur_fond;
+        background-color: transparent;
         display: flex;
         // background-color: #eee;
         // border: 3px solid #bdbdbd;
@@ -32,7 +32,7 @@
         // width: clamp(325px, 30%, 30%);
         top: 14vh;
         grid-area: barre;
-        background-color: $couleur_fond;
+        background-color: transparent;
         // transform: translateX(-100vw);
         @media screen and (min-width: 700px) {}
         z-index: 20;
