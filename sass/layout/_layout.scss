@@ -10,7 +10,7 @@
         grid-template-areas: "header header" "barre main" "footer footer";
     }
     &__main {
-        overflow: hidden;
+        // overflow: hidden;
         grid-area: main;
         background: transparent;
         display: flex;

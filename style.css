@@ -413,7 +413,6 @@ LAYOUT
   }
 }
 .site__main {
-  overflow: hidden;
   grid-area: main;
   background: transparent;
   display: flex;
@@ -544,6 +543,9 @@ ELEMENTS
   font-family: "Brevia", sans-serif;
   color: #F2F2F2;
   transition: 0.2s;
+  margin-right: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
 }
 .cours__titre a:hover {
   color: hsl(198deg, 99%, 67%) !important;
@@ -609,7 +611,7 @@ input:checked ~ .cours__logiciel {
 .listeProfs__titre {
   text-align: center;
   max-width: 50%;
-  margin: 0 auto;
+  margin: 1em auto;
   max-height: 3.5vh;
 }
 
@@ -1427,4 +1429,8 @@ COMPOSANTS
 
 .bloquer {
   overflow-y: hidden;
+}
+
+.searchform {
+  color: white;
 }/*# sourceMappingURL=style.css.map */

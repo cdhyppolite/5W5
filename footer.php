@@ -21,4 +21,5 @@
     </div>
 </footer>
 </body>
+<?php get_search_form(); ?>
 <?php wp_footer(); ?>
