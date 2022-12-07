@@ -42,5 +42,6 @@ Ajout d'informations dans le pied de page
 Modification de la vidéo de présentation
 Modification de la page des projets
 Modification de la page 404
+Ajout d'image en arrière-plan
 ```
 ![Image](./screenshot.png "Image du Thème")
