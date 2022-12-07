@@ -7,7 +7,7 @@
 ?>
 <main class="site__main">
     <section class="listeProfs">
-        <h2 class="listeProfs__titre">Liste <?= $nomCategorie; ?></h2>
+        <h1 class="listeProfs__titre"><?= $nomCategorie; ?></h1>
 
         <?php if ($isPageProjet) : ?>
             <input type="checkbox" id="chk-projets">
