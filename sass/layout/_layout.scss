@@ -1,70 +1,31 @@
 .site {
+    background-image: url("images/brick7.jpg");
     display: grid;
     overflow-x: hidden;
     background-color: $couleur_fond;
-    //    gap: 1px;
     grid-template-columns: auto;
     grid-template-areas: "header" "barre" "main" "footer";
-    // @media screen and (min-width: 700px) and (max-width: 1199px) {
     @media screen and (min-width: 700px) {
         grid-template-columns: ($size__site-sidebar) auto;
         grid-template-areas: "header header" "barre main" "footer footer";
     }
-    //   @media screen and (min-width: 1200px) and (max-width:1600px) {
-    //       grid-template-columns: ($size__site-sidebar) auto;
-    //       grid-template-areas: "header header" "barre main" "footer footer";
-    //   }
     &__main {
         overflow: hidden;
         grid-area: main;
-        background-color: $couleur_fond;
+        background: transparent;
         display: flex;
-        // background-color: #eee;
-        // border: 3px solid #bdbdbd;
         flex-wrap: wrap;
         row-gap: 20px;
-        // border-radius: 25px;
         min-height: 80vh;
     }
     &__barre {
-        position: relative;
+        position: fixed;
+        width: 30%;
+        top: 14vh;
         grid-area: barre;
-        background-color: $couleur_fond;
-        // transform: translateX(-100vw);
+        background: transparent;
         @media screen and (min-width: 700px) {}
         z-index: 20;
-        // border: 3px solid #bdbdbd;
-        // border-radius: 25px;
-        // nav {
-        //     display: flex;
-        //     flex-direction: column;
-        //     margin: 0 auto;
-        //     a {
-        //         text-decoration: none;
-        //         font-weight: bold;
-        //         font-size: 1.15em;
-        //     }
-        // }
-    }
-    &__footer {
-        grid-area: footer;
-        background-image: linear-gradient($couleur_fond, black);
-    }
-    &__copyright {
-        // border-top: 3px double rgb(59, 59, 59);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        nav,
-        h2 {
-            margin: 0 auto;
-        }
-        nav a {
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.15em;
-        }
     }
     &__info {
         display: flex;

@@ -18,6 +18,6 @@
             <h6 class="header__secondaire"> <?php echo (get_bloginfo('description', 'display')); ?> </h6>
         </a>
     </header>
-    
+    <div class="effet_background"></div>
     <!-- Menu avec la liste des cours -->
 <?php include('inclusions/menuBarreCours.php');?>

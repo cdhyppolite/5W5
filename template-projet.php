@@ -21,10 +21,15 @@
          <div class="unProf__desc">
             <p><?= $description; ?></p>
             <p class="unProf__auteur">Auteur: <?php the_field('auteur'); ?></p>
-            <p class="unProf__Logiciel">Réalisé avec: <?php the_field('logiciel'); ?></p>
-            <p class="unProf__Cours">Cours:
-               <a target="popup" onclick="window.open('<?php the_field('cours'); ?>','popup','width=600,height=800'); return false;"> <?php the_field('nom_du_cours'); ?> </a>
-            </p> 
+            
+            <?php if (get_field('logiciel') != "") : ?>
+               <p class="unProf__Logiciel">Réalisé avec: <?php the_field('logiciel'); ?></p>
+            <?php endif; ?>
+
+            <?php if (get_field('cours') != "") : ?>
+               <a target="popup" onclick="window.open('<?php the_field('cours'); ?>','popup','width=600,height=900'); return false;"> <?php the_field('nom_du_cours'); ?> </a></p>
+            <?php endif; ?>
+
          </div>
       </div>
    </section>

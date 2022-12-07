@@ -1,8 +1,7 @@
     .listeCours {
-        // background-color: white;
-        // padding: 0 1vw 0 1vw;
         width: clamp(300px, 100%, 750px);
         margin: 0 auto;
+        margin-top: 5vh;
         &__titre {
             text-align: center;
         }
@@ -20,21 +19,35 @@
         }
         position: relative;
         &__btn {
-            // border-radius: 50%;
+            div {
+                transition: .4s cubic-bezier(.5, 0, .5, 1.7);
+                background-color: white;
+                -webkit-mask-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-down-bold);
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 15px;
+                height: 15px;
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $couleur_fond2 !important;
+            @include effetNeon();
+            border: 2px solid $couleur_texte1;
+            box-shadow: none;
             position: absolute;
             right: 20px;
             top: 20px;
-            -webkit-mask-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-down-bold);
-            background-repeat: no-repeat;
-            background-position: center;
             background-color: $couleur_texte1;
             transform: scale(1.5);
-            width: 13px;
-            height: 12px;
+            width: 24px;
+            height: 24px;
             transition: .4s cubic-bezier(.5, 0, .5, 1.7);
             &:hover {
                 cursor: pointer;
-                background-color: $couleur_texte2;
+                div {
+                    background-color: $couleur_texte2;
+                }
             }
         }
         &__infos {
@@ -53,11 +66,6 @@
             overflow: hidden;
             // flex-wrap: wrap;
             flex-direction: column;
-            .cours {
-                &__desc {
-                    text-align: justify;
-                }
-            }
         }
         &__img {
             width: auto;
@@ -70,6 +78,7 @@
             }
         }
         &__desc {
+            text-align: justify;
             font-size: 14px;
             &::first-letter {
                 // text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px $couleur_fond2, 0 0 82px $couleur_fond2, 0 0 92px $couleur_fond2, 0 0 102px $couleur_fond2, 0 0 151px $couleur_fond2;
@@ -77,10 +86,14 @@
             width: 50%;
         }
         &__titre {
+            max-width: 90%;
             a {
                 font-family: $font2;
                 color: $couleur_texte1;
                 transition: .2s;
+                margin-right: 1.5em;
+                display: flex;
+                flex-wrap: wrap;
                 &:hover {
                     color: $couleur_texte2 !important;
                     cursor: pointer;
@@ -98,7 +111,6 @@
                 height: 230px;
             }
         }
-        
     }
     
     input {
@@ -106,8 +118,10 @@
         &:checked {
             display: none;
             ~label>.cours__btn {
-                // background-image: url(https://s2.svgbox.net/octicons.svg?ic=chevron-up-bold);
                 transform: rotate(-180deg) scale(1.5);
+                div {
+                    background-color: $couleur_texte2;
+                }
             }
             ~.cours {
                 &__infos {
