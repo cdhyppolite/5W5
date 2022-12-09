@@ -403,6 +403,7 @@ LAYOUT
   display: grid;
   overflow-x: hidden;
   background-color: hsl(231deg, 100%, 10%);
+  background-attachment: fixed;
   grid-template-columns: auto;
   grid-template-areas: "header" "barre" "main" "footer";
 }
