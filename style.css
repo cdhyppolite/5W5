@@ -957,12 +957,17 @@ input:checked ~ .cours__logiciel {
 }
 
 .stages .listeStage {
-  list-style-position: inside;
-  padding-left: 0;
+  list-style-position: outside;
+  padding-left: 1.5rem;
 }
 
 .stages .listeStage li {
   margin-top: 20px;
+}
+
+.stages .listeStage li::marker {
+  color: #ffa3dc !important;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 700px) {
@@ -1012,8 +1017,8 @@ input:checked ~ .cours__logiciel {
 }
 
 .emplois .listeEmplois {
-  list-style-position: inside;
-  padding-left: 0;
+  list-style-position: outside;
+  padding-left: 1.5rem;
 }
 
 .emplois .listeEmplois li {
@@ -1044,7 +1049,7 @@ input:checked ~ .cours__logiciel {
   }
   .emplois .listeEmplois {
     list-style-position: outside;
-    padding-left: 20px;
+    padding-left: 1.5rem;
   }
 }
 
