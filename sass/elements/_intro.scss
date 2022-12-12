@@ -5,3 +5,12 @@
         margin: 0 auto;
     }
 }
+
+figure {
+    @include effetNeon();
+    border-radius: 2rem;
+
+    img {
+        border-radius: 2rem;
+    }
+}

@@ -10,6 +10,13 @@
         grid-template-columns: ($size__site-sidebar) auto;
         grid-template-areas: "header header" "barre main" "footer footer";
     }
+
+    @media screen and (min-width: 1000px) {
+    .listeCours {
+        width: 70%;
+    }
+     }
+    
     &__main {
         // overflow: hidden;
         grid-area: main;
@@ -18,6 +25,7 @@
         flex-wrap: wrap;
         row-gap: 20px;
         min-height: 80vh;
+        margin: 15px;
     }
     &__barre {
         position: fixed;
