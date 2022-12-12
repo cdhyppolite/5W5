@@ -5,7 +5,7 @@
             color: $couleur_texte1;
         }
         &:focus {
-            background-color: rgba($color: $couleur_texte1, $alpha: 0.3);
+            background-color: rgba($color: $couleur_texte1, $alpha: 0.6);
             transform: rotateY(360deg) perspective(500px);
         }
         font-family: $fontsMenu;
@@ -17,7 +17,7 @@
         transform: rotateY(0deg)perspective(0);
         border: none;
         outline: none;
-        background: transparent;
+        background-color: rgba($color: $couleur_texte1, $alpha: 0.3);
         border-radius: 5px;
     }
     &__bouton {

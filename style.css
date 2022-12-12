@@ -1075,14 +1075,14 @@ COMPOSANTS
   transform: rotateY(0deg) perspective(0);
   border: none;
   outline: none;
-  background: transparent;
+  background-color: rgba(242, 242, 242, 0.3);
   border-radius: 5px;
 }
 .recherche__input::placeholder {
   color: #F2F2F2;
 }
 .recherche__input:focus {
-  background-color: rgba(242, 242, 242, 0.3);
+  background-color: rgba(242, 242, 242, 0.6);
   transform: rotateY(360deg) perspective(500px);
 }
 .recherche__bouton {
