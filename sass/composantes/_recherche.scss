@@ -40,4 +40,21 @@
     &__mot {
         color: $couleur_texte2;
     }
+    &__article {
+        margin-left: 10px;
+        margin-right: 10px;
+        p {
+            text-align: justify;
+        }
+    }
+}
+
+.search {
+    .site__main {
+        // flex-wrap: nowrap;
+        flex-direction: column;
+        h1 {
+            margin: 0 auto;
+        }
+    }
 }

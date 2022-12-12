@@ -1107,6 +1107,20 @@ COMPOSANTS
 .recherche__mot {
   color: hsl(198deg, 99%, 67%);
 }
+.recherche__article {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.recherche__article p {
+  text-align: justify;
+}
+
+.search .site__main {
+  flex-direction: column;
+}
+.search .site__main h1 {
+  margin: 0 auto;
+}
 
 .site__header {
   grid-area: header;
