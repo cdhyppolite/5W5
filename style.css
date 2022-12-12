@@ -406,6 +406,7 @@ LAYOUT
   background-attachment: fixed;
   grid-template-columns: auto;
   grid-template-areas: "header" "barre" "main" "footer";
+  width: 100vw;
 }
 @media screen and (min-width: 700px) {
   .site {
@@ -668,6 +669,7 @@ input:checked ~ .cours__logiciel {
 }
 .unProf__infos {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   width: clamp(300px, 100%, 800px);
   margin: 0 auto;
@@ -676,12 +678,17 @@ input:checked ~ .cours__logiciel {
   display: flex;
   flex-direction: column;
   font-family: "Brevia", sans-serif;
-  text-align: justify;
   margin: 0 auto;
   padding: 10px;
+  color: hsl(323deg, 100%, 82%);
 }
 .unProf__anecdote {
   margin-left: 50%;
+}
+.unProf__anciennete, .unProf__expertise, .unProf__outil, .unProf__passion {
+  color: hsl(323deg, 100%, 82%);
+  font-size: 1rem;
+  font-style: italic;
 }
 
 .iframe-container {
@@ -871,9 +878,8 @@ input:checked ~ .cours__logiciel {
 .stages .listeStage li {
   margin-top: 20px;
 }
-
 .stages .listeStage li::marker {
-  color: #ffa3dc !important;
+  color: hsl(323deg, 100%, 82%) !important;
   font-size: 1.5rem;
 }
 
