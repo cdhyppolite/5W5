@@ -1484,7 +1484,7 @@ COMPOSANTS
   margin: 0 auto;
 }
 .triSession a {
-  width: 14.2857142857%;
+  width: 100%;
   text-align: center;
   background-color: hsl(271deg, 76%, 53%);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
