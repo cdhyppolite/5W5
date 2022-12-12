@@ -1064,12 +1064,12 @@ COMPOSANTS
 
 .recherche {
   display: flex;
+  flex-wrap: wrap;
 }
 .recherche__input {
   font-family: lobster;
   font-size: 1.4rem;
   color: hsl(198deg, 99%, 67%);
-  width: 90%;
   display: unset !important;
   transition: 0.25s;
   transform: rotateY(0deg) perspective(0);
@@ -1077,6 +1077,7 @@ COMPOSANTS
   outline: none;
   background-color: rgba(242, 242, 242, 0.3);
   border-radius: 5px;
+  width: 90%;
 }
 .recherche__input::placeholder {
   color: #F2F2F2;
@@ -1084,6 +1085,11 @@ COMPOSANTS
 .recherche__input:focus {
   background-color: rgba(242, 242, 242, 0.6);
   transform: rotateY(360deg) perspective(500px);
+}
+@media (min-width: 700px) and (max-width: 1300px) {
+  .recherche__input {
+    width: 78%;
+  }
 }
 .recherche__bouton {
   width: 35px;
@@ -1400,6 +1406,7 @@ COMPOSANTS
   z-index: 1;
   box-shadow: 10px 10px 10px hsl(271deg, 76%, 53%);
   margin-top: 5px;
+  width: 100%;
 }
 .menu-principal-container {
   position: absolute;

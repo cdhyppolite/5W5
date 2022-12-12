@@ -12,9 +12,6 @@ let page = d.querySelector('html');
 let liSidebarFooter = d.querySelectorAll(".wp-block-social-link-anchor");
 let searchBar = d.querySelector(".recherche");
 
-// searchBar.innerHTML = 'RECHERCHE';
-// searchBar.innerHTML += '<div class="menu-item__ligne"></div>';
-
 for (let i = 0; i < liMenuPrincipal.length; i++) {
     liMenuPrincipal[i].innerHTML += '<div class="menu-item__ligne"></div>';
 }
@@ -22,11 +19,6 @@ for (let i = 0; i < liMenuPrincipal.length; i++) {
 for (let i = 0; i < liSidebarFooter.length; i++) {
     liSidebarFooter[i].setAttribute('target', '_blank');
 }
-
-// var photo = document.getElementById("photo");
-// photo.id  = "newId";
-// document.getElementById("newDiv").appendChild(photo);
-// menuPrincipal.innerHTML += searchBar;
 menuPrincipal.appendChild(searchBar);
 
 (function() {
