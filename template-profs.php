@@ -17,6 +17,7 @@
 
       <div class="unProf__infos">
             <!-- Afficher la photo de l'enseignant -->
+            <p>GMM</p>
             <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt="">
          <div class="unProf__desc">
             <p><?= $description; ?></p>
