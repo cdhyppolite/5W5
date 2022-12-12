@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main class="site__main">
-    <h1>Résultat de la recherche: « <i class="mot_recherche"><?= $_GET['s']; ?></i> »</h1>
+    <h1>Résultat de la recherche: « <i class="recherche__mot"><?= $_GET['s']; ?></i> »</h1>
     <?php if (have_posts()):
         while (have_posts()): the_post(); ?>
 

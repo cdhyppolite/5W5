@@ -1063,7 +1063,6 @@ COMPOSANTS
 }
 
 .recherche {
-  border: none;
   display: flex;
 }
 .recherche__input {
@@ -1074,8 +1073,6 @@ COMPOSANTS
   display: unset !important;
   transition: 0.25s;
   transform: rotateY(0deg) perspective(0);
-  font-family: "Roboto";
-  height: 35px;
   border: none;
   outline: none;
   background: transparent;
@@ -1084,19 +1081,31 @@ COMPOSANTS
 .recherche__input::placeholder {
   color: #F2F2F2;
 }
+.recherche__input:focus {
+  background-color: rgba(242, 242, 242, 0.3);
+  transform: rotateY(360deg) perspective(500px);
+}
 .recherche__bouton {
-  background-color: yellow;
-  border: none;
-  outline: none;
   width: 35px;
   height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0 5px 5px 0;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
+}
+.recherche__bouton div {
+  -webkit-mask-image: url(https://s2.svgbox.net/octicons.svg?ic=search-bold);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  transform: scale(1.3);
+  width: 16px;
+  height: 16px;
 }
 .recherche__bouton:hover {
   cursor: pointer;
+}
+.recherche__mot {
+  color: hsl(198deg, 99%, 67%);
 }
 
 .site__header {
