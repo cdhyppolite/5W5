@@ -48,7 +48,6 @@
 
 .unProf {
     margin: 0 auto;
-    font-size: $couleur_texte3;
     &__titre {
         height: 30px;
         text-align: center;
@@ -76,8 +75,30 @@
         text-align: justify;
         margin: 0 auto;
         padding: 10px;
+        color: $couleur_texte3;
     }
     &__anecdote {
         margin-left: 50%;
     }
+    &__anciennete {
+        color: hsl(323, 100%, 82%);
+        font-size: 1rem;
+        font-style: italic;
+    }
+    &__expertise {
+        color: hsl(323, 100%, 82%);
+        font-size: 1rem;
+        font-style: italic;
+    }
+    &__outil {
+        color: hsl(323, 100%, 82%);
+        font-size: 1rem;
+        font-style: italic;
+    }
+    &__passion {
+        color: hsl(323, 100%, 82%);
+        font-size: 1rem;
+        font-style: italic;
+    }
+
 }
