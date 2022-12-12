@@ -1419,7 +1419,7 @@ COMPOSANTS
 @media screen and (max-width: 700px) {
   .menu-principal-container {
     position: fixed;
-    top: 20vh;
+    top: 21.5vh;
   }
 }
 @media screen and (min-width: 700px) {
