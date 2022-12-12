@@ -1,0 +1,40 @@
+.recherche {
+    border: none;
+    display: flex;
+    &__input {
+        &::placeholder {
+            color: $couleur_texte1;
+        }
+        font-family: $fontsMenu;
+        font-size: 1.4rem;
+        color: $couleur_texte2;
+        width: 90%;
+        display: unset !important;
+        transition: 0.25s;
+        transform: rotateY(0deg)perspective(0);
+        font-family: 'Roboto';
+        height: 35px;
+        border: none;
+        outline: none;
+        background: transparent;
+        border-radius: 5px;
+        // width: 250px;
+    }
+    &__bouton {
+        background-color: yellow;
+        // top: 0;
+        // right: 0;
+        border: none;
+        outline: none;
+        width: 35px;
+        height: 35px;
+        // position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 5px 5px 0;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

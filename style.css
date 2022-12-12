@@ -1062,6 +1062,43 @@ COMPOSANTS
   justify-content: center;
 }
 
+.recherche {
+  border: none;
+  display: flex;
+}
+.recherche__input {
+  font-family: lobster;
+  font-size: 1.4rem;
+  color: hsl(198deg, 99%, 67%);
+  width: 90%;
+  display: unset !important;
+  transition: 0.25s;
+  transform: rotateY(0deg) perspective(0);
+  font-family: "Roboto";
+  height: 35px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-radius: 5px;
+}
+.recherche__input::placeholder {
+  color: #F2F2F2;
+}
+.recherche__bouton {
+  background-color: yellow;
+  border: none;
+  outline: none;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 5px 5px 0;
+}
+.recherche__bouton:hover {
+  cursor: pointer;
+}
+
 .site__header {
   grid-area: header;
   background-color: transparent;

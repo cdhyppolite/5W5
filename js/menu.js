@@ -10,10 +10,10 @@ let menuOuvert = false;
 let boiteTransparent = d.querySelector('.boiteTransparent');
 let page = d.querySelector('html');
 let liSidebarFooter = d.querySelectorAll(".wp-block-social-link-anchor");
-let searchBar = d.querySelector(".searchform");
+let searchBar = d.querySelector(".recherche");
 
-searchBar.innerHTML = 'RECHERCHE';
-searchBar.innerHTML += '<div class="menu-item__ligne"></div>';
+// searchBar.innerHTML = 'RECHERCHE';
+// searchBar.innerHTML += '<div class="menu-item__ligne"></div>';
 
 for (let i = 0; i < liMenuPrincipal.length; i++) {
     liMenuPrincipal[i].innerHTML += '<div class="menu-item__ligne"></div>';
