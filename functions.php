@@ -9,12 +9,10 @@ function e4_5w5_enqueue(){
     
     // Ajout des scripts JS
     wp_enqueue_script('5w5-menuJS');
-    wp_enqueue_script('5w5-404');
-    if (is_category('projets')) {
+    if (is_404())
+        wp_enqueue_script('5w5-404');
+    if (is_category('projets')) 
         wp_enqueue_script('5w5-projetsJS');
-    }
-    // <!-- Script pour l'erreur 404 -->
-    // <script src="https://kit.fontawesome.com/4b9ba14b0f.js" crossorigin="anonymous"></script>
 }
 
 add_action("wp_enqueue_scripts", "e4_5w5_enqueue");

@@ -1,0 +1,65 @@
+.recherche {
+    display: flex;
+    flex-wrap: wrap;
+    &__input {
+        &::placeholder {
+            color: $couleur_texte1;
+        }
+        &:focus {
+            background-color: rgba($color: $couleur_texte1, $alpha: 0.6);
+            transform: rotateY(360deg) perspective(500px);
+        }
+        font-family: $fontsMenu;
+        font-size: 1.4rem;
+        color: $couleur_texte2;
+        display: unset !important;
+        transition: 0.25s;
+        transform: rotateY(0deg)perspective(0);
+        border: none;
+        outline: none;
+        background-color: rgba($color: $couleur_texte1, $alpha: 0.3);
+        border-radius: 5px;
+        width: 90%;
+        @media (min-width:700px) and (max-width:1300px) {
+            // @media (700px <= width <= 1300px) {
+            width: 78%;
+        }
+    }
+    &__bouton {
+        width: 35px;
+        height: 35px;
+        @include effetNeon();
+        div {
+            -webkit-mask-image: url(https://s2.svgbox.net/octicons.svg?ic=search-bold);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: white;
+            transform: scale(1.3);
+            width: 16px;
+            height: 16px;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__mot {
+        color: $couleur_texte2;
+    }
+    &__article {
+        margin-left: 10px;
+        margin-right: 10px;
+        p {
+            text-align: justify;
+        }
+    }
+}
+
+.search {
+    .site__main {
+        // flex-wrap: nowrap;
+        flex-direction: column;
+        h1 {
+            margin: 0 auto;
+        }
+    }
+}

@@ -3,6 +3,7 @@
     display: grid;
     overflow-x: hidden;
     background-color: $couleur_fond;
+    background-attachment: fixed;
     grid-template-columns: auto;
     grid-template-areas: "header" "barre" "main" "footer";
     @media screen and (min-width: 700px) {
@@ -10,7 +11,7 @@
         grid-template-areas: "header header" "barre main" "footer footer";
     }
     &__main {
-        overflow: hidden;
+        // overflow: hidden;
         grid-area: main;
         background: transparent;
         display: flex;
