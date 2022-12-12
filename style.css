@@ -1123,6 +1123,7 @@ COMPOSANTS
 }
 .recherche__mot {
   color: hsl(198deg, 99%, 67%);
+  font-family: "Brevia", sans-serif;
 }
 .recherche__article {
   margin-left: 10px;
