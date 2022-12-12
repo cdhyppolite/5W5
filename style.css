@@ -1495,8 +1495,10 @@ COMPOSANTS
   transform: scale(1) !important;
 }
 
-.bloquer {
-  overflow-y: hidden;
+@media screen and (max-width: 700px) {
+  .bloquer {
+    overflow-y: hidden;
+  }
 }
 
 .searchform {
