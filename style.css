@@ -380,13 +380,13 @@ h1 {
 }
 a {
   text-decoration: none;
-  color: #4169e1;
+  color: hsl(323deg, 100%, 82%);
 }
 a:visited {
   color: hsl(271deg, 76%, 53%);
 }
 a:hover, a:focus, a:active {
-  color: hsl(240deg, 64%, 27%);
+  color: hsl(323deg, 100%, 82%);
 }
 a:focus {
   outline: thin dotted;
@@ -412,11 +412,6 @@ LAYOUT
   .site {
     grid-template-columns: 30% auto;
     grid-template-areas: "header header" "barre main" "footer footer";
-  }
-}
-@media screen and (min-width: 1000px) {
-  .site .listeCours {
-    width: 70%;
   }
 }
 .site__main {
@@ -458,18 +453,23 @@ ELEMENTS
 ----------------------------------------*/
 .listeCours {
   width: clamp(300px, 100%, 750px);
+  width: 100%;
   margin: 0 auto;
   margin-top: 5vh;
 }
 .listeCours__titre {
   text-align: center;
 }
-
 .listeCours h3 {
   display: flex;
   flex-wrap: wrap;
   width: 70%;
   font-size: 1.5rem;
+}
+@media screen and (min-width: 1000px) {
+  .listeCours {
+    width: 80%;
+  }
 }
 
 .cours {
@@ -867,7 +867,7 @@ input:checked ~ .cours__logiciel {
   color: white;
 }
 .stages a:hover {
-  color: hsl(240deg, 64%, 27%);
+  color: hsl(323deg, 100%, 82%);
 }
 .stages p {
   width: 100%;
@@ -1045,9 +1045,6 @@ input:checked ~ .cours__logiciel {
 }
 
 figure {
-  border: 0.2rem solid #fff;
-  border-radius: 2rem;
-  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
   border-radius: 2rem;
 }
 figure img {
