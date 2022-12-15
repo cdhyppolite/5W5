@@ -6,6 +6,13 @@
             text-align: center;
         }
     }
+
+    .listeCours h3 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        font-size: 1.5rem;
+      }
     
     .cours {
         a:visited {

@@ -414,6 +414,11 @@ LAYOUT
     grid-template-areas: "header header" "barre main" "footer footer";
   }
 }
+@media screen and (min-width: 1000px) {
+  .site .listeCours {
+    width: 70%;
+  }
+}
 .site__main {
   grid-area: main;
   background: transparent;
@@ -421,6 +426,7 @@ LAYOUT
   flex-wrap: wrap;
   row-gap: 20px;
   min-height: 80vh;
+  margin: 15px;
 }
 .site__barre {
   position: fixed;
@@ -457,6 +463,13 @@ ELEMENTS
 }
 .listeCours__titre {
   text-align: center;
+}
+
+.listeCours h3 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  font-size: 1.5rem;
 }
 
 .cours {
@@ -1031,6 +1044,16 @@ input:checked ~ .cours__logiciel {
   }
 }
 
+figure {
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
+  border-radius: 2rem;
+}
+figure img {
+  border-radius: 2rem;
+}
+
 /* -------------------------------------
 COMPOSANTS
 ----------------------------------------*/
@@ -1445,7 +1468,7 @@ COMPOSANTS
   .menu-principal-container {
     position: static;
     transform: translateX(0);
-    width: 100%;
+    width: 70%;
   }
 }
 .menu-principal-container a {
@@ -1480,7 +1503,7 @@ COMPOSANTS
   margin: 0 auto;
 }
 .triSession a {
-  width: 14.2857142857%;
+  width: 100%;
   text-align: center;
   background-color: hsl(271deg, 76%, 53%);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);

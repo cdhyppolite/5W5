@@ -35,7 +35,7 @@
             @media screen and (min-width: 700px) {
                 position: static;
                 transform: translateX(0);
-                width: 100%;
+                width: 70%;
             }
             a {
                 font-size: 50px;
@@ -87,7 +87,7 @@
     margin: 0 auto;
     a {
         $taille: 100%;
-        width: $taille/7;
+        width: $taille;
         text-align: center;
         background-color: $couleur_fond2;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
