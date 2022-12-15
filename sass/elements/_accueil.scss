@@ -4,6 +4,10 @@
     padding-bottom: 56.25%;
     height: 0;
     margin: 0 auto;
+    @media screen and (min-width: 700px) {
+        @include effetNeon();
+        overflow: hidden;
+    }
     iframe {
         position: absolute;
         top: 0;

@@ -723,6 +723,14 @@ input:checked ~ .cours__logiciel {
   height: 0;
   margin: 0 auto;
 }
+@media screen and (min-width: 700px) {
+  .iframe-container {
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
+    overflow: hidden;
+  }
+}
 .iframe-container iframe {
   position: absolute;
   top: 0;
