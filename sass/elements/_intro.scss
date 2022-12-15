@@ -6,7 +6,30 @@
     }
 }
 
-figure {
+img.wp-image-594{
+    overflow: hidden;
+    width: clamp(250px, 30%, 350px);
+    @include effetNeon();
+    border-radius: 2rem;
+
+    img {
+        border-radius: 2rem;
+    }
+}
+
+img.wp-image-596{
+    overflow: hidden;
+    width: clamp(250px, 30%, 350px);
+    @include effetNeon();
+    border-radius: 2rem;
+
+    img {
+        border-radius: 2rem;
+    }
+}
+img.wp-image-597{
+    overflow: hidden;
+    width: clamp(250px, 30%, 350px);
     @include effetNeon();
     border-radius: 2rem;
 
