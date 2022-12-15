@@ -9,7 +9,7 @@
     width: 100vw;
     @media screen and (min-width: 700px) {
         grid-template-columns: ($size__site-sidebar) auto;
-        grid-template-areas: "header header" "barre main" "footer footer";
+        grid-template-areas: "header header" "barre main" ". main" "footer footer";
     }
     &__main {
         // overflow: hidden;
@@ -27,8 +27,14 @@
         top: 14vh;
         grid-area: barre;
         background: transparent;
-        @media screen and (min-width: 700px) {}
         z-index: 20;
+        @media screen and (max-height: 800px) {
+            position: unset !important;
+            width: unset;
+        }
+        @media screen and (min-width: 700px) {
+            position: fixed;
+        }
     }
     &__info {
         display: flex;

@@ -411,7 +411,7 @@ LAYOUT
 @media screen and (min-width: 700px) {
   .site {
     grid-template-columns: 30% auto;
-    grid-template-areas: "header header" "barre main" "footer footer";
+    grid-template-areas: "header header" "barre main" ". main" "footer footer";
   }
 }
 .site__main {
@@ -430,6 +430,17 @@ LAYOUT
   grid-area: barre;
   background: transparent;
   z-index: 20;
+}
+@media screen and (max-height: 800px) {
+  .site__barre {
+    position: unset !important;
+    width: unset;
+  }
+}
+@media screen and (min-width: 700px) {
+  .site__barre {
+    position: fixed;
+  }
 }
 .site__info {
   display: flex;
@@ -1473,17 +1484,13 @@ COMPOSANTS
   }
 }
 .menu-principal-container a {
-  font-size: 50px;
+  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 0.815rem + 1.925vw, 3.125rem);
   margin-left: 20px;
   color: #F2F2F2;
   padding: 4px;
   text-shadow: 0px 2px 0px grey;
   transition-duration: 0.4s;
-}
-@media screen and (min-width: 700px) {
-  .menu-principal-container a {
-    font-size: clamp(1rem, 12vw, 2.5rem);
-  }
 }
 .menu-principal-container a:visited {
   color: #F2F2F2;
