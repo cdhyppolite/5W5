@@ -1,64 +1,52 @@
-.emplois{
+.emplois {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    
     width: 100%;
-    .imgEmplois{
+    .imgEmplois {
         width: 40%;
-
-        img{
+        img {
             width: 90%;
         }
     }
-    p{
+    p {
         width: 100%;
     }
-    .descEmplois{
+    .descEmplois {
         width: 45%;
     }
-    
-    .listeEmplois{
+    .listeEmplois {
         list-style-position: outside;
         padding-left: 1.5rem;
-
-        li{
+        li {
             margin-top: 20px;
-            &::marker{
+            &::marker {
                 color: $couleur_texte3 !important;
                 font-size: 1.5rem
-                
             }
         }
     }
 }
-@media screen and (max-width: 700px) {
 
-    .emplois{
+@media screen and (max-width: 700px) {
+    .emplois {
         display: flex;
         flex-direction: column;
         align-items: center;
-        .imgEmplois{
+        .imgEmplois {
             width: 80%;
             height: 300px;
-    
-            img{
+            img {
                 width: 100%;
                 height: 300px;
             }
         }
-        .descEmplois{
+        .descEmplois {
             width: 80%;
-            
         }
-        .listeEmplois{
+        .listeEmplois {
             list-style-position: outside;
             padding-left: 1.5rem;
-
-        li{
-    
         }
     }
-    }
-
 }
