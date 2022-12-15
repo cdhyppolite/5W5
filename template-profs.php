@@ -16,9 +16,8 @@
       <h1 class="unProf__titre"><?php the_title() ?></h1>
 
       <div class="unProf__infos">
-            <!-- Afficher la photo de l'enseignant -->
-            <!-- <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt=""> -->
-            <?php the_post_thumbnail ("medium");?>
+            <?php //Afficher la photo de l'enseignant ?>
+            <img src="<?php if (has_post_thumbnail()) { echo get_the_post_thumbnail_url(); } else { echo $imageBlank; } ?>" alt="">
          <div class="unProf__desc">
             <p class = "unProf__anecdote"><?= $description; ?></p>
             <br> <br>
