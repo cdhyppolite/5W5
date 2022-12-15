@@ -1,6 +1,5 @@
 .recherche {
-    display: flex;
-    flex-wrap: wrap;
+    position: relative;
     &__input {
         &::placeholder {
             color: $couleur_texte1;
@@ -17,15 +16,13 @@
         transform: rotateY(0deg)perspective(0);
         border: none;
         outline: none;
-        background-color: rgba($color: $couleur_texte1, $alpha: 0.3);
+        background-color: rgba($color: $couleur_texte1, $alpha: 0.1);
         border-radius: 5px;
         width: 90%;
-        @media (min-width:700px) and (max-width:1300px) {
-            // @media (700px <= width <= 1300px) {
-            width: 78%;
-        }
     }
     &__bouton {
+        position: absolute;
+        bottom: 7px;
         width: 35px;
         height: 35px;
         @include effetNeon();
