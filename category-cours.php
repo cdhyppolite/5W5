@@ -16,12 +16,11 @@
                         unset($_GET["session"]); // Détruire la variable
                     }
                 ?>
-                <a title="Toutes les sessions" href="?" <?php if (!isset($_GET["session"])) echo 'class="active"' ?>>Tous</a>
+                <a href="?" <?php if (!isset($_GET["session"])) echo 'class="active"' ?>>Toutes les sessions</a>
                 <?php // Boucle ?>
                 <?php for ($nbSessions = 1; $nbSessions <= 6; $nbSessions++) : ?>
                 <a title="Session <?= $nbSessions; ?>" href="?session=<?= $nbSessions; ?>"
-                    <?= (isset($_GET["session"]) && ($_GET["session"]==$nbSessions)) ? 'class="active"' :""; ?>>
-                    <?= $nbSessions; ?></a>
+                    <?= (isset($_GET["session"]) && ($_GET["session"]==$nbSessions)) ? 'class="active"' :""; ?>><?= $nbSessions; ?></a>
                 <?php endfor; ?>
             </nav>
 
@@ -30,7 +29,7 @@
             <?php
                 $titre = get_the_title();
                 $codeCours = substr($titre, 0,3);
-                $conditionSession = (isset($_GET["session"]) && $_GET["session"] == $codeCours[0]) || (!isset($_GET["session"]));
+                $conditionSession = (isset($_GET["session"]) && $_GET["session"][0] == $codeCours[0]) || (!isset($_GET["session"]));
                 $titreFiltreCours = substr($titre, 3, -6);
                 $nbHeures = substr($titre, -6);
                 $descriptionCours = get_the_excerpt();

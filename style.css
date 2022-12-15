@@ -1507,14 +1507,16 @@ COMPOSANTS
   margin: 0 auto;
 }
 .triSession a {
-  width: 100%;
-  text-align: center;
+  width: 14.2857142857%;
   background-color: hsl(271deg, 76%, 53%);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
   color: #F2F2F2;
   font-family: lobster;
   font-weight: 900;
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .triSession a:hover {
   background: linear-gradient(to top, #f969a2 0, #ff0a64 20%, #ff0a64 49%, #f969a2 50%, #ff0a64);
