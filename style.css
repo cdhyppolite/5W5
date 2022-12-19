@@ -684,10 +684,10 @@ input:checked ~ .cours__logiciel {
   border: 0.2rem solid #fff;
   border-radius: 2rem;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
-  width: 100%;
   margin: 10px;
   transition: 0.4s;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 .unProf img:hover {
   border: 3px solid hsl(271deg, 76%, 53%);
@@ -705,12 +705,14 @@ input:checked ~ .cours__logiciel {
   font-family: "Brevia", sans-serif;
   margin: 0 auto;
   padding: 10px;
-  color: hsl(323deg, 100%, 82%);
+  flex: 0 1 60%;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 .unProf__anecdote {
   margin-left: 50%;
 }
-.unProf__anciennete, .unProf__expertise, .unProf__outil, .unProf__passion {
+.unProf__anciennete, .unProf__expertise, .unProf__outils, .unProf__passion {
   color: hsl(323deg, 100%, 82%);
   font-size: 1rem;
   font-style: italic;
@@ -1064,10 +1066,39 @@ input:checked ~ .cours__logiciel {
   }
 }
 
-figure {
+img.wp-image-594 {
+  overflow: hidden;
+  width: clamp(250px, 30%, 350px);
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
   border-radius: 2rem;
 }
-figure img {
+img.wp-image-594 img {
+  border-radius: 2rem;
+}
+
+img.wp-image-596 {
+  overflow: hidden;
+  width: clamp(250px, 30%, 350px);
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
+  border-radius: 2rem;
+}
+img.wp-image-596 img {
+  border-radius: 2rem;
+}
+
+img.wp-image-597 {
+  overflow: hidden;
+  width: clamp(250px, 30%, 350px);
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem hsl(271deg, 76%, 53%), 0 0 0.8rem hsl(271deg, 76%, 53%), 0 0 2.8rem hsl(271deg, 76%, 53%), inset 0 0 1.3rem hsl(271deg, 76%, 53%);
+  border-radius: 2rem;
+}
+img.wp-image-597 img {
   border-radius: 2rem;
 }
 
