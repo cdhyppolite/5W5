@@ -1524,6 +1524,7 @@ COMPOSANTS
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .triSession a:hover {
   background: linear-gradient(to top, #f969a2 0, #ff0a64 20%, #ff0a64 49%, #f969a2 50%, #ff0a64);
