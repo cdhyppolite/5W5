@@ -52,10 +52,10 @@
     }
     img {
         @include effetNeon();
-        width: 100%;
         margin: 10px;
         transition: .4s;
         margin: 0 auto;
+        margin-bottom: 30px;
         &:hover {
             border: 3px solid $couleur_fond2;
         }
@@ -71,16 +71,35 @@
         display: flex;
         flex-direction: column;
         font-family: $font2;
+        //text-align: justify;
         margin: 0 auto;
         padding: 10px;
-        color: $couleur_texte3;
+        flex: 0 1 60%;
+        font-weight: bold;
+        font-size: 1.1rem;
     }
     &__anecdote {
         margin-left: 50%;
     }
-    &__anciennete,
-    &__expertise,
-    &__outil,
+
+    &__anciennete {
+        color: hsl(323, 100%, 82%);
+        font-size: 1rem;
+        font-style: italic;
+    }
+
+    &__expertise {
+        color: hsl(323, 100%, 82%);
+        font-size: 1rem;
+        font-style: italic;
+    }
+
+    &__outils {
+        color: hsl(323, 100%, 82%);
+        font-size: 1rem;
+        font-style: italic;
+    }
+
     &__passion {
         color: hsl(323, 100%, 82%);
         font-size: 1rem;
